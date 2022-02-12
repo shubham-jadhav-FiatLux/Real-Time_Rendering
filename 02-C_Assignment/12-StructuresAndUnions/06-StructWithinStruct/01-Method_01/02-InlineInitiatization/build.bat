@@ -1,0 +1,6 @@
+
+cl.exe /c /EHsc StructWithinStructInlineInitializationMethod_01.cpp
+
+link.exe StructWithinStructInlineInitializationMethod_01.obj
+
+StructWithinStructInlineInitializationMethod_01.exe

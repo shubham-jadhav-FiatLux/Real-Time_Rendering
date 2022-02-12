@@ -1,0 +1,6 @@
+
+cl.exe /c /EHsc Converting3DArrayTo1DArray.c
+
+link.exe Converting3DArrayTo1DArray.obj
+
+Converting3DArrayTo1DArray.exe

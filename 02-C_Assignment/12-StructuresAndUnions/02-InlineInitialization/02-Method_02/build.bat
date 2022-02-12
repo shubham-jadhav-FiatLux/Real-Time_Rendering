@@ -1,0 +1,5 @@
+cl.exe /c /EHsc singleStructVariableInlineInitialization.c
+
+link.exe singleStructVariableInlineInitialization.obj
+
+singleStructVariableInlineInitialization.exe
