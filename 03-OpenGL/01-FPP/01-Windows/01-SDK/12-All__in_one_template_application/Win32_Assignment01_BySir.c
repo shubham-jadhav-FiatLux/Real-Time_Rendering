@@ -54,8 +54,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLi
 	hwnd = CreateWindow(szAppName,
 		TEXT("Shubham Balaso Jadhav"),
 		WS_OVERLAPPEDWINDOW,
-		GetSystemMetrics(SM_CXSCREEN) / 2 - 400,
-		GetSystemMetrics(SM_CYSCREEN) / 2 - 300,
+		(GetSystemMetrics(SM_CXSCREEN) / 2 - 400),
+		(GetSystemMetrics(SM_CYSCREEN) / 2 - 300),
 		800,
 		600,
 		NULL,
@@ -160,7 +160,7 @@ void ToggleFullscreen(void)
 {
 	// Variable Declarations
 	static DWORD dwStyle;
-	WINDOWPLACEMENT wp;
+	static WINDOWPLACEMENT wp;
 	MONITORINFO mi;
 
 	// Code
@@ -180,14 +180,14 @@ void ToggleFullscreen(void)
 			ShowCursor(FALSE);
 			gbFullscreen = TRUE;
 		}
-		else
-		{
-			SetWindowLong(ghwnd, GWL_STYLE, dwStyle | WS_OVERLAPPEDWINDOW);
-			SetWindowPlacement(ghwnd, &wp);
-			SetWindowPos(ghwnd, HWND_TOP, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOOWNERZORDER | SWP_NOZORDER | SWP_FRAMECHANGED);
+	}
+	else
+	{
+		SetWindowLong(ghwnd, GWL_STYLE, dwStyle | WS_OVERLAPPEDWINDOW);
+		SetWindowPlacement(ghwnd, &wp);
+		SetWindowPos(ghwnd, HWND_TOP, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOOWNERZORDER | SWP_NOZORDER | SWP_FRAMECHANGED);
 
-			ShowCursor(TRUE);
-			gbFullscreen = FALSE;
-		}
+		ShowCursor(TRUE);
+		gbFullscreen = FALSE;
 	}
 }
