@@ -20,7 +20,7 @@ int main(void) {
 			printf("\t----------------------------\n\n");
 			for (shubh_k = 1; shubh_k <= 3; shubh_k++) {
 			
-				printf("\t\tshubh_k = %d\n", shubh_k++);
+				printf("\t\tshubh_k = %d\n", shubh_k);
 			}
 			printf("\n\n");
 		}
