@@ -108,6 +108,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLi
 	}
 	else
 		fprintf(gpFile, "Succeed.\n");
+
 	// Show Window
 	ShowWindow(hwnd, iCmdShow);
 
@@ -257,7 +258,7 @@ int initialize(void)
 	int iPixelFormatIndex = 0;
 
 	// Code
-	ZeroMemory(&pfd, sizeof(PIXELFORMATDESCRIPTOR));
+	ZeroMemory(&pfd, sizeof(PIXELFORMATDESCRIPTOR));			// MemSet((void*)&pfd, NULL, sizof(PIXELFORMATDESCRIPTOR));
 
 	// Initialization of PIXELFORMAT
 	pfd.nSize = sizeof(PIXELFORMATDESCRIPTOR);
