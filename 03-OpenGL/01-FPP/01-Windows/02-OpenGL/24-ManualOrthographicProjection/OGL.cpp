@@ -5,14 +5,12 @@
 
 // OpenGL Header Files
 #include <GL/gl.h>
-#include <GL/glu.h>
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
 
 // OpenGL Libraries
 #pragma comment(lib, "OpenGL32.lib")
-#pragma comment(lib, "glu32.lib")
 
 // Global Function Declarations
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
@@ -24,6 +22,9 @@ HWND ghwnd = NULL;
 HDC ghdc = NULL;
 HGLRC ghrc = NULL;
 static BOOL gbFullscreen = FALSE;
+
+GLfloat identityMatrix[16];
+GLfloat orthographicMatrix[16];
 
 // Entry-Point Function
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLine, int iCmdShow)
@@ -300,6 +301,25 @@ int initialize(void)
 	// Clear The Screen Using Black Color
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
+	// Initialization Of Matrix Arrays
+	// Identity Matrix
+	identityMatrix[0] = 1.0f;
+	identityMatrix[1] = 0.0f;
+	identityMatrix[2] = 0.0f;
+	identityMatrix[3] = 0.0f;
+	identityMatrix[4] = 0.0f;
+	identityMatrix[5] = 1.0f;
+	identityMatrix[6] = 0.0f;
+	identityMatrix[7] = 0.0f;
+	identityMatrix[8] = 0.0f;
+	identityMatrix[9] = 0.0f;
+	identityMatrix[10] = 1.0f;
+	identityMatrix[11] = 0.0f;
+	identityMatrix[12] = 0.0f;
+	identityMatrix[13] = 0.0f;
+	identityMatrix[14] = 0.0f;
+	identityMatrix[15] = 1.0f;
+
 	// Warmup resize() Call
 	resize(WIN_WIDTH, WIN_HEIGHT);
 
@@ -308,16 +328,82 @@ int initialize(void)
 
 void resize(int width, int height)
 {
+	// Local Variable Declarations
+	float l = -100.0f;
+	float r = 100.0f;
+	float b = -100.0f;
+	float t = 100.0f;
+	float n = -100.0f;
+	float f = 100.0f;
+
 	// Code
 	if (height == 0)
 		height = 1;					// To avoid 'Divide By 0' in future
 
-	glViewport(0, 0, width, height);
+	glViewport(0, 0, (GLsizei)width, (GLsizei)height);
 
 	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
+	//glLoadIdentity();
+	glLoadMatrixf(identityMatrix);
 
-	gluPerspective(45.0f, (GLfloat)width / (GLfloat)height, 0.1f, 100.0f);
+	if (width <= height)
+	{
+		orthographicMatrix[0] = 2 / (r - l);
+		orthographicMatrix[1] = 0.0f;
+		orthographicMatrix[2] = 0.0f;
+		orthographicMatrix[3] = 0.0f;
+		orthographicMatrix[4] = 0.0f;
+		orthographicMatrix[5] = 2 / (t * ((GLfloat)height / (GLfloat)width) - b * ((GLfloat)height / (GLfloat)width));
+		orthographicMatrix[6] = 0.0f;
+		orthographicMatrix[7] = 0.0f;
+		orthographicMatrix[8] = 0.0f;
+		orthographicMatrix[9] = 0.0f;
+		orthographicMatrix[10] = -2 / (f - n);
+		orthographicMatrix[11] = 0.0f;
+		orthographicMatrix[12] = (r + l) / (r - l);
+		orthographicMatrix[13] = (t * ((GLfloat)height / (GLfloat)width) + b * ((GLfloat)height / (GLfloat)width)) / (t * ((GLfloat)height / (GLfloat)width) - b * ((GLfloat)height / (GLfloat)width));
+		orthographicMatrix[14] = (f + n)/(f - n);
+		orthographicMatrix[15] = 1.0f;
+
+
+		glMultMatrixf(orthographicMatrix);
+
+		/*glOrtho(-100.0f,
+			100.0f,
+			(-100.0f * ((GLfloat)height / (GLfloat)width)),
+			(100.0f * ((GLfloat)height / (GLfloat)width)),
+			-100.0f,
+			100.0f);*/
+	}
+	else
+	{
+		orthographicMatrix[0] = 2 / (r * ((GLfloat)width / (GLfloat)height) - l * ((GLfloat)width / (GLfloat)height));
+		orthographicMatrix[1] = 0.0f;
+		orthographicMatrix[2] = 0.0f;
+		orthographicMatrix[3] = 0.0f;
+		orthographicMatrix[4] = 0.0f;
+		orthographicMatrix[5] = 2 / (t - b);
+		orthographicMatrix[6] = 0.0f;
+		orthographicMatrix[7] = 0.0f;
+		orthographicMatrix[8] = 0.0f;
+		orthographicMatrix[9] = 0.0f;
+		orthographicMatrix[10] = -2 / (f - n);
+		orthographicMatrix[11] = 0.0f;
+		orthographicMatrix[12] = (r * ((GLfloat)width / (GLfloat)height) + l * ((GLfloat)width / (GLfloat)height)) / (r * ((GLfloat)width / (GLfloat)height) - l * ((GLfloat)width / (GLfloat)height));
+		orthographicMatrix[13] = (t + b) / (t - b);
+		orthographicMatrix[14] = (f + n) / (f - n);
+		orthographicMatrix[15] = 1.0f;
+
+
+		glMultMatrixf(orthographicMatrix);
+
+		/*glOrtho((-100.0f * ((GLfloat)width / (GLfloat)height)),
+			(100.0f * ((GLfloat)width / (GLfloat)height)),
+			-100.0f,
+			100.0f,
+			-100.0f,
+			100.0f);*/
+	}
 }
 
 void display(void)
@@ -326,17 +412,14 @@ void display(void)
 	glClear(GL_COLOR_BUFFER_BIT);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-
-	glTranslatef(0.0f, 0.0f, -3.0f);
-
 	glBegin(GL_TRIANGLES);
 	
 	glColor3f(1.0f, 0.0f, 0.0f);
-	glVertex3f(0.0f, 1.0f, 0.0f);
+	glVertex3f(0.0f, 50.0f, 0.0f);
 	glColor3f(0.0f, 1.0f, 0.0f);
-	glVertex3f(-1.0f, -1.0f, 0.0f);
+	glVertex3f(-50.0f, -50.0f, 0.0f);
 	glColor3f(0.0f, 0.0f, 1.0f);
-	glVertex3f(1.0f, -1.0f, 0.0f);
+	glVertex3f(50.0f, -50.0f, 0.0f);
 	glEnd();
 
 	SwapBuffers(ghdc);
