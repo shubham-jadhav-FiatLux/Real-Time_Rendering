@@ -437,11 +437,11 @@ void display(void)
 void update(void)
 {
 	// Code
-	anglePyramid = anglePyramid + 0.5f;
+	anglePyramid = anglePyramid + 0.1f;
 	if (anglePyramid >= 360.0f)
 		anglePyramid = anglePyramid - 360.0f;
 
-	angleCube = angleCube + 0.5f;
+	angleCube = angleCube + 0.1f;
 	if (angleCube >= 360.0f)
 		angleCube = angleCube - 360.0f;
 }

@@ -29,19 +29,21 @@ HDC ghdc = NULL;
 HGLRC ghrc = NULL;
 static BOOL gbFullscreen = FALSE;
 
-float anglePyramid = 0.0f;
+float anglePyramid = 45.0f;
+
 float angleCube = 0.0f;
-float x = 0.0f;
-float z = 0.0f;
+static float x = 0.0f;
+static float z = 0.0f;
 float i = 0.0f;
 float j = 0.0f;
-
+/*
 GLfloat identityMatrix[16];
 GLfloat translationMatrix[16];
 GLfloat scaleMatrix[16];
 GLfloat rotationMatrix_X[16];
 GLfloat rotationMatrix_Y[16];
 GLfloat rotationMatrix_Z[16];
+*/
 
 // Entry-Point Function
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLine, int iCmdShow)
@@ -327,6 +329,7 @@ int initialize(void)
 	glShadeModel(GL_SMOOTH);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 
+	/*
 	// Initialization Of Matrix Arrays
 	// Identity Matrix
 	identityMatrix[0] = 1.0f;
@@ -400,7 +403,7 @@ int initialize(void)
 	rotationMatrix_Y[13] = 0.0f;
 	rotationMatrix_Y[14] = 0.0f;
 	rotationMatrix_Y[15] = 1.0f;
-
+	*/
 
 	// Warmup resize() Call
 	resize(WIN_WIDTH, WIN_HEIGHT);
@@ -428,14 +431,12 @@ void display(void)
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glMatrixMode(GL_MODELVIEW);
 
-	glLoadMatrixf(identityMatrix);
-
-	//gluLookAt(x, 0.0f, z, 0.0f, 0.0f, -7.0f, 0.0f, 1.0f, 0.0f);
-
-	glMultMatrixf(translationMatrix);
-	//glTranslatef(0.0f, 0.0f, -6.0f);
-	
-	glMultMatrixf(rotationMatrix_Y);
+	glLoadIdentity();
+	//glLoadMatrixf(identityMatrix);
+	//glMultMatrixf(translationMatrix);
+	glTranslatef(0.0f, 0.0f, -9.0f);
+	glRotatef(anglePyramid, 0.0f, 1.0f, 0.0f);
+	//glMultMatrixf(rotationMatrix_Y);
 	//glRotatef(anglePyramid, 0.0f, 1.0f, 0.0f);			// Spin
 
 	glBegin(GL_TRIANGLES);
@@ -545,12 +546,18 @@ void display(void)
 	//glMultMatrixf(rotationMatrix_Z);
 	*/
 
-	gluLookAt(x, 0.0f, z, 0.0f, 0.0f, -7.0f, 0.0f, 0.0f, 1.0f);
 	
-	glLoadMatrixf(identityMatrix);
-	glTranslatef(0.0f, 0.0f, -7.0f);
-	glRotatef(i, x, 0.0f, z);
-	glMultMatrixf(scaleMatrix);
+	//gluLookAt(x, 0.0f, z, 0.0f, 0.0f, -7.0f, 0.0f, 0.0f, 1.0f);
+	glLoadIdentity();
+	
+	//glLoadMatrixf(identityMatrix);
+	glTranslatef(0.0f, 0.0f, -4.0f);
+	//glRotatef(i, x, 0.0f, z);
+	
+	//glMultMatrixf(scaleMatrix);
+	glScalef(0.15f, 0.15f, 0.15f);
+
+	glRotatef(i, 0.0f, 1.0f, 0.0f);
 
 	glBegin(GL_QUADS);
 
@@ -598,21 +605,25 @@ void display(void)
 
 	glEnd();
 
+	glLoadIdentity();
+	//glRotatef(360.0f,0.0f, 1.0f, 0.0f);
+	gluLookAt(0.0f, 0.0f, 0.0f, 0.0f, i, 0.0f, 0.0f, 1.0f, 0.0f);
 	SwapBuffers(ghdc);
 }
 
 void update(void)
 {
 	// Code
-	x = 10.0f * sin((float)i * M_PI / 180.0f) * cos((float)j * M_PI / 180.0f);
-	z = 10.0f * cos((float)i * M_PI / 180.0f);
-	i += 0.01f;
-	if (i >= 180)
-		i = 0;
-	j += 0.01f;
-	if (j >= 360)
-		j = 0;
-
+	
+	x = 10.0f * cos((float)i / 180.0f * M_PI );
+	z =-10 + 10.0f * sin((float)i / 180.0f * M_PI );
+	i += 0.1f;
+	//if (i >= 180)
+	//	i = 0;
+	j += 0.1f;
+	//if (j >= 360)
+		//j = 0;
+	
 	/*angleCube = angleCube + 0.1f;
 	if (angleCube >= 360.0f)
 		angleCube = angleCube - 360.0f;*/

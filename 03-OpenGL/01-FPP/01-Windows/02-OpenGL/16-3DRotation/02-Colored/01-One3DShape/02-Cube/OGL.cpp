@@ -338,8 +338,8 @@ void display(void)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	glTranslatef(0.0f, 0.0f, -3.0f);
-	
+	glTranslatef(0.0f, 0.0f, -6.0f);
+	glScalef(0.75f, 0.75f, 0.75f);
 	glRotatef(angleCube, 1.0f, 1.0f, 1.0f);		
 
 	glBegin(GL_QUADS);
@@ -394,11 +394,7 @@ void display(void)
 void update(void)
 {
 	// Code
-	anglePyramid = anglePyramid + 0.5f;
-	if (anglePyramid >= 360.0f)
-		anglePyramid = anglePyramid - 360.0f;
-
-	angleCube = angleCube + 0.5f;
+	angleCube = angleCube + 0.1f;
 	if (angleCube >= 360.0f)
 		angleCube = angleCube - 360.0f;
 }

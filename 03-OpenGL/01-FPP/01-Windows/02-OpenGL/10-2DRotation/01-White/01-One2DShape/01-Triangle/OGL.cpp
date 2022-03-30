@@ -347,7 +347,7 @@ void display(void)
 void update(void)
 {
 	// Code
-	angleTriangle = angleTriangle + 2.0f;
+	angleTriangle = angleTriangle + 0.1f;
 	if (angleTriangle >= 360.0f)
 		angleTriangle = angleTriangle - 360.0f;
 }
