@@ -173,40 +173,44 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 	case WM_CHAR:
 		switch (wParam)
 		{
-		case 1:
-			glViewport(0, 0, LOWORD(lParam) / 2, HIWORD(lParam) / 2);
+		case '1':
+			glViewport(0, 0, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2);
 			break;
 
-		case 1:
-
+		case '2':
+			glViewport(GetSystemMetrics(SM_CXSCREEN) / 2, 0, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2);
 			break;
 
-		case 1:
-
+		case '3':
+			glViewport(GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2);
 			break;
 
-		case 1:
-
+		case '4':
+			glViewport(0, GetSystemMetrics(SM_CYSCREEN) / 2, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2);
 			break;
 
-		case 1:
-
+		case '5':
+			glViewport(0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN) / 2);
 			break;
 
-		case 1:
-
+		case '6':
+			glViewport(0, GetSystemMetrics(SM_CYSCREEN) / 2, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN) / 2);
 			break;
 
-		case 1:
-
+		case '7':
+			glViewport(0, 0, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN));
 			break;
 
-		case 1:
-
+		case '8':
+			glViewport(GetSystemMetrics(SM_CXSCREEN) / 2, 0, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN));
 			break;
 
-		case 1:
+		case '9':
+			glViewport(GetSystemMetrics(SM_CXSCREEN) / 4, GetSystemMetrics(SM_CYSCREEN) / 4, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2);
+			break;
 
+		case '0':
+			glViewport(0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN));
 			break;
 
 		case 'F':

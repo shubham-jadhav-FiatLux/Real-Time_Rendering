@@ -368,13 +368,14 @@ void display(void)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	glTranslatef(0.0f, 0.0f, -3.0f);
+	glTranslatef(0.0f, 0.0f, -2.0f);
 	
 	//if (gbToggleCircle)
-		DrawCircle();
-
-	//if (gbToggleTriangle)
 		DrawTriangle();
+		
+	glTranslatef(0.0f, 0.0f, 0.0f);
+	//if (gbToggleTriangle)
+		DrawCircle();
 	
 	SwapBuffers(ghdc);
 }
@@ -388,7 +389,7 @@ void update(void)
 void DrawCircle(void)
 {
 	//
-	float radius = 0.8f * 1.0f / 2.0f;
+	float radius = 0.8f * 1.732f / 6.0f;
 
 	// Code
 	glBegin(GL_LINE_LOOP);
@@ -408,9 +409,9 @@ void DrawTriangle(void)
 	glBegin(GL_LINE_LOOP);
 
 	glColor3f(255.0f, 255.0f, 0.0f);
-	glVertex3f(0.0f, 0.8f, 0.0f);
-	glVertex3f(0.8f * cos(225 / 180.f * M_PI), 0.8f * sin(225 / 180.f * M_PI), 0.0f);
-	glVertex3f(0.8f * cos(315 / 180.f * M_PI), 0.8f * sin(315 / 180.f * M_PI), 0.0f);
+	glVertex3f(0.0f, 0.69f * (0.8f - 1.732f / 6.0f), 0.0f);
+	glVertex3f(-0.4f,-(0.8f *  1.732f / 6.0f), 0.0f);
+	glVertex3f(0.4f, -(0.8f *  1.732f / 6.0f), 0.0f);
 
 	glEnd();
 }
