@@ -302,7 +302,7 @@ int initialize(void)
 
 	// Here Starts OpenGL Code
 	// Clear The Screen Using Black Color
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 
 	// Depth Related Changes
 	glClearDepth(1.0f);

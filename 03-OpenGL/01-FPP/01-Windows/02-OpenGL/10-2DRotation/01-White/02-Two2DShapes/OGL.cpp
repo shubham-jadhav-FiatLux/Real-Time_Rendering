@@ -301,7 +301,7 @@ int initialize(void)
 
 	// Here Starts OpenGL Code
 	// Clear The Screen Using Black Color
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 
 	// Warmup resize() Call
 	resize(WIN_WIDTH, WIN_HEIGHT);
