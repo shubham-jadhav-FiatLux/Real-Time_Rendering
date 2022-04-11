@@ -26,6 +26,7 @@ HGLRC ghrc = NULL;
 BOOL gbFullscreen = FALSE;
 int shoulder = 0;
 int elbow = 0;
+int palm = 0;
 GLUquadric* quadric = NULL;
 
 // Entry-Point Function
@@ -195,6 +196,14 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 
 		case 'e':
 			elbow = (elbow - 3) % 360;
+			break;
+
+		case 'P':
+			palm = (palm + 2) % 360;
+			break;
+
+		case 'p':
+			palm = (palm - 2) % 360;
 			break;
 
 		default:
@@ -367,7 +376,8 @@ void display(void)
 	glTranslatef(1.0f, 0.0f, 0.0f);
 
 	glPushMatrix();
-	glScalef(2.0f, 0.6f, 1.0f);
+	
+	glScalef(2.0f, 0.5f, 1.0f);
 
 	// Now Draw The Arm
 	// Create Quadric
@@ -389,7 +399,7 @@ void display(void)
 
 	// Save The Current Camera Matrix
 	glPushMatrix();
-	glScalef(2.0f, 0.4f, 1.0f);
+	glScalef(2.0f, 0.5f, 1.0f);
 
 	// Draw ForeArm
 	quadric = gluNewQuadric();
@@ -398,10 +408,34 @@ void display(void)
 
 
 	// Draw Sphere
-	gluSphere(quadric, 0.6f, 10, 10);
+	gluSphere(quadric, 0.5f, 10, 10);
 	
 	glPopMatrix();		// To Reach At Elbow
 	
+
+	// palm
+
+	// ForeArm
+	glTranslatef(1.0f, 0.0f, 0.0f);
+	glRotatef((GLfloat)palm, 0.0f, 0.0f, 1.0f);
+	glTranslatef(0.3f, 0.0f, 0.0f);
+
+	// Save The Current Camera Matrix
+	glPushMatrix();
+	//glScalef(0.75f, 0.75f, 0.75f);
+
+	// Draw ForeArm
+	quadric = gluNewQuadric();
+
+	glColor3f(0.5f, 0.35f, 0.05f);
+
+
+	// Draw Sphere
+	gluSphere(quadric, 0.3f, 20, 20);
+
+	glPopMatrix();		// To Reach At plam
+
+	glPopMatrix();		// To Reach At Elbow
 
 	glPopMatrix();		// To Reach At Origin
 
