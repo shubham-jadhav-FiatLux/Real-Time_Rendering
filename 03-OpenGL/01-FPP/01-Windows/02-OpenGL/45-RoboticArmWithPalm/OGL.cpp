@@ -414,8 +414,6 @@ void display(void)
 	
 
 	// palm
-
-	// ForeArm
 	glTranslatef(1.0f, 0.0f, 0.0f);
 	glRotatef((GLfloat)palm, 0.0f, 0.0f, 1.0f);
 	glTranslatef(0.3f, 0.0f, 0.0f);
@@ -424,13 +422,9 @@ void display(void)
 	glPushMatrix();
 	//glScalef(0.75f, 0.75f, 0.75f);
 
-	// Draw ForeArm
+	// Draw Palm
 	quadric = gluNewQuadric();
-
 	glColor3f(0.5f, 0.35f, 0.05f);
-
-
-	// Draw Sphere
 	gluSphere(quadric, 0.3f, 20, 20);
 
 	glPopMatrix();		// To Reach At plam
