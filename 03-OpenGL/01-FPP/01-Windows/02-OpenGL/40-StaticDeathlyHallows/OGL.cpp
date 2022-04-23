@@ -26,12 +26,9 @@ BOOL gbActiveWindow = FALSE;
 HWND ghwnd = NULL;
 HDC ghdc = NULL;
 HGLRC ghrc = NULL;
-static BOOL gbFullscreen = FALSE;
+BOOL gbFullscreen = FALSE;
 
-//BOOL gbToggleLine = FALSE;
-//BOOL gbToggleCircle = FALSE;
-//BOOL gbToggleTriangle = FALSE;
-//BOOL gbDoubleClick = FALSE;
+float h = 0.5 * 1.7320f;
 
 // Entry-Point Function
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLine, int iCmdShow)
@@ -185,31 +182,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 		case 'f':
 			ToggleFullscreen();
 			break;
-		/*
-		case 'S':
-		case 's':
-			if (gbToggleSquare == FALSE)
-				gbToggleSquare = TRUE;
-			else
-				gbToggleSquare = FALSE;
-			break;
-
-		case 'C':
-		case 'c':
-			if (gbToggleCircle == FALSE)
-				gbToggleCircle = TRUE;
-			else
-				gbToggleCircle = FALSE;
-			break;
-
-		case 'T':
-		case 't':
-			if (gbToggleTriangle == FALSE)
-				gbToggleTriangle = TRUE;
-			else
-				gbToggleTriangle = FALSE;
-			break;
-		*/
+		
 		default:
 			break;
 		}
@@ -226,11 +199,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 			break;
 		}
 		break;
-	/*
-	case WM_LBUTTONDBLCLK:
-		gbDoubleClick = TRUE;
-		break;
-	*/
+	
 	case WM_SIZE:
 		resize(LOWORD(lParam), HIWORD(lParam));
 		break;
@@ -249,7 +218,6 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 
 	return(DefWindowProc(hwnd, iMsg, wParam, lParam));
 }
-
 
 void ToggleFullscreen(void)
 {
@@ -362,6 +330,7 @@ void display(void)
 	// Function Declarations
 	void DrawCircle(void);
 	void DrawTriangle(void);
+	void DrawLine(void);
 	
 	// Code
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -369,13 +338,13 @@ void display(void)
 	glLoadIdentity();
 
 	glTranslatef(0.0f, 0.0f, -2.0f);
+	glLineWidth(1.5f);
 	
-	//if (gbToggleCircle)
-		DrawTriangle();
+	DrawTriangle();
 		
-	glTranslatef(0.0f, 0.0f, 0.0f);
-	//if (gbToggleTriangle)
-		DrawCircle();
+	DrawCircle();
+
+	DrawLine();
 	
 	SwapBuffers(ghdc);
 }
@@ -388,16 +357,17 @@ void update(void)
 
 void DrawCircle(void)
 {
-	//
-	float radius = 0.8f * 1.732f / 6.0f;
+	// Local Variable Declarations
+	float radius = 0.5 * 1.7320f / 3;
 
 	// Code
 	glBegin(GL_LINE_LOOP);
 
-	glColor3f(255.0f, 255.0f, 0.0f);
+	glColor3f(1.0f, 1.0f, 1.0f);
+
 	for (float i = 0.0f; i <= 360.0f; i += 0.5f)
 	{
-		glVertex3f(radius * cos(i / 180.f * M_PI), -0.15f + radius * sin(i / 180.f * M_PI), 0.0f);
+		glVertex3f(radius * cos(i / 180.f * M_PI), radius * sin(i / 180.f * M_PI), 0.0f);
 	}
 
 	glEnd();
@@ -408,11 +378,19 @@ void DrawTriangle(void)
 	// Code
 	glBegin(GL_LINE_LOOP);
 
-	glColor3f(255.0f, 255.0f, 0.0f);
-	glVertex3f(0.0f, 0.69f * (0.8f - 1.732f / 6.0f), 0.0f);
-	glVertex3f(-0.4f,-(0.8f *  1.732f / 6.0f), 0.0f);
-	glVertex3f(0.4f, -(0.8f *  1.732f / 6.0f), 0.0f);
+	glVertex3f(0.0f, (2 * h / 3), 0.0f);
+	glVertex3f(-0.5f,-(h / 3), 0.0f);
+	glVertex3f(0.5f, -(h / 3), 0.0f);
 
+	glEnd();
+}
+
+void DrawLine()
+{
+	// Code
+	glBegin(GL_LINES);
+	glVertex3f(0.0f, (2 * h / 3), 0.0f);
+	glVertex3f(0.0f, -(h / 3), 0.0f);
 	glEnd();
 }
 

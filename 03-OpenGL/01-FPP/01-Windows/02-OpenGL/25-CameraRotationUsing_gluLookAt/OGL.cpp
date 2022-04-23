@@ -353,33 +353,33 @@ void display(void)
 	// Front Face
 	glColor3f(1.0f, 0.0f, 0.0f);
 	glVertex3f(0.0f, 1.0f, 0.0f);		// Apex
-	glColor3f(1.0f, 1.0f, 0.0f);
+	glColor3f(0.0f, 1.0f, 0.0f);
 	glVertex3f(-1.0f, -1.0f, 1.0f);
-	glColor3f(1.0f, 1.0f, 0.0f);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3f(1.0f, -1.0f, 1.0f);
 
 	// Right Face
 	glColor3f(1.0f, 0.0f, 0.0f);
 	glVertex3f(0.0f, 1.0f, 0.0f);		// Apex
-	glColor3f(1.0f, 1.0f, 0.0f);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3f(1.0f, -1.0f, 1.0f);
-	glColor3f(1.0f, 1.0f, 0.0f);
+	glColor3f(0.0f, 1.0f, 0.0f);
 	glVertex3f(1.0f, -1.0f, -1.0f);
 
 	// Back Face
 	glColor3f(1.0f, 0.0f, 0.0f);
 	glVertex3f(0.0f, 1.0f, 0.0f);		// Apex
-	glColor3f(1.0f, 1.0f, 0.0f);
+	glColor3f(0.0f, 1.0f, 0.0f);
 	glVertex3f(1.0f, -1.0f, -1.0f);
-	glColor3f(1.0f, 1.0f, 0.0f);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3f(-1.0f, -1.0f, -1.0f);
 
 	// Left Face
 	glColor3f(1.0f, 0.0f, 0.0f);
 	glVertex3f(0.0f, 1.0f, 0.0f);		// Apex
-	glColor3f(1.0f, 0.5f, 0.0f);
+	glColor3f(0.0f, 0.0f, 1.0f);
 	glVertex3f(-1.0f, -1.0f, -1.0f);
-	glColor3f(1.0f, 0.5f, 0.0f);
+	glColor3f(0.0f, 1.0f, 0.0f);
 	glVertex3f(-1.0f, -1.0f, 1.0f);
 
 	glEnd();

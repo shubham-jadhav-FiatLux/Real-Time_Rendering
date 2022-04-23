@@ -23,9 +23,10 @@ BOOL gbActiveWindow = FALSE;
 HWND ghwnd = NULL;
 HDC ghdc = NULL;
 HGLRC ghrc = NULL;
-static BOOL gbFullscreen = FALSE;
-float day = 0.0f;
-float year = 0.0f;
+BOOL gbFullscreen = FALSE;
+int day = 0.0f;
+int year = 0.0f;
+int hour = 0.0f;
 GLUquadric* quadric = NULL;
 
 // Entry-Point Function
@@ -181,7 +182,6 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 			ToggleFullscreen();
 			break;
 
-		/*
 		case 'D':
 			day = (day + 6) % 360;
 			break;
@@ -197,7 +197,14 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 		case 'y':
 			year = (year - 3) % 360;
 			break;
-		*/
+
+		case 'H':
+			hour = (hour + 3) % 360;
+			break;
+
+		case 'h':
+			hour = (hour - 3) % 360;
+			break;
 
 		default:
 			break;
@@ -416,8 +423,7 @@ void display(void)
 void update(void)
 {
 	// Code
-	day += 0.002f;
-	year += 0.01f;
+	
 }
 
 void DrawMoon(void)
@@ -425,7 +431,7 @@ void DrawMoon(void)
 	// code
 	glPushMatrix();
 
-	glRotatef((GLfloat)year * 5, 0.0f, 1.0f, 0.0f);
+	glRotatef((GLfloat)day * 5, 0.0f, 1.0f, 0.0f);
 
 	// To Translate for Moon
 	glTranslatef(0.35f, 0.0f, 0.0f);
@@ -433,7 +439,7 @@ void DrawMoon(void)
 	glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
 
 	// Self Rotation Of Moon
-	glRotatef((GLfloat)day, 0.0f, 0.0f, 1.0f);
+	glRotatef((GLfloat)hour, 0.0f, 0.0f, 1.0f);
 
 	// Draw Earth
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
