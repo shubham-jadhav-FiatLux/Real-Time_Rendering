@@ -45,7 +45,7 @@ float xi = -1.0f;
 float y_n = 1.0f;
 float yi = -1.0f;
 float xa = 1.0f;
-float xaero = -3.0f;
+float xaero = -2.5f;
 float xaero_1 = -1.3f;
 float yaero_1 = 1.0f;
 float aeroAngle = -90.0f;
@@ -355,6 +355,9 @@ int initialize(void)
 	glShadeModel(GL_SMOOTH);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 
+	// Create Quadric
+	quadric = gluNewQuadric();			// It Internally Calls Malloc, So Dont Use Inside Display()
+
 	// Warmup resize() Call
 	resize(WIN_WIDTH, WIN_HEIGHT);
 
@@ -506,32 +509,32 @@ void update(void)
 {
 	// Code
 	if (xi <= 0.0f)
-		xi += 0.00008f;
+		xi += 0.003f;
 	if (y_n >= 0.0f && flagN == 1)
-		y_n -= 0.00009f;
+		y_n -= 0.0035f;
 
 	if (flagD == 1)
 	{
 		if (oRed <= 1.0f)
-			oRed += 0.00006f;
+			oRed += 0.0008f;
 		if (oGreen < 0.56f)
-			oGreen += 0.00003f;
+			oGreen += 0.0005f;
 		if (oBlue <= 0.11f)
-			oBlue += 0.00001f;
+			oBlue += 0.0001f;
 		w = oRed;
 		if (gRed < 0.313f)
-			gRed += 0.00002f;
+			gRed += 0.00025f;
 		if (gGreen < 0.62f)
-			gGreen += 0.00005f;
+			gGreen += 0.00045f;
 		if (gBlue < 0.184f)
-			gBlue += 0.00001f;
+			gBlue += 0.00015f;
 	}
 	if (yi <= 0.0f && flagI == 1)
-		yi += 0.00006f;
+		yi += 0.002f;
 	if (xa >= 0.0f && flagA ==1)
-		xa -= 0.00008f;
+		xa -= 0.0025f;
 	if (xaero <= 5.0f && flagAeroplane == 1)
-		xaero += 0.00009f;
+		xaero += 0.0015f;
 
 	if (flagAeroplane1 == 1)
 	{
@@ -539,27 +542,27 @@ void update(void)
 		{
 			xaero_1 = a + r * cos(Angle * M_PI / 180.0f);
 			yaero_1 = b + r * sin(Angle * M_PI / 180.0f);
-			Angle += 0.01;
-			aeroAngle += 0.01f;
-			aeroAngle2 -= 0.01f;
+			Angle += 0.2f;
+			aeroAngle += 0.2f;
+			aeroAngle2 -= 0.2f;
 		}
 		else if (Angle >= 270.0f && xaero_1 <= 0.9f)
 		{
-			xaero_1 += 0.00009f;					
+			xaero_1 += 0.0015f;					
 		}
 		else
 		{
 			xaero_1 = (-a + 0.2f) + r * cos(Angle * M_PI / 180.0f);
 			yaero_1 = b + r * sin(Angle * M_PI / 180.0f);
-			Angle += 0.01f;
-			aeroAngle += 0.01f;
-			aeroAngle2 -= 0.01f;
+			Angle += 0.2f;
+			aeroAngle += 0.2f;
+			aeroAngle2 -= 0.2f;
 		}
 	}
 	if (z >= -2.0f && flagZ == 1 && flagNegativeZ == 0)
-		z -= 0.00009f;
+		z -= 0.0035f;
 	else if (z <= -1.0f && flagNegativeZ == 1)
-		z += 0.00009f;
+		z += 0.003f;
 }
 
 void I(float x, float y, float width)
@@ -1111,7 +1114,6 @@ void Aeroplane(int number)
 	glPushMatrix();
 	glTranslatef(0.2f, 0.0f, 0.0f);
 	glScalef(4.0f, 1.0f, 0.0f);
-	quadric = gluNewQuadric();
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	gluSphere(quadric, 0.05f, 30, 30);
 	glPopMatrix();
@@ -1121,7 +1123,6 @@ void Aeroplane(int number)
 	glPushMatrix();
 	glTranslatef(0.2f, 0.0f, 0.0f);
 	glScalef(2.0f, 1.0f, 1.0f);
-	quadric = gluNewQuadric();
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	gluSphere(quadric, 0.05f, 40, 40);
 	glPopMatrix();
@@ -1332,6 +1333,12 @@ void uninitialize(void)
 	{
 		DestroyWindow(ghwnd);
 		ghwnd = NULL;
+	}
+
+	if (quadric)
+	{
+		gluDeleteQuadric(quadric);
+		quadric = NULL;
 	}
 
 	if (gpFile)

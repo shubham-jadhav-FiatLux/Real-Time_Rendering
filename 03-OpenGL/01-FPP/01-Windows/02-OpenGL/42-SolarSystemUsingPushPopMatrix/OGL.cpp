@@ -331,6 +331,9 @@ int initialize(void)
 	glShadeModel(GL_SMOOTH);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 
+	// Create Quadric
+	quadric = gluNewQuadric();			// It Internally Calls Malloc, So Dont Use Inside Display()
+
 	// Warmup resize() Call
 	resize(WIN_WIDTH, WIN_HEIGHT);
 
@@ -368,9 +371,6 @@ void display(void)
 	
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
-	// Create Quadric
-	quadric = gluNewQuadric();
-
 	glColor3f(1.0f, 1.0f, 0.0f);
 
 	// Draw Sphere (Sun)
@@ -395,8 +395,6 @@ void display(void)
 
 	// Draw Earth
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
-	quadric = gluNewQuadric();
 	
 	glColor3f(0.4f, 0.9f, 1.0f);
 
@@ -452,6 +450,12 @@ void uninitialize(void)
 	{
 		DestroyWindow(ghwnd);
 		ghwnd = NULL;
+	}
+
+	if (quadric)
+	{
+		gluDeleteQuadric(quadric);
+		quadric = NULL;
 	}
 
 	if (gpFile)

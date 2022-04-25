@@ -337,6 +337,9 @@ int initialize(void)
 	glShadeModel(GL_SMOOTH);
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
 
+	// Create Quadric
+	quadric = gluNewQuadric();			// It Internally Calls Malloc, So Dont Use Inside Display()
+
 	// Warmup resize() Call
 	resize(WIN_WIDTH, WIN_HEIGHT);
 
@@ -380,9 +383,6 @@ void display(void)
 	glScalef(2.0f, 0.5f, 1.0f);
 
 	// Now Draw The Arm
-	// Create Quadric
-	quadric = gluNewQuadric();
-
 	glColor3f(0.5f, 0.35f, 0.05f);
 
 	// 
@@ -402,8 +402,6 @@ void display(void)
 	glScalef(2.0f, 0.5f, 1.0f);
 
 	// Draw ForeArm
-	quadric = gluNewQuadric();
-	
 	glColor3f(0.5f, 0.35f, 0.05f);
 
 
@@ -423,7 +421,6 @@ void display(void)
 	//glScalef(0.75f, 0.75f, 0.75f);
 
 	// Draw Palm
-	quadric = gluNewQuadric();
 	glColor3f(0.5f, 0.35f, 0.05f);
 	gluSphere(quadric, 0.3f, 20, 20);
 
@@ -473,6 +470,12 @@ void uninitialize(void)
 	{
 		DestroyWindow(ghwnd);
 		ghwnd = NULL;
+	}
+
+	if (quadric)
+	{
+		gluDeleteQuadric(quadric);
+		quadric = NULL;
 	}
 
 	if (gpFile)
