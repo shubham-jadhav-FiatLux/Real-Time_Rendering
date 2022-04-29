@@ -51,7 +51,7 @@ float yaero_1 = 1.0f;
 float aeroAngle = -90.0f;
 float aeroAngle2 = 90.0f;
 float Angle = 180.0f;
-float r = yaero_1 - 0.4f;
+float r = yaero_1;
 float a = xaero_1 + r;
 float b = yaero_1;
 float z = -1.0f;
@@ -467,7 +467,7 @@ void display(void)
 		if (xaero <= 5.0f)
 		{
 			glTranslatef(xaero, 0.0f, 0.0f);
-			if (xaero >= -0.9)
+			if (xaero >= -0.855f)
 				flagAeroplane1 = 1;
 			if (xaero >= 0.6f)
 				flagWhiteStrip = 1;
