@@ -1,0 +1,6 @@
+#include <Windows.h>
+#include "OGL.h"
+
+MYICON ICON Coffee.ico
+
+IDBITMAP_STONE BITMAP Stone.bmp
