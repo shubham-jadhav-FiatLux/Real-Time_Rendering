@@ -23,7 +23,7 @@ float timeOnCPU = 0.0f;
 float timeOnGPU = 0.0f;
 
 // CUDA Kernel
-__global__ void matMulGPU(int *A, int *B, int *C, int numARows, int numBColumns, int numCColumns)
+__global__ void matMulGPU(int *A, int *B, int *C, int numARows, int numAColumns, int numBColumns, int numCColumns)
 {
 	// Variable Declarations
 	int row = blockIdx.y * blockDim.y + threadIdx.y;
