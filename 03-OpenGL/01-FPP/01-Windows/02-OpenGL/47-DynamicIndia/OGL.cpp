@@ -67,6 +67,8 @@ int flagAeroplane1 = 0;
 int flagWhiteStrip = 0;
 int flagOrangeStrip = 0;
 int flagGreenStrip = 0;
+int flagTricolor = 0;
+int flagTemp = 0;
 
 // Entry-Point Function
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLine, int iCmdShow)
@@ -392,11 +394,12 @@ void display(void)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	//glTranslatef(0.0f, 0.0f, -3.0f);
+	//glTranslatef(0.0f, 0.0f, -2.0f);
 	
 	if (flagZ == 0)
+	{
 		glTranslatef(0.0f, 0.0f, z);
-
+	}
 	else if (flagZ == 1 && flagNegativeZ == 0)
 	{
 		glTranslatef(0.0f, 0.0f, z);
@@ -407,7 +410,7 @@ void display(void)
 	{
 		glTranslatef(0.0f, 0.0f, z);
 	}
-
+	
 	if (1)
 	{
 		glPushMatrix();
@@ -461,19 +464,20 @@ void display(void)
 		glPopMatrix();
 	}
 
+	//flagAeroplane = 1;
 	if (flagAeroplane == 1)
 	{
 		glPushMatrix();
 		if (xaero <= 5.0f)
 		{
 			glTranslatef(xaero, 0.0f, 0.0f);
-			if (xaero >= -0.855f)
+			if (xaero >= -0.999f)
 				flagAeroplane1 = 1;
 			if (xaero >= 0.6f)
 				flagWhiteStrip = 1;
 			if (xaero >= 2.0f)
 				flagNegativeZ = 1;
-			glScalef(0.5f, 0.5f, 0.5f);
+			glScalef(0.4f, 0.4f, 0.4f);
 			Aeroplane(2);
 		}
 		glPopMatrix();
@@ -483,10 +487,10 @@ void display(void)
 			// Upper Plane
 			glPushMatrix();
 			glTranslatef(xaero_1, yaero_1, 0.0f);
-			if (xaero_1 >= 0.8f)
+			if (xaero_1 >= 0.7f)
 				flagOrangeStrip = 1;
 			glRotatef(aeroAngle, 0.0f, 0.0f, 1.0f);
-			glScalef(0.5f, 0.5f, 0.5f);
+			glScalef(0.4f, 0.4f, 0.4f);
 			Aeroplane(1);
 			glPopMatrix();
 
@@ -494,10 +498,10 @@ void display(void)
 			// Lower Plane
 			glPushMatrix();
 			glTranslatef(xaero_1, -yaero_1, 0.0f);
-			if (xaero_1 >= 0.8f)
+			if (xaero_1 >= 0.7f)
 				flagGreenStrip = 1;
 			glRotatef(aeroAngle2, 0.0f, 0.0f, 1.0f);
-			glScalef(0.5f, 0.5f, 0.5f);
+			glScalef(0.4f, 0.4f, 0.4f);
 			Aeroplane(3);
 			glPopMatrix();
 		}
@@ -533,8 +537,10 @@ void update(void)
 		yi += 0.002f;
 	if (xa >= 0.0f && flagA ==1)
 		xa -= 0.0025f;
-	if (xaero <= 5.0f && flagAeroplane == 1)
+	if (xaero <= 2.0f && flagAeroplane == 1)
 		xaero += 0.0015f;
+	//if (xaero > 0.7f && xaero <= 2.0f && flagAeroplane == 1)
+		//xaero += 0.002f;
 
 	if (flagAeroplane1 == 1)
 	{
@@ -542,21 +548,23 @@ void update(void)
 		{
 			xaero_1 = a + r * cos(Angle * M_PI / 180.0f);
 			yaero_1 = b + r * sin(Angle * M_PI / 180.0f);
-			Angle += 0.2f;
-			aeroAngle += 0.2f;
-			aeroAngle2 -= 0.2f;
+			Angle += 0.195f;
+			aeroAngle += 0.195f;
+			aeroAngle2 -= 0.195f;
 		}
-		else if (Angle >= 270.0f && xaero_1 <= 0.9f)
+		else if (Angle >= 270.0f && xaero_1 <= 0.75f || Angle < 271.0f)
 		{
-			xaero_1 += 0.0015f;					
+			xaero_1 += 0.0015f;
+			Angle = 271.0f;
+			flagTemp = 1;
 		}
-		else
+		else if (flagTemp == 1 && Angle <= 400)
 		{
-			xaero_1 = (-a + 0.2f) + r * cos(Angle * M_PI / 180.0f);
-			yaero_1 = b + r * sin(Angle * M_PI / 180.0f);
-			Angle += 0.2f;
-			aeroAngle += 0.2f;
-			aeroAngle2 -= 0.2f;
+			xaero_1 = (0.75f) + (r - 0.2f) * cos(Angle * M_PI / 180.0f);
+			yaero_1 = (b - 0.2f) + (r - 0.2f) * sin(Angle * M_PI / 180.0f);
+			Angle += 0.195f;
+			aeroAngle += 0.185f;
+			aeroAngle2 -= 0.185f;
 		}
 	}
 	if (z >= -2.0f && flagZ == 1 && flagNegativeZ == 0)
@@ -795,14 +803,14 @@ void A(float x, float y, float width)
 	glVertex3f((x + width - 0.01f), (y - 0.05f), 0.0f);
 
 
-		// Middle Quad 1
+	// Middle Quad 1
 	glColor3f(0.0f, 0.0f, 0.0f);
 	if (flagOrangeStrip == 1)
 	{
 		glColor3f(1.0f, 0.56f, 0.11f);								// Orange
 	}
-	glVertex3f((x + 2 * width / 3 + 0.01f), 0.03f, 0.0f);
-	glVertex3f((x + width / 3 - 0.01f), 0.03f, 0.0f);
+	glVertex3f((x + 2 * width / 3 + 0.01f), 0.02f, 0.0f);
+	glVertex3f((x + width / 3 - 0.01f), 0.02f, 0.0f);
 		
 	if (flagWhiteStrip == 1)
 	{
@@ -820,8 +828,8 @@ void A(float x, float y, float width)
 	{
 		glColor3f(0.313f, 0.62f, 0.184f);							// Green
 	}
-	glVertex3f((x + width / 3 - 0.01f), -0.03f, 0.0f);
-	glVertex3f((x + 2 * width / 3 + 0.01f), -0.03f, 0.0f);
+	glVertex3f((x + width / 3 - 0.01f), -0.02f, 0.0f);
+	glVertex3f((x + 2 * width / 3 + 0.01f), -0.02f, 0.0f);
 	
 	glEnd();
 }
@@ -1267,7 +1275,7 @@ void Aeroplane(int number)
 
 
 
-	glBegin(GL_POLYGON);
+	glBegin(GL_QUADS);
 	if (number == 1)
 	{
 		glColor3f(1.0f, 0.56f, 0.11f);			// Orange
@@ -1280,23 +1288,64 @@ void Aeroplane(int number)
 	}
 	else if (number == 2)
 	{
-		glColor3f(1.0f, 1.0f, 1.0f);			// White
-		glVertex3f(-0.71f, 0.05f, 0.0f);
-		glColor3f(0.0f, 0.0f, 0.0f);			// Black
-		glVertex3f(-1.0f, 0.05f, 0.0f);
-		glVertex3f(-1.0f, -0.05f, 0.0f);
-		glColor3f(1.0f, 1.0f, 1.0f);			// White
-		glVertex3f(-0.71f, -0.05f, 0.0f);
+		if (xaero <= -0.3f || xaero > 0.75f)
+		{
+			flagTricolor = 0;
+			glColor3f(1.0f, 1.0f, 1.0f);			// White
+			glVertex3f(-0.71f, 0.05f, 0.0f);
+			glColor3f(0.0f, 0.0f, 0.0f);			// Black
+			glVertex3f(-1.0f, 0.05f, 0.0f);
+			glVertex3f(-1.0f, -0.05f, 0.0f);
+			glColor3f(1.0f, 1.0f, 1.0f);			// White
+			glVertex3f(-0.71f, -0.05f, 0.0f);
+		}
+		else if ( xaero >= -0.3f && xaero <= 0.75f)
+		{
+			flagTricolor = 1;
+		}
+		
 	}
-	else
+	else if (number == 3)
 	{
-		glColor3f(0.313f, 0.62f, 0.184f);		// Green
-		glVertex3f(-0.71f, 0.05f, 0.0f);
-		glColor3f(0.0f, 0.0f, 0.0f);			// Black
-		glVertex3f(-1.0f, 0.05f, 0.0f);
-		glVertex3f(-1.0f, -0.05f, 0.0f);
-		glColor3f(0.313f, 0.62f, 0.184f);		// Green
-		glVertex3f(-0.71f, -0.05f, 0.0f);
+		if (flagTricolor == 0)
+		{
+			glColor3f(0.313f, 0.62f, 0.184f);		// Green
+			glVertex3f(-0.71f, 0.05f, 0.0f);
+			glColor3f(0.0f, 0.0f, 0.0f);			// Black
+			glVertex3f(-1.0f, 0.05f, 0.0f);
+			glVertex3f(-1.0f, -0.05f, 0.0f);
+			glColor3f(0.313f, 0.62f, 0.184f);		// Green
+			glVertex3f(-0.71f, -0.05f, 0.0f);
+		}
+		else
+		{
+			glColor3f(1.0f, 0.56f, 0.11f);			// Orange
+			glVertex3f(-0.71f, 0.055f, 0.0f);
+			glColor3f(0.0f, 0.0f, 0.0f);
+			glVertex3f(-1.0f, 0.055f, 0.0f);
+			glVertex3f(-1.0f, 0.02f, 0.0f);
+			//glColor3f(1.0f, 1.0f, 1.0f);			// White
+			glColor3f(1.0f, 0.56f, 0.11f);		// Orange
+			glVertex3f(-0.71f, 0.02f, 0.0f);
+
+			
+			glColor3f(1.0f, 1.0f, 1.0f);			// White
+			glVertex3f(-0.71f, 0.02f, 0.0f);
+			glColor3f(0.0f, 0.0f, 0.0f);
+			glVertex3f(-1.0f, 0.02f, 0.0f);
+			glVertex3f(-1.0f, -0.02f, 0.0f);
+			glColor3f(1.0f, 1.0f, 1.0f);			// White
+			glVertex3f(-0.71f, -0.02f, 0.0f);
+			
+
+			glColor3f(0.313f, 0.62f, 0.184f);		// Green
+			glVertex3f(-0.71f, -0.02f, 0.0f);
+			glColor3f(0.0f, 0.0f, 0.0f);
+			glVertex3f(-1.0f, -0.02f, 0.0f);
+			glVertex3f(-1.0f, -0.055f, 0.0f);
+			glColor3f(0.313f, 0.62f, 0.184f);		// Green
+			glVertex3f(-0.71f, -0.055f, 0.0f);
+		}
 	}
 	glEnd();
 }
