@@ -23,11 +23,11 @@ void PrintCUDADeviceProperties(void)
 	int dev_count;
 
 	ret_cuda_rt = cudaGetDeviceCount(&dev_count);		// Number Of Graphic Cards
-	if (ret_cuda_rt != cudaSeccess)
+	if (ret_cuda_rt != cudaSuccess)
 	{
 		printf("CUDA Runtime API error - cudaGetDeviceCount() failed due to %s. \n", cudaGetErrorString(ret_cuda_rt));
 	}
-	else if (dvice_count == 0)
+	else if (dev_count == 0)
 	{
 		printf("There is no CUDA supported device on this system.\n");
 		return;
@@ -102,7 +102,7 @@ void PrintCUDADeviceProperties(void)
 			printf("GPU Device Maximum Number Of Threads Per SMProcessor	: %d \n", dev_prop.maxThreadsPerMultiProcessor);
 			printf("GPU Device Maximum Number Of Threads Per Block			: %d \n", dev_prop.maxThreadsPerBlock);
 			printf("GPU Device Threads In Warp								: %d \n", dev_prop.warpSize);
-			printf("GPU Device Maximum Thread Dimensions					: (%d, %d, %d) \n", dev_prop.maxThreadDim[0], dev_prop.maxThreadDim[1], dev_prop.maxThreadDim[2]);
+			printf("GPU Device Maximum Thread Dimensions					: (%d, %d, %d) \n", dev_prop.maxThreadsDim[0], dev_prop.maxThreadsDim[1], dev_prop.maxThreadsDim[2]);
 			printf("GPU Device Maximum Grid Dimensions						: (%d, %d, %d) \n", dev_prop.maxGridSize[0], dev_prop.maxGridSize[1], dev_prop.maxGridSize[2]);
 			printf("\n\n");
 
@@ -115,7 +115,7 @@ void PrintCUDADeviceProperties(void)
 #if defined(WIN32) || defined(_WIN32) || defined(WIN64) || defined(_WIN64)
 			printf("GPU Devicce CUDA Driver Mode ( TCC Or WDDM ) \n", dev_prop.tccDriver ? "TCC (Tesla Compute Cluster Driver)" : "WDDM (Windows Display Driver Model)");
 #endif
-			prinntf("\n****************************************************************************************\n");
+			printf("\n****************************************************************************************\n");
 		}
 	}
 }

@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <math.h>		// fabs()
 
-// OpeenCL Headers
+// OpeenCL Header
 #include <CL/opencl.h>	
 
 #include "helper_timer.h"
@@ -19,7 +19,7 @@ cl_device_id oclDeviceID;
 cl_context oclContext;
 cl_command_queue oclCommandQueue;
 
-cl_program oclProgran;
+cl_program oclProgram;
 cl_kernel oclKernel;
 
 int* hostA = NULL;
@@ -27,33 +27,33 @@ int* hostB = NULL;
 int* hostC = NULL;
 int* gold = NULL;
 
-cl_mem deviceInput1 = NULL;
-cl_mem deviceInput2 = NULL;
-cl_mem deviceOutput = NULL;
+cl_mem deviceA = NULL;
+cl_mem deviceB = NULL;
+cl_mem deviceC = NULL;
 
 float timeOnCPU = 0.0f;
 float timeOnGPU = 0.0f;
 
 // OpenCL Kernel
 const char* oclSourceCode =
-"__kernel void matMulGPU(__global int *A, __global int *B, __global int *C, int numARows, int numAColumns, int numBColumns, int numCColumns)" /
-"{" /
+"__kernel void matMulGPU(__global int *A, __global int *B, __global int *C, int numARows, int numAColumns, int numBColumns, int numCColumns)" \
+"{" \
 // Variable Declarations
-"int row = get_global_id(0);" /
-"nt column = get_global_id(1);" /
+"int row = get_global_id(0);" \
+"nt column = get_global_id(1);" \
 
 // Code
-"if ((row < numARows) && (column < numBColumns))" /
-"{" /
-"int value = 0;" /
-"for (int k = 0; k < numAColumns; k++)" /
-"{" /
-"int a = A[row * numAColumns + k];" /
-"int b = B[k * numBColumns + column];" /
-"value += a * b;" /
-"}" /
-"C[row * numCColumns + column] = value;" /
-"}" /
+"if ((row < numARows) && (column < numBColumns))" \
+"{" \
+"int value = 0;" \
+"for (int k = 0; k < numAColumns; k++)" \
+"{" \
+"int a = A[row * numAColumns + k];" \
+"int b = B[k * numBColumns + column];" \
+"value += a * b;" \
+"}" \
+"C[row * numCColumns + column] = value;" \
+"}" \
 "}";
 
 // Entry-Point Function
@@ -290,7 +290,7 @@ int main(int argc, char *argv[])
 	}
 
 	// Write Above 'input' Device buffer To Device Memory
-	result = clEnqueueWriteBuffer(oclCommandQueue, deviceA, CL_FALSE, 0, size, hostA, 0, NULL, NULL);
+	result = clEnqueueWriteBuffer(oclCommandQueue, deviceA, CL_FALSE, 0, sizeA, hostA, 0, NULL, NULL);
 	if (result != CL_SUCCESS)
 	{
 		printf("clEnqueueWriteBuffer() Failed For 1st Input Device buffer : %d \n", result);
@@ -298,7 +298,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	result = clEnqueueWriteBuffer(oclCommandQueue, deviceB, CL_FALSE, 0, size, hostB, 0, NULL, NULL);
+	result = clEnqueueWriteBuffer(oclCommandQueue, deviceB, CL_FALSE, 0, sizeB, hostB, 0, NULL, NULL);
 	if (result != CL_SUCCESS)
 	{
 		printf("clEnqueueWriteBuffer() Failed For 2nd Input Device buffer : %d \n", result);
@@ -310,7 +310,7 @@ int main(int argc, char *argv[])
 	size_t globalWorkSize[2];
 	globalWorkSize[0] = BLOCK_WIDTH;
 	globalWorkSize[1] = BLOCK_WIDTH;
-	globalWorkSize = roundGlobalSizeToNearestMultipleOfLocalSize(localWorkSize, iNumberOfArrayElements);
+	//globalWorkSize = roundGlobalSizeToNearestMultipleOfLocalSize(localWorkSize, iNumberOfArrayElements);
 
 	// Start Timer
 	StopWatchInterface* timer = NULL;
@@ -415,7 +415,7 @@ void matMulCPU(int* A, int* B, int* C, int numARows, int numAColumns, int numBCo
 	// Code
 	StopWatchInterface* timer = NULL;
 	sdkCreateTimer(&timer);
-	sdkstartTimer(&timer);
+	sdkStartTimer(&timer);
 
 	for (int i = 0; i < numARows; i++)
 	{

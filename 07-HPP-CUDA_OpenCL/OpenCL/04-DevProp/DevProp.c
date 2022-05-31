@@ -1,5 +1,6 @@
 // Header Files
 #include <stdio.h>
+#include <stdlib.h>
 
 // OpeenCL Headers
 #include <CL/opencl.h>	
@@ -29,16 +30,16 @@ void PrintOpenCLDeviceProperties(void)
 	char oclPlatformInfo[512];
 
 	// Get First Platform ID
-	result = clGetPlatformIDs(1, &oclPlatformID, NULL);
+	result = clGetPlatformIDs(1, &ocl_platform_id, NULL);
 	if (result != CL_SUCCESS)
 	{
-		printf("clGetPlatformIDs() Failed.\n",);
+		printf("clGetPlatformIDs() Failed.\n");
 		exit(EXIT_FAILURE);
 	}
 
 	// Get GPU Device Count
 	result = clGetDeviceIDs(ocl_platform_id, CL_DEVICE_TYPE_GPU, 0, NULL, &dev_count);
-	if (result != CL - SUCCESS)
+	if (result != CL_SUCCESS)
 	{
 		printf("clGetDeviceIDs() Failed.\n");
 		exit(EXIT_FAILURE);
@@ -78,16 +79,16 @@ void PrintOpenCLDeviceProperties(void)
 			printf("GPU Device Number				: %d\n", i);
 			
 			clGetDeviceInfo(ocl_device_ids[i], CL_DEVICE_NAME, sizeof(ocl_dev_prop), &ocl_dev_prop, NULL);
-			printf("GPU Device Name					: %s\n", ocl_device_prop);
+			printf("GPU Device Name					: %s\n", ocl_dev_prop);
 
-			clGetDeviceInfo(ocl_device_ids[i], CL_DEVICE_VERDOR, sizeof(ocl_dev_prop), &ocl_dev_prop, NULL);
-			printf("GPU Device Vendor					: %s\n", ocl_device_prop);
+			clGetDeviceInfo(ocl_device_ids[i], CL_DEVICE_VENDOR, sizeof(ocl_dev_prop), &ocl_dev_prop, NULL);
+			printf("GPU Device Vendor					: %s\n", ocl_dev_prop);
 
 			clGetDeviceInfo(ocl_device_ids[i], CL_DRIVER_VERSION, sizeof(ocl_dev_prop), &ocl_dev_prop, NULL);
-			printf("GPU Device Driver Version			: %s\n", ocl_device_prop);
+			printf("GPU Device Driver Version			: %s\n", ocl_dev_prop);
 
 			clGetDeviceInfo(ocl_device_ids[i], CL_DEVICE_VERSION, sizeof(ocl_dev_prop), &ocl_dev_prop, NULL);
-			printf("GPU Device OpenCl Version			: %s\n", ocl_device_prop);
+			printf("GPU Device OpenCl Version			: %s\n", ocl_dev_prop);
 
 			cl_uint clock_frequency;
 			clGetDeviceInfo(ocl_device_ids[i], CL_DEVICE_MAX_CLOCK_FREQUENCY, sizeof(clock_frequency), &clock_frequency, NULL);

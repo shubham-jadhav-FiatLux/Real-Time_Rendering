@@ -258,7 +258,7 @@ void matMulCPU(int* A, int* B, int* C, int numARows, int numAColumns, int numBCo
 	// Code
 	StopWatchInterface* timer = NULL;
 	sdkCreateTimer(&timer);
-	sdkstartTimer(&timer);
+	sdkStartTimer(&timer);
 
 	for (int i = 0; i < numARows; i++)
 	{

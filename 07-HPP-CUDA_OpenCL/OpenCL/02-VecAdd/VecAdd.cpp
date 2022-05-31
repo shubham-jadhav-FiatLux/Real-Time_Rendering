@@ -18,7 +18,7 @@ cl_device_id oclDeviceID;
 cl_context oclContext;
 cl_command_queue oclCommandQueue;
 
-cl_program oclProgran;
+cl_program oclProgram;
 cl_kernel oclKernel;
 
 float* hostInput1 = NULL;
@@ -51,7 +51,7 @@ int main(void)
 {
 	// Function Declarations
 	void fillFloatArrayWithRandomNumbers(float*, int);
-	size_t = roundGlobalSizeToNearestMultipleOfLocalSize(int, unsigned int);
+	size_t roundGlobalSizeToNearestMultipleOfLocalSize(int, unsigned int);
 	void vecAddCPU(const float*, const float*, float*, int);
 	void cleanup(void);
 
@@ -95,7 +95,7 @@ int main(void)
 
 	// Filling Values Into Host Arrays
 	fillFloatArrayWithRandomNumbers(hostInput1, iNumberOfArrayElements);
-	fillFloatArrayWithRandomNumbers(hostInput2, iNumberOfArrayelements);
+	fillFloatArrayWithRandomNumbers(hostInput2, iNumberOfArrayElements);
 
 	// Get OpenCL Supporting Platform's ID
 	result = clGetPlatformIDs(1, &oclPlatformID, NULL);
@@ -254,7 +254,7 @@ int main(void)
 	sdkCreateTimer(&timer);
 	sdkStartTimer(&timer);
 
-	result = clEnqueueNDRangeKernel(oclCommandQueue, oclKernel, 1, NULL, &global_size, NULL, 0, NULL, NULL);
+	result = clEnqueueNDRangeKernel(oclCommandQueue, oclKernel, 1, NULL, &globalWorkSize, &localWorkSize, 0, NULL, NULL);
 	if (result != CL_SUCCESS)
 	{
 		printf("clEnqueueNDRangeKernel() Failed : %d \n", result);
@@ -310,7 +310,7 @@ int main(void)
 
 	printf("Array2 begins from 0th index %.6f to %dth index %.6f \n", hostInput2[0], iNumberOfArrayElements - 1, hostInput2[iNumberOfArrayElements - 1]);
 
-	printf("CUDA kernel Grid dimension = %d, %d, %d and Block dimension = %d, %d, %d \n", dimGrid.x, dimGrid.y, dimGrid.z, dimBlock.x, dimBlock.y, dimBlock.z);
+	printf("OpenCL kernel Global Work Size = %lu and Local Work size = %lu\n", globalWorkSize, localWorkSize);
 
 	printf("Output Array begins from 0th index %.6f to %dth index %.6f \n", hostOutput[0], iNumberOfArrayElements - 1, hostOutput[iNumberOfArrayElements - 1]);
 
@@ -339,7 +339,7 @@ void vecAddCPU(const float* arr1, const float* arr2, float* out, int len)
 	// Code
 	StopWatchInterface* timer = NULL;
 	sdkCreateTimer(&timer);
-	sdkstartTimer(&timer);
+	sdkStartTimer(&timer);
 
 	for (int i = 0; i < len; i++)
 	{
@@ -352,7 +352,7 @@ void vecAddCPU(const float* arr1, const float* arr2, float* out, int len)
 	timer = NULL;
 }
 
-size_t roundFGlobalSizeToNearestMultipleOfLocalSize(int local_size, unsigned int global_size)
+size_t roundGlobalSizeToNearestMultipleOfLocalSize(int local_size, unsigned int global_size)
 {
 	// Code
 	unsigned int r = global_size % local_size;

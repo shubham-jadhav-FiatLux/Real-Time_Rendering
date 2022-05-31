@@ -81,7 +81,7 @@ int main(void)
 
 	// Filling Values Into Host Arrays
 	fillFloatArrayWithRandomNumbers(hostInput1, iNumberOfArrayElements);
-	fillFloatArrayWithRandomNumbers(hostInput2, iNumberOfArrayelements);
+	fillFloatArrayWithRandomNumbers(hostInput2, iNumberOfArrayElements);
 
 	// Device Memory Allocation
 	result = cudaMalloc((void**)&deviceInput1, size);
@@ -209,7 +209,7 @@ void vecAddCPU(const float* arr1, const float* arr2, float* out, int len)
 	// Code
 	StopWatchInterface* timer = NULL;
 	sdkCreateTimer(&timer);
-	sdkstartTimer(&timer);
+	sdkStartTimer(&timer);
 
 	for (int i = 0; i < len; i++)
 	{
