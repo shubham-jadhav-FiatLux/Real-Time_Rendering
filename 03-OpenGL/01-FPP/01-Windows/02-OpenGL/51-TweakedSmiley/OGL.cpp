@@ -347,7 +347,7 @@ int initialize(void)
 		return -5;
 	
 	// Enabling The Texture
-	glEnable(GL_TEXTURE_2D);
+	//glEnable(GL_TEXTURE_2D);
 
 	// Warmup resize() Call
 	resize(WIN_WIDTH, WIN_HEIGHT);
