@@ -24,6 +24,9 @@ HWND ghwnd = NULL;
 HDC ghdc = NULL;
 HGLRC ghrc = NULL;
 static BOOL gbFullscreen = FALSE;
+static char ch;
+GLsizei gCurrentWindowWidth = WIN_WIDTH;
+GLsizei gCurrentWindowHeight = WIN_HEIGHT;
 
 // Entry-Point Function
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLine, int iCmdShow)
@@ -155,12 +158,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 	// Function Declarations
 	void ToggleFullscreen(void);
 	void resize(int, int);
-
-	// Local Variable Declarations
-	//WindowX = GetSystemMetrics(SM_CXSCREEN);
-	//WindowY = GetSystemMetrics(SM_CYSCREEN);
-	static char ch;
-
+	
 	// Code
 	switch (iMsg)
 	{
@@ -180,42 +178,50 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 		{
 		case '1':
 			ch = '1';
+			//glViewport(0, 0, LOWORD(lParam) / 2, HIWORD(lParam) / 2);
+			glViewport(0, 0, gCurrentWindowWidth / 2, gCurrentWindowHeight / 2);
 			break;
 
 		case '2':
 			ch = '2';
+			glViewport(gCurrentWindowWidth / 2, 0, gCurrentWindowWidth / 2, gCurrentWindowHeight / 2);
 			break;
 
 		case '3':
 			ch = '3';
+			glViewport(gCurrentWindowWidth / 2, gCurrentWindowHeight / 2, gCurrentWindowWidth / 2, gCurrentWindowHeight / 2);
 			break;
 
 		case '4':
 			ch = '4';
+			glViewport(0, gCurrentWindowHeight / 2, gCurrentWindowWidth / 2, gCurrentWindowHeight / 2);
 			break;
 
 		case '5':
 			ch = '5';
+			glViewport(0, 0, gCurrentWindowWidth, gCurrentWindowHeight / 2);
 			break;
 
 		case '6':
 			ch = '6';
+			glViewport(0, gCurrentWindowHeight / 2, gCurrentWindowWidth, gCurrentWindowHeight / 2);
 			break;
 
 		case '7':
 			ch = '7';
+			glViewport(0, 0, gCurrentWindowWidth / 2, gCurrentWindowHeight);
 			break;
 
 		case '8':
-			glViewport(GetSystemMetrics(SM_CXSCREEN) / 2, 0, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN));
+			glViewport(gCurrentWindowWidth / 2, 0, gCurrentWindowWidth / 2, gCurrentWindowHeight);
 			break;
 
 		case '9':
-			glViewport(GetSystemMetrics(SM_CXSCREEN) / 4, GetSystemMetrics(SM_CYSCREEN) / 4, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2);
+			glViewport(gCurrentWindowWidth / 4, gCurrentWindowHeight / 4, gCurrentWindowWidth / 2, gCurrentWindowHeight / 2);
 			break;
 
 		case '0':
-			glViewport(0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN));
+			glViewport(0, 0, gCurrentWindowWidth, gCurrentWindowHeight);
 			break;
 
 		case 'F':
@@ -242,50 +248,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 
 	case WM_SIZE:
 		resize(LOWORD(lParam), HIWORD(lParam));
-
-		switch (ch)
-		{
-		case '1':
-			//glViewport(0, 0, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2);
-			glViewport(0, 0, LOWORD(lParam) / 2, HIWORD(lParam) / 2);
-			break;
-
-		case '2':
-			glViewport(GetSystemMetrics(SM_CXSCREEN) / 2, 0, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2);
-			break;
-
-		case '3':
-			glViewport(GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2);
-			break;
-
-		case '4':
-			glViewport(0, GetSystemMetrics(SM_CYSCREEN) / 2, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2);
-			break;
-
-		case '5':
-			glViewport(0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN) / 2);
-			break;
-
-		case '6':
-			glViewport(0, GetSystemMetrics(SM_CYSCREEN) / 2, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN) / 2);
-			break;
-
-		case '7':
-			glViewport(0, 0, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN));
-			break;
-
-		case '8':
-			glViewport(GetSystemMetrics(SM_CXSCREEN) / 2, 0, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN));
-			break;
-
-		case '9':
-			glViewport(GetSystemMetrics(SM_CXSCREEN) / 4, GetSystemMetrics(SM_CYSCREEN) / 4, GetSystemMetrics(SM_CXSCREEN) / 2, GetSystemMetrics(SM_CYSCREEN) / 2);
-			break;
-
-		case '0':
-			glViewport(0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN));
-			break;
-		}
+		gCurrentWindowWidth = LOWORD(lParam);
+		gCurrentWindowHeight = HIWORD(lParam);
 		break;
 
 	case WM_CLOSE:
@@ -387,7 +351,7 @@ int initialize(void)
 		return -4;
 
 	// Here Starts OpenGL Code
-	// Clear The Screen Using Black Color
+	// Clear The Screen Using Blue Color
 	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 
 	// Warmup resize() Call

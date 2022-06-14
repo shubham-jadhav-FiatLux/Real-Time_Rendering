@@ -1,0 +1,3 @@
+#define MYICON 101
+
+#define IDBITMAP_TEAPOT 102

@@ -40,7 +40,7 @@ const char* oclSourceCode =
 "{" \
 // Variable Declarations
 "int row = get_global_id(0);" \
-"nt column = get_global_id(1);" \
+"int column = get_global_id(1);" \
 
 // Code
 "if ((row < numARows) && (column < numBColumns))" \

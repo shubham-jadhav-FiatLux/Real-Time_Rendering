@@ -314,6 +314,7 @@ int initialize(void)
 	if (wglMakeCurrent(ghdc, ghrc) == FALSE)
 		return -4;
 
+
 	// Here Starts OpenGL Code
 	// Clear The Screen Using Black Color
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -466,7 +467,6 @@ void display(void)
 	glVertex3f(1.0f, 1.0f, 1.0f);
 
 	// Bottom Face
-
 	glTexCoord2f(1.0f, 1.0f);
 	glVertex3f(1.0f, -1.0f, -1.0f);
 	glTexCoord2f(0.0f, 1.0f);
@@ -522,7 +522,7 @@ BOOL LoadGLTexture(GLuint* Texture, TCHAR ImageResourceID[])
 		glGenTextures(1, Texture);
 
 		// Bind That Texture Object
-		glBindTexture(GL_TEXTURE_2D, * Texture);
+		glBindTexture(GL_TEXTURE_2D, *Texture);
 
 		// Set Texture Parameters
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);

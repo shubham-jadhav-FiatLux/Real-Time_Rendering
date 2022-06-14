@@ -297,7 +297,7 @@ int initialize(void)
 		return -4;
 
 	// Here Starts OpenGL Code
-	// Clear The Screen Using Black Color
+	// Clear The Screen Using Blue Color
 	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 
 	// Warmup resize() Call
@@ -331,10 +331,10 @@ void display(void)
 
 	glBegin(GL_QUADS);
 	
-	glVertex3f(1.0f, 1.0f, 0.0f);
-	glVertex3f(-1.0f, 1.0f, 0.0f);
-	glVertex3f(-1.0f, -1.0f, 0.0f);
-	glVertex3f(1.0f, -1.0f, 0.0f);
+		glVertex3f(1.0f, 1.0f, 0.0f);
+		glVertex3f(-1.0f, 1.0f, 0.0f);
+		glVertex3f(-1.0f, -1.0f, 0.0f);
+		glVertex3f(1.0f, -1.0f, 0.0f);
 
 	glEnd();
 

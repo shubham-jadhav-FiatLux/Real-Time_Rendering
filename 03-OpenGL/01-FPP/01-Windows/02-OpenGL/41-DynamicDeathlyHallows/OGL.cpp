@@ -379,6 +379,7 @@ void display(void)
 		glTranslatef(0.0f, yl, 0.0f);
 		DrawLine();
 	}
+	
 	SwapBuffers(ghdc);
 }
 
