@@ -353,7 +353,13 @@ void display(void)
 	glLoadIdentity();
 
 	glTranslatef(0.0f, 0.0f, -2.0f);
-	SquareOne(-0.85f, 0.8f, side);
+	//SquareOne(-gCurrentWidth/6, gCurrentHeight/2, gCurrentWidth/3 - 0.25f);
+	glPointSize(2.0f);
+	glBegin(GL_POINTS);
+	glColor3f(1.0f, 0.0f, 0.0f);
+		glVertex3f(gCurrentWidth/3, gCurrentHeight/3, 0.0f);
+	glVertex3f(0.0f, 0.0f, 0.0f);
+	glEnd();
 	/*SquareTwo(-0.25f, 0.8f, side);
 	SquareThree(0.35f, 0.8f, side);
 	SquareFour(-0.85f, -0.3f, side);
