@@ -258,6 +258,7 @@ void ToggleFullscreen(void)
 int initialize(void)
 {
 	// Function Declarations
+	void resize(int, int);
 	void printGLInfo(void);
 
 	// Variable Declarations
@@ -317,6 +318,9 @@ int initialize(void)
 
 	// Clear The Screen Using Blue Color
 	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+
+	// Warmup resize() Call
+	resize(WIN_WIDTH, WIN_HEIGHT);
 
 	return 0;
 }

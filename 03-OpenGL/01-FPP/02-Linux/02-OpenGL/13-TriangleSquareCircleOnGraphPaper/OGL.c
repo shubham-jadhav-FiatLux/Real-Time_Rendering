@@ -230,6 +230,14 @@ int main(void)
 						else
 							gbToggleTriangle = False;
 						break;
+
+					case 'G':
+					case 'g':
+						if (gbDoubleClick == False)
+							gbDoubleClick = True;
+						else
+							gbDoubleClick = False;
+						break;
 				}
 				break;
 				

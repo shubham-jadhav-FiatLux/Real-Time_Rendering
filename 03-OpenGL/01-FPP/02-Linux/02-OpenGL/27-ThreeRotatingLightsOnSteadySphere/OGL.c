@@ -382,8 +382,10 @@ void draw(void)
 	glLoadIdentity();
 	//glTranslatef(0.0f, 0.0f, 0.55f);
 	// Rotating 0th Light
-	glRotatef(LightAngleZero, 1.0f, 0.0f, 0.0f);
-	LightPositionZero[2] = LightAngleZero;
+	//glRotatef(LightAngleZero, 1.0f, 0.0f, 0.0f);
+	//LightPositionZero[2] = LightAngleZero;
+	LightPositionZero[1] = 0.0f + 8.0f * cos(LightAngleZero * M_PI / 180.0f);
+	LightPositionZero[2] = 0.0f + 8.0f * sin(LightAngleZero * M_PI / 180.0f);
 	glLightfv(GL_LIGHT0, GL_POSITION, LightPositionZero);
 
 
@@ -391,8 +393,10 @@ void draw(void)
 	glLoadIdentity();
 	//glTranslatef(0.0f, 0.0f, 0.55f);
 	// Rotating 1st Light
-	glRotatef(LightAngleOne, 0.0f, 1.0f, 0.0f);
-	LightPositionOne[0] = LightAngleOne;
+	//glRotatef(LightAngleOne, 0.0f, 1.0f, 0.0f);
+	//LightPositionOne[0] = LightAngleOne;
+	LightPositionOne[0] = 0.0f + 8.0f * cos(LightAngleOne * M_PI / 180.0f);
+	LightPositionOne[2] = 0.0f + 8.0f * sin(-LightAngleOne * M_PI / 180.0f);
 	glLightfv(GL_LIGHT1, GL_POSITION, LightPositionOne);
 
 
@@ -400,8 +404,10 @@ void draw(void)
 	glLoadIdentity();
 	//glTranslatef(0.0f, 0.0f, 0.55f);
 	// Rotating 2nd Light
-	glRotatef(LightAngleTwo, 0.0f, 0.0f, 1.0f);
-	LightPositionTwo[1] = LightAngleTwo;
+	//glRotatef(LightAngleTwo, 0.0f, 0.0f, 1.0f);
+	//LightPositionTwo[1] = LightAngleTwo;
+	LightPositionTwo[0] = 0.0f + 8.0f * cos(LightAngleTwo * M_PI / 180.0f);
+	LightPositionTwo[1] = 0.0f + 8.0f * sin(LightAngleTwo * M_PI / 180.0f);
 	glLightfv(GL_LIGHT2, GL_POSITION, LightPositionTwo);
 
 

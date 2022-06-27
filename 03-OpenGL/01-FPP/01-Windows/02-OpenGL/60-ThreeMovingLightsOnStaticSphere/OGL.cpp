@@ -7,6 +7,9 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 
+#define _USE_MATH_DEFINES 1
+#include <math.h>
+
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
 
@@ -255,7 +258,6 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 	return(DefWindowProc(hwnd, iMsg, wParam, lParam));
 }
 
-
 void ToggleFullscreen(void)
 {
 	// Variable Declarations
@@ -408,8 +410,10 @@ void display(void)
 	glLoadIdentity();
 	//glTranslatef(0.0f, 0.0f, 0.55f);
 	// Rotating 0th Light
-	glRotatef(LightAngleZero, 1.0f, 0.0f, 0.0f);
-	LightPositionZero[2] = LightAngleZero;
+	//glRotatef(LightAngleZero, 1.0f, 0.0f, 0.0f);
+	//LightPositionZero[2] = LightAngleZero;
+	LightPositionZero[1] = 0.0f + 8.0f * cos(LightAngleZero * M_PI / 180.0f);
+	LightPositionZero[2] = 0.0f + 8.0f * sin(LightAngleZero * M_PI / 180.0f);
 	glLightfv(GL_LIGHT0, GL_POSITION, LightPositionZero);
 
 
@@ -417,8 +421,10 @@ void display(void)
 	glLoadIdentity();
 	//glTranslatef(0.0f, 0.0f, 0.55f);
 	// Rotating 1st Light
-	glRotatef(LightAngleOne, 0.0f, 1.0f, 0.0f);
-	LightPositionOne[0] = LightAngleOne;
+	//glRotatef(LightAngleOne, 0.0f, 1.0f, 0.0f);
+	//LightPositionOne[0] = LightAngleOne;
+	LightPositionOne[0] = 0.0f + 8.0f * cos(LightAngleOne * M_PI / 180.0f);
+	LightPositionOne[2] = 0.0f + 8.0f * sin(-LightAngleOne * M_PI / 180.0f);
 	glLightfv(GL_LIGHT1, GL_POSITION, LightPositionOne);
 
 
@@ -426,8 +432,10 @@ void display(void)
 	glLoadIdentity();
 	//glTranslatef(0.0f, 0.0f, 0.55f);
 	// Rotating 2nd Light
-	glRotatef(LightAngleTwo, 0.0f, 0.0f, 1.0f);
-	LightPositionTwo[1] = LightAngleTwo;
+	//glRotatef(LightAngleTwo, 0.0f, 0.0f, 1.0f);
+	//LightPositionTwo[1] = LightAngleTwo;
+	LightPositionTwo[0] = 0.0f + 8.0f * cos(LightAngleTwo * M_PI / 180.0f);
+	LightPositionTwo[1] = 0.0f + 8.0f * sin(LightAngleTwo * M_PI / 180.0f);
 	glLightfv(GL_LIGHT2, GL_POSITION, LightPositionTwo);
 
 
@@ -445,15 +453,17 @@ void display(void)
 void update(void)
 {
 	// Code
-	LightAngleZero = LightAngleZero + 1.0f;
+	LightAngleZero = LightAngleZero + 0.1f;
 	if (LightAngleZero >= 360.0f)
 		LightAngleZero = 360.0f - LightAngleZero;
+	
 
-	LightAngleOne = LightAngleOne + 1.0f;
+	LightAngleOne = LightAngleOne + 0.1f;
 	if (LightAngleOne >= 360.0f)
 		LightAngleOne = 360.0f - LightAngleOne;
+	
 
-	LightAngleTwo = LightAngleTwo + 1.0f;
+	LightAngleTwo = LightAngleTwo + 0.1f;
 	if (LightAngleTwo >= 360.0f)
 		LightAngleTwo = 360.0f - LightAngleTwo;
 	
