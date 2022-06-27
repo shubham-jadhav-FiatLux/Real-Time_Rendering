@@ -26,7 +26,6 @@ HGLRC ghrc = NULL;
 static BOOL gbFullscreen = FALSE;
 
 GLUquadric* quadric = NULL;
-
 BOOL gbLight = FALSE;
 
 GLfloat LightAmbientZero[] = { 0.0f, 0.0f, 0.0f, 1.0f };
