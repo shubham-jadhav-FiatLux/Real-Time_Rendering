@@ -3,6 +3,9 @@
 #include "OGL.h"
 #include <stdio.h>
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 // OpenGL Header Files
 #include <GL/gl.h>
 #include <GL/glu.h>
@@ -41,6 +44,8 @@ GLfloat AngleForYRotation = 0.0f;
 GLfloat AngleForZRotation = 0.0f;
 
 GLint KeyPressed = 0;
+GLfloat currentWidth = WIN_WIDTH;
+GLfloat currentHeight = WIN_HEIGHT;
 
 // Entry-Point Function
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLine, int iCmdShow)
@@ -247,6 +252,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 
 	case WM_SIZE:
 		resize(LOWORD(lParam), HIWORD(lParam));
+		currentWidth = LOWORD(lParam);
+		currentHeight = HIWORD(lParam);
 		break;
 
 	case WM_CLOSE:
@@ -263,7 +270,6 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 
 	return(DefWindowProc(hwnd, iMsg, wParam, lParam));
 }
-
 
 void ToggleFullscreen(void)
 {
@@ -350,7 +356,7 @@ int initialize(void)
 
 	// Here Starts OpenGL Code
 	// Clear The Screen Using Gray Color
-	glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+	glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
 
 	// Depth Related Changes
 	glClearDepth(1.0f);
@@ -393,24 +399,7 @@ void resize(int width, int height)
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 
-	if (width <= height)
-	{
-		glOrtho(0.0f,
-			15.0f,
-			(0.0f * ((GLfloat)height / (GLfloat)width)),
-			(15.0f * ((GLfloat)height / (GLfloat)width)),
-			-10.0f,
-			10.0f);
-	}
-	else
-	{
-		glOrtho((0.0f * ((GLfloat)width / (GLfloat)height)),
-			(15.0f * ((GLfloat)width / (GLfloat)height)),
-			0.0f,
-			15.0f,
-			-10.0f,
-			10.0f);
-	}
+	gluPerspective(45.0f, (GLfloat)width / (GLfloat)height, 0.1f, 50.0f);
 }
 
 void display(void)
@@ -425,18 +414,21 @@ void display(void)
 
 	if (KeyPressed == 1)								// X Rotation
 	{
-		glRotatef(AngleForXRotation, 1.0f, 0.0f, 0.0f);
-		LightPosition[2] = AngleForXRotation;
+		//glRotatef(AngleForXRotation, 1.0f, 0.0f, 0.0f);
+		LightPosition[1] = 4.0f * cos(AngleForXRotation * M_PI / 180.0f);
+		LightPosition[2] =-12.0f + 4.0f * sin(AngleForXRotation * M_PI / 180.0f);
 	}
 	else if (KeyPressed == 2)							// Y Rotation
 	{
-		glRotatef(AngleForYRotation, 0.0f, 1.0f, 0.0f);
-		LightPosition[0] = AngleForYRotation;
+		//glRotatef(AngleForYRotation, 0.0f, 1.0f, 0.0f);
+		LightPosition[0] = 4.0f * cos(AngleForYRotation * M_PI / 180.0f);
+		LightPosition[2] = -12.0f + 4.0f * sin(-AngleForYRotation * M_PI / 180.0f);
 	}
 	else if (KeyPressed == 3)							// Z Rotation
 	{
-		glRotatef(AngleForZRotation, 0.0f, 0.0f, 1.0f);
-		LightPosition[1] = AngleForZRotation;
+		//glRotatef(AngleForZRotation, 0.0f, 0.0f, 1.0f);
+		LightPosition[0] = 4.0f * cos(AngleForZRotation * M_PI / 180.0f);
+		LightPosition[1] = 4.0f * sin(AngleForZRotation * M_PI / 180.0f);
 	}
 	else
 	{
@@ -446,6 +438,8 @@ void display(void)
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+
+	glTranslatef(0.0f, 0.0f, -12.0f);
 
 	Draw24Spheres();
 
@@ -457,21 +451,21 @@ void update(void)
 	// Code
 	if (KeyPressed == 1)
 	{
-		AngleForXRotation += 1.0f;
-		if (AngleForXRotation >= 360.0f)
-			AngleForXRotation -= 360.0f;
+		AngleForXRotation += 1.5f;
+		if (AngleForXRotation >= 180.0f) {}
+			//AngleForXRotation -= 180.0f;
 	}
 	else if (KeyPressed == 2)
 	{
-		AngleForYRotation += 1.0f;
-		if (AngleForYRotation >= 360.0f)
-			AngleForYRotation -= 360.0f;
+		AngleForYRotation += 1.5f;
+		if (AngleForYRotation >= 360.0f) {}
+			//AngleForYRotation -= 360.0f;
 	}
 	else if (KeyPressed == 3)
 	{
-		AngleForZRotation += 1.0f;
-		if (AngleForZRotation >= 360.0f)
-			AngleForZRotation -= 360.0f;
+		AngleForZRotation += 1.5f;
+		if (AngleForZRotation >= 360.0f) {}
+			//AngleForZRotation -= 360.0f;
 	}
 }
 
@@ -482,6 +476,9 @@ void Draw24Spheres(void)
 	GLfloat MaterialDiffuse[4];
 	GLfloat MaterialSpecular[4];
 	GLfloat MaterialShininess;
+
+	GLfloat viewportWidth = (GLsizei)currentWidth / 4;
+	GLfloat viewportHeight = (GLsizei)currentHeight / 6;
 
 	// Code
 	// ***** 1st sphere on 1st column, emerald *****
@@ -513,8 +510,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(1.5f, 14.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-6.0f, 3.5f, -12.0f);
+	//glViewport(0, 5 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 2nd sphere on 1st column, jade *****
@@ -546,8 +545,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(1.5f, 11.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-6.0f, 2.0f, -12.0f);
+	//glViewport(0, 4 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 3rd sphere on 1st column, obsidian *****
@@ -579,8 +580,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(1.5f, 9.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-6.0f, 0.5f, -12.0f);
+	//glViewport(0, 3 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 4th sphere on 1st column, pearl *****
@@ -612,8 +615,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(1.5f, 6.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-6.0f, -1.0f, -12.0f);
+	//glViewport(0, 2 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 5th sphere on 1st column, ruby *****
@@ -645,8 +650,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(1.5f, 4.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-6.0f, -2.5f, -12.0f);
+	//glViewport(0, 1 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 6th sphere on 1st column, turquoise *****
@@ -678,8 +685,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(1.5f, 1.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-6.0f, -4.0f, -12.0f);
+	//glViewport(0, 0 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 	// *******************************************************
 	// *******************************************************
@@ -713,8 +722,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(7.5f, 14.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-2.0f, 3.5f, -12.0f);
+	//glViewport(1 * viewportWidth, 5 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 2nd sphere on 2nd column, bronze *****
@@ -746,8 +757,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(7.5f, 11.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-2.0f, 2.0f, -12.0f);
+	//glViewport(1 * viewportWidth, 4 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 3rd sphere on 2nd column, chrome *****
@@ -779,8 +792,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(7.5f, 9.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-2.0f, 0.5f, -12.0f);
+	//glViewport(1 * viewportWidth, 3 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 4th sphere on 2nd column, copper *****
@@ -812,8 +827,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(7.5f, 6.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-2.0f, -1.0f, -12.0f);
+	//glViewport(1 * viewportWidth, 2 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 5th sphere on 2nd column, gold *****
@@ -845,8 +862,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(7.5f, 4.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-2.0f, -2.5f, -12.0f);
+	//glViewport(1 * viewportWidth, 1 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 6th sphere on 2nd column, silver *****
@@ -878,8 +897,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(7.5f, 1.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(-2.0f, -4.0f, -12.0f);
+	//glViewport(1 * viewportWidth, 0 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 	// *******************************************************
 	// *******************************************************
@@ -913,8 +934,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(13.5f, 14.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(2.0f, 3.5f, -12.0f);
+	//glViewport(2 * viewportWidth, 5 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 2nd sphere on 3rd column, cyan *****
@@ -946,8 +969,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(13.5f, 11.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(2.0f, 2.0f, -12.0f);
+	//glViewport(2 * viewportWidth, 4 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 3rd sphere on 2nd column, green *****
@@ -979,8 +1004,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(13.5f, 9.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(2.0f, 0.5f, -12.0f);
+	//glViewport(2 * viewportWidth, 3 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 4th sphere on 3rd column, red *****
@@ -1012,8 +1039,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(13.5f, 6.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(2.0f, -1.0f, -12.0f);
+	//glViewport(2 * viewportWidth, 2 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 5th sphere on 3rd column, white *****
@@ -1045,8 +1074,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(13.5f, 4.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(2.0f, -2.5f, -12.0f);
+	//glViewport(2 * viewportWidth, 1 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 6th sphere on 3rd column, yellow plastic *****
@@ -1078,8 +1109,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(13.5f, 1.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(2.0f, -4.0f, -12.0f);
+	//glViewport(2 * viewportWidth, 0 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 	// *******************************************************
 	// *******************************************************
@@ -1113,8 +1146,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(19.5f, 14.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(6.0f, 3.5f, -12.0f);
+	//glViewport(3 * viewportWidth, 5 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 2nd sphere on 4th column, cyan *****
@@ -1146,8 +1181,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(19.5f, 11.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(6.0f, 2.0f, -12.0f);
+	//glViewport(3 * viewportWidth, 4 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 3rd sphere on 4th column, green *****
@@ -1179,8 +1216,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(19.5f, 9.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(6.0f, 0.5f, -12.0f);
+	//glViewport(3 * viewportWidth, 3 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 4th sphere on 4th column, red *****
@@ -1212,8 +1251,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(19.5f, 6.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(6.0f, -1.0f, -12.0f);
+	//glViewport(3 * viewportWidth, 2 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 5th sphere on 4th column, white *****
@@ -1245,8 +1286,10 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(19.5f, 4.0f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(6.0f, -2.5f, -12.0f);
+	//glViewport(3 * viewportWidth, 1 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 
 	// ***** 6th sphere on 4th column, yellow rubber *****
@@ -1278,11 +1321,14 @@ void Draw24Spheres(void)
 	// geometry
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(19.5f, 1.5f, 0.0f);
-	gluSphere(quadric, 1.0f, 30, 30);
+	glTranslatef(6.0f, -4.0f, -12.0f);
+	//glViewport(3 * viewportWidth, 0 * viewportHeight, viewportWidth, viewportHeight);
+	//glTranslatef(0.0f, 0.0f, -4.0f);
+	gluSphere(quadric, 0.5f, 30, 30);
 	// *******************************************************
 	// *******************************************************
 	// *******************************************************
+	
 }
 
 void uninitialize(void)
