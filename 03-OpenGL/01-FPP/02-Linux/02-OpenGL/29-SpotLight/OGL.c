@@ -39,7 +39,7 @@ GLfloat LightAmbient[] = { 0.2f, 0.2f, 0.2f, 1.0f };
 GLfloat LightDiffuse[] = { 1.0f, 0.0f, 0.0f, 1.0f };			// Red
 GLfloat LightSpecular[] = { 1.0f, 0.0f, 0.0f, 1.0f };
 GLfloat LightPosition[] = { 0.0f, 0.0f, 6.0f, 1.0f };
-//GLfloat spot_direction[] = { 0.0f, 0.0f, -1.0f, 1.0f };
+GLfloat spot_direction[] = { 0.0f, 0.0f, -1.0f, 1.0f };
 
 GLfloat MaterialAmbient[] = {0.0f, 0.0f, 0.0f, 1.0f};
 GLfloat MaterialDiffuse[] = {1.0f, 1.0f, 1.0f, 1.0f};
@@ -315,7 +315,7 @@ int initialise(void)
 	glLightfv(GL_LIGHT0, GL_SPECULAR, LightSpecular);
 	glLightfv(GL_LIGHT0, GL_POSITION, LightPosition);
 	glLightf(GL_LIGHT0, GL_SPOT_CUTOFF, 6.0f);
-	//glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, spot_direction);
+	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, spot_direction);
 	glLightf(GL_LIGHT0, GL_SPOT_EXPONENT, 2.0f);
 	glEnable(GL_LIGHT0);
 
