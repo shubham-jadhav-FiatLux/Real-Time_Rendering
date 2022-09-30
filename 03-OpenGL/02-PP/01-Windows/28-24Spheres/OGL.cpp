@@ -499,7 +499,7 @@ int initialize(void)
 		"vec3 normalized_tranformed_normals = normalize(transformedNormals);" \
 		"vec3 normalized_lightDirection = normalize(lightDirection);" \
 		"vec3 diffuse = u_ld * u_kd * max(dot(normalized_lightDirection, normalized_tranformed_normals), 0.0);" \
-		"vec3 reflectionVector = reflect(-normalized_lightDirection, normalized_lightDirection);" \
+		"vec3 reflectionVector = reflect(-normalized_lightDirection, normalized_tranformed_normals);" \
 		"vec3 normalized_viewerVector = normalize(viewerVector);" \
 		"vec3 specular = u_ls * u_ks * pow(max(dot(reflectionVector, normalized_viewerVector), 0.0), u_materialShininess);" \
 		"phong_ads_light = ambient + diffuse + specular;" \
@@ -652,7 +652,7 @@ void resize(int width, int height)
 
 	glViewport(0, 0, (GLsizei)width, (GLsizei)height);
 
-	perspectiveProjectionMatrix = vmath::perspective(45.0f, (GLfloat)width / (GLfloat)height, 0.1f, 100.0f);
+	perspectiveProjectionMatrix = vmath::perspective(45.0f, ((GLfloat)width * 1.5f) / ((GLfloat)height), 0.1f, 200.0f);
 }
 
 void display(void)
