@@ -668,7 +668,7 @@ int initialize(void)
 		"ambient[i] = u_la[i] * u_ka;" \
 		"normalized_lightDirection[i] = normalize(lightDirection[i]);" \
 		"diffuse[i] = u_ld[i] * u_kd * max(dot(normalized_lightDirection[i], normalized_tranformedNormals), 0.0);" \
-		"reflectionVector[i] = reflect(-normalized_lightDirection[i], normalized_lightDirection[i]);" \
+		"reflectionVector[i] = reflect(-normalized_lightDirection[i], normalized_tranformedNormals);" \
 		"specular[i] = u_ls[i] * u_ks * pow(max(dot(reflectionVector[i], normalized_viewerVector), 0.0), u_materialShininess);" \
 		"phong_ads_light += ambient[i] + diffuse[i] + specular[i];" \
 		"}" \

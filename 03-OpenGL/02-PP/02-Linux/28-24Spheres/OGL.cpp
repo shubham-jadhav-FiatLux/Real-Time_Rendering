@@ -42,6 +42,8 @@ unsigned short sphere_elements[2280];
 unsigned int gNumVertices;
 unsigned int gNumElements;
 
+Bool bLight = False;
+
 // Programmable Pipeline Related Global Variables
 GLuint shaderProgramObject;
 
@@ -74,17 +76,18 @@ GLuint materialShininessUniform;
 
 GLuint lightingEnabledUniform;
 
-Bool bLight = False;
+GLint KeyPressed = 0;
+GLfloat AngleForXRotation = 0.0f;
+GLfloat AngleForYRotation = 0.0f;
+GLfloat AngleForZRotation = 0.0f;
+GLfloat currentWidth = WIN_WIDTH;
+GLfloat currentHeight = WIN_HEIGHT;
 
-GLfloat lightAmbient[] = { 0.1f, 0.1f, 0.1f, 1.0f };
-GLfloat lightDiffuse[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-GLfloat lightSpecular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-GLfloat lightPosition[] = { 100.0f, 100.0f, 100.0f, 1.0f };
 
-GLfloat materialAmbient[] = { 0.0f, 0.0f, 0.0f, 1.0f };
-GLfloat materialDiffuse[] = { 0.5f, 0.2f, 0.7f, 1.0f };
-GLfloat materialSpecular[] = { 0.7f, 0.7f, 0.7f, 1.0f };
-GLfloat materialShininess = 128.0f;
+GLfloat LightAmbient[] = { 0.0f, 0.0f, 0.0f, 1.0f };
+GLfloat LightDiffuse[] = { 1.0f, 1.0f, 1.0f, 1.0f };
+GLfloat LightSpecular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
+GLfloat LightPosition[] = { 0.0f, 0.0f, 2.0f, 1.0f };
 
 mat4 perspectiveProjectionMatrix;
 
@@ -96,6 +99,7 @@ int main(void)
 	int initialize(void);
 	void resize(int, int);
 	void draw(void);
+	void update(void);
 	void uninitialize(void);
 
 	// Local Variables
@@ -325,7 +329,32 @@ int main(void)
 					}
 					break;
 
+				case 'X':
+				case 'x':
+					KeyPressed = 1;
+					AngleForXRotation = 0.0f;		// Reset
+					AngleForYRotation = 0.0f;
+					AngleForZRotation = 0.0f;
+					break;
+
+				case 'Y':
+				case 'y':
+					KeyPressed = 2;
+					AngleForXRotation += 0.0f;
+					AngleForYRotation = 0.0f;
+					AngleForZRotation = 0.0f;
+					break;
+
+				case 'Z':
+				case 'z':
+					KeyPressed = 3;
+					AngleForXRotation += 0.0f;
+					AngleForYRotation = 0.0f;
+					AngleForZRotation = 0.0f;
+					break;
+
 				default:
+					KeyPressed = 0;
 					break;
 				}
 				break;
@@ -334,6 +363,8 @@ int main(void)
 				winWidth = event.xconfigure.width;
 				winHeight = event.xconfigure.height;
 				resize(winWidth, winHeight);
+				currentWidth = winWidth;
+				currentHeight = winHeight;
 				break;
 
 			case 33:
@@ -347,9 +378,9 @@ int main(void)
 		
 		if (bActiveWindow == True)
 		{
-			// Update
-		
 			draw();
+
+			update();
 		}
 	}
 	
@@ -453,37 +484,25 @@ int initialize(void)
 		"uniform mat4 u_modelMatrix;" \
 		"uniform mat4 u_viewMatrix;" \
 		"uniform mat4 u_projectionMatrix;" \
-		"uniform vec3 u_la;" \
-		"uniform vec3 u_ld;" \
-		"uniform vec3 u_ls;" \
 		"uniform vec4 u_lightPosition;" \
-		"uniform vec3 u_ka;" \
-		"uniform vec3 u_kd;" \
-		"uniform vec3 u_ks;" \
-		"uniform float u_materialShininess;" \
 		"uniform int u_lightingEnabled;" \
-		"out vec3 phong_ads_light;" \
+		"out vec3 transformedNormals;" \
+		"out vec3 lightDirection;" \
+		"out vec3 viewerVector;" \
 		"void main(void)" \
 		"{" \
 		"if (u_lightingEnabled == 1)" \
 		"{" \
-		"vec3 ambient = u_la * u_ka;" \
 		"vec4 eyeCoordinates = u_viewMatrix * u_modelMatrix * a_position;" \
 		"mat3 normalMatrix = mat3(u_viewMatrix * u_modelMatrix);" \
-		"vec3 transformedNormals = normalize(normalMatrix * a_normal);" \
-		"vec3 lightDirection = normalize(vec3(u_lightPosition) - eyeCoordinates.xyz);" \
-		"vec3 diffuse = u_ld * u_kd * max(dot(lightDirection, transformedNormals), 0.0);" \
-		"vec3 reflectionVector = reflect(-lightDirection, transformedNormals);" \
-		"vec3 viewerVector = normalize(-eyeCoordinates.xyz);" \
-		"vec3 specular = u_ls * u_ks * pow(max(dot(reflectionVector, viewerVector), 0.0), u_materialShininess);" \
-		"phong_ads_light = ambient + diffuse + specular;" \
-		"}" \
-		"else" \
-		"{" \
-		"phong_ads_light = vec3(1.0, 1.0, 1.0);" \
+		"transformedNormals = normalMatrix * a_normal;" \
+		"lightDirection = vec3(u_lightPosition) - eyeCoordinates.xyz;" \
+		"viewerVector = -eyeCoordinates.xyz;" \
 		"}" \
 		"gl_Position = u_projectionMatrix * u_viewMatrix * u_modelMatrix * a_position;" \
 		"}";
+
+	
 
 	// Creating Shader Object
 	GLuint vertexShaderObject = glCreateShader(GL_VERTEX_SHADER);
@@ -514,10 +533,36 @@ int initialize(void)
 	const GLchar* fragmentShaderSourceCode = 
 		"#version 460 core" \
 		"\n" \
-		"in vec3 phong_ads_light;" \
+		"in vec3 transformedNormals;" \
+		"in vec3 lightDirection;" \
+		"in vec3 viewerVector;" \
+		"uniform vec3 u_la;" \
+		"uniform vec3 u_ld;" \
+		"uniform vec3 u_ls;" \
+		"uniform vec3 u_ka;" \
+		"uniform vec3 u_kd;" \
+		"uniform vec3 u_ks;" \
+		"uniform float u_materialShininess;" \
+		"uniform int u_lightingEnabled;" \
 		"out vec4 FragColor;" \
 		"void main(void)" \
 		"{" \
+		"vec3 phong_ads_light;" \
+		"if (u_lightingEnabled == 1)" \
+		"{" \
+		"vec3 ambient = u_la * u_ka;" \
+		"vec3 normalized_tranformed_normals = normalize(transformedNormals);" \
+		"vec3 normalized_lightDirection = normalize(lightDirection);" \
+		"vec3 diffuse = u_ld * u_kd * max(dot(normalized_lightDirection, normalized_tranformed_normals), 0.0);" \
+		"vec3 reflectionVector = reflect(-normalized_lightDirection, normalized_tranformed_normals);" \
+		"vec3 normalized_viewerVector = normalize(viewerVector);" \
+		"vec3 specular = u_ls * u_ks * pow(max(dot(reflectionVector, normalized_viewerVector), 0.0), u_materialShininess);" \
+		"phong_ads_light = ambient + diffuse + specular;" \
+		"}" \
+		"else" \
+		"{" \
+		"phong_ads_light = vec3(1.0, 1.0, 1.0);" \
+		"}" \
 		"FragColor = vec4(phong_ads_light, 1.0);" \
 		"}";
 
@@ -624,7 +669,7 @@ int initialize(void)
 	//glShadeModel(),glHint() Deprecated In PP
 
 	// Here Starts OpenGL Code
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
 
 	perspectiveProjectionMatrix = mat4::identity();
 
@@ -661,11 +706,14 @@ void resize(int width, int height)
 		
 	glViewport(0, 0, (GLsizei)width, (GLsizei)height);
 
-	perspectiveProjectionMatrix = vmath::perspective(45.0f, (GLfloat)width / (GLfloat)height, 0.1f, 100.0f);
+	perspectiveProjectionMatrix = vmath::perspective(45.0f, ((GLfloat)width * 1.5f) / ((GLfloat)height), 0.1f, 100.0f);
 }
 
 void draw(void)
 {
+	// Function Declaration
+	void Draw24Spheres(void);
+
 	// Code
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -683,33 +731,25 @@ void draw(void)
 	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
 	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
 
+	
+
 	// Sending Light Related Uniforms
 	if (bLight == True)
 	{
 		glUniform1i(lightingEnabledUniform, 1);
 
-		glUniform3fv(laUniform, 1, lightAmbient);
-		glUniform3fv(ldUniform, 1, lightDiffuse);
-		glUniform3fv(lsUniform, 1, lightSpecular);
-		glUniform4fv(lightPositionUniform, 1, lightPosition);
-
-		glUniform3fv(kaUniform, 1, materialAmbient);
-		glUniform3fv(kdUniform, 1, materialDiffuse);
-		glUniform3fv(ksUniform, 1, materialSpecular);
-		glUniform1f(materialShininessUniform, materialShininess);
+		/*glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+		*/
 	}
 	else
 	{
 		glUniform1i(lightingEnabledUniform, 0);
 	}
 
-	glBindVertexArray(vao_Sphere);
-	
-	// Draw, either by 'glDrawTriangles()' or 'glDrawArrays()' or 'glDrawElements()'
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
-	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
-
-	glBindVertexArray(0);
+	Draw24Spheres();
 	
 	// Unuse The Shader Program Object
 	glUseProgram(0);
@@ -720,7 +760,1282 @@ void draw(void)
 void update(void)
 {
 	// Code
+	if (KeyPressed == 1)
+	{
+		AngleForXRotation += 2.0f;
+		AngleForYRotation = 0.0f;
+		AngleForZRotation = 0.0f;
+		//if (AngleForXRotation >= 360.0f)
+			//AngleForXRotation -= 360.0f;
+	}
+	else if (KeyPressed == 2)
+	{
 
+		AngleForYRotation += 2.0f;
+		AngleForXRotation += 2.0f;
+		AngleForZRotation = 0.0f;
+		//if (AngleForYRotation >= 360.0f)
+			//AngleForYRotation -= 360.0f;
+	}
+	else if (KeyPressed == 3)
+	{
+		AngleForZRotation += 2.0f;
+		AngleForXRotation += 2.0f;
+		AngleForYRotation = 0.0f;
+		//if (AngleForZRotation >= 360.0f)
+			//AngleForZRotation -= 360.0f;
+	}
+
+
+	if (KeyPressed == 1)								// X Rotation
+	{
+		LightPosition[1] = 10 * sin(AngleForXRotation * M_PI / 180.0f);
+		LightPosition[2] = 10 * cos(AngleForXRotation * M_PI / 180.0f);
+	}
+	else if (KeyPressed == 2)							// Y Rotation
+	{
+		LightPosition[0] = 10 * sin(AngleForYRotation * M_PI / 180.0f);
+		LightPosition[2] = 10 * cos(-AngleForYRotation * M_PI / 180.0f);
+	}
+	else if (KeyPressed == 3)							// Z Rotation
+	{
+		LightPosition[0] = 10 * -sin(AngleForZRotation * M_PI / 180.0f);
+		LightPosition[1] = 10 * cos(AngleForZRotation * M_PI / 180.0f);
+	}
+	else
+	{
+		LightPosition[0] = 0.0f;
+		LightPosition[1] = 0.0f;
+		LightPosition[2] = 0.0f;
+	}
+}
+
+void Draw24Spheres(void)
+{
+	// Variable Declarations
+	GLfloat MaterialAmbient[4];
+	GLfloat MaterialDiffuse[4];
+	GLfloat MaterialSpecular[4];
+	GLfloat MaterialShininess;
+
+	GLfloat viewportWidth = (GLsizei)currentWidth / 4;
+	GLfloat viewportHeight = (GLsizei)currentHeight / 6;
+
+	mat4 translationMatrix = mat4::identity();
+	mat4 modelMatrix = mat4::identity();
+	mat4 viewMatrix = mat4::identity();
+
+	GLfloat zVal = -2.0f;
+
+	// Code
+	// ***** 1st sphere on 1st column, emerald *****
+	// ambient material
+	MaterialAmbient[0] = 0.0215; // r
+	MaterialAmbient[1] = 0.1745; // g
+	MaterialAmbient[2] = 0.0215; // b
+	MaterialAmbient[3] = 1.0f;   // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.07568; // r
+	MaterialDiffuse[1] = 0.61424; // g
+	MaterialDiffuse[2] = 0.07568; // b
+	MaterialDiffuse[3] = 1.0f;    // a
+
+	// specular material
+	MaterialSpecular[0] = 0.633;    // r
+	MaterialSpecular[1] = 0.727811; // g
+	MaterialSpecular[2] = 0.633;    // b
+	MaterialSpecular[3] = 1.0f;     // a
+
+	// shininess
+	MaterialShininess = 0.6 * 128;
+
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(0, 5 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+	
+	// ***** 2nd sphere on 1st column, jade *****
+	// ambient material
+	MaterialAmbient[0] = 0.135;  // r
+	MaterialAmbient[1] = 0.2225; // g
+	MaterialAmbient[2] = 0.1575; // b
+	MaterialAmbient[3] = 1.0f;   // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.54; // r
+	MaterialDiffuse[1] = 0.89; // g
+	MaterialDiffuse[2] = 0.63; // b
+	MaterialDiffuse[3] = 1.0f; // a
+
+	// specular material
+	MaterialSpecular[0] = 0.316228; // r
+	MaterialSpecular[1] = 0.316228; // g
+	MaterialSpecular[2] = 0.316228; // b
+	MaterialSpecular[3] = 1.0f;     // a
+
+	// shininess
+	MaterialShininess = 0.1 * 128;
+	glMaterialf(GL_FRONT, GL_SHININESS, MaterialShininess);
+
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(0, 4 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+	
+	// ***** 3rd sphere on 1st column, obsidian *****
+	// ambient material
+	MaterialAmbient[0] = 0.05375; // r
+	MaterialAmbient[1] = 0.05;    // g
+	MaterialAmbient[2] = 0.06625; // b
+	MaterialAmbient[3] = 1.0f;    // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.18275; // r
+	MaterialDiffuse[1] = 0.17;    // g
+	MaterialDiffuse[2] = 0.22525; // b
+	MaterialDiffuse[3] = 1.0f;    // a
+
+	// specular material
+	MaterialSpecular[0] = 0.332741; // r
+	MaterialSpecular[1] = 0.328634; // g
+	MaterialSpecular[2] = 0.346435; // b
+	MaterialSpecular[3] = 1.0f;     // a
+
+	// shininess
+	MaterialShininess = 0.3 * 128;
+
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(0, 3 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 4th sphere on 1st column, pearl *****
+	// ambient material
+	MaterialAmbient[0] = 0.25;    // r
+	MaterialAmbient[1] = 0.20725; // g
+	MaterialAmbient[2] = 0.20725; // b
+	MaterialAmbient[3] = 1.0f;    // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 1.0;   // r
+	MaterialDiffuse[1] = 0.829; // g
+	MaterialDiffuse[2] = 0.829; // b
+	MaterialDiffuse[3] = 1.0f;  // a
+
+	// specular material
+	MaterialSpecular[0] = 0.296648; // r
+	MaterialSpecular[1] = 0.296648; // g
+	MaterialSpecular[2] = 0.296648; // b
+	MaterialSpecular[3] = 1.0f;     // a
+
+	// shininess
+	MaterialShininess = 0.088 * 128;
+
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(0, 2 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 5th sphere on 1st column, ruby *****
+	// ambient material
+	MaterialAmbient[0] = 0.1745;  // r
+	MaterialAmbient[1] = 0.01175; // g
+	MaterialAmbient[2] = 0.01175; // b
+	MaterialAmbient[3] = 1.0f;    // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.61424; // r
+	MaterialDiffuse[1] = 0.04136; // g
+	MaterialDiffuse[2] = 0.04136; // b
+	MaterialDiffuse[3] = 1.0f;    // a
+
+	// specular material
+	MaterialSpecular[0] = 0.727811; // r
+	MaterialSpecular[1] = 0.626959; // g
+	MaterialSpecular[2] = 0.626959; // b
+	MaterialSpecular[3] = 1.0f;     // a
+
+	// shininess
+	MaterialShininess = 0.6 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(0, 1 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 6th sphere on 1st column, turquoise *****
+	// ambient material
+	MaterialAmbient[0] = 0.1;     // r
+	MaterialAmbient[1] = 0.18725; // g
+	MaterialAmbient[2] = 0.1745;  // b
+	MaterialAmbient[3] = 1.0f;    // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.396;   // r
+	MaterialDiffuse[1] = 0.74151; // g
+	MaterialDiffuse[2] = 0.69102; // b
+	MaterialDiffuse[3] = 1.0f;    // a
+
+	// specular material
+	MaterialSpecular[0] = 0.297254; // r
+	MaterialSpecular[1] = 0.30829;  // g
+	MaterialSpecular[2] = 0.306678; // b
+	MaterialSpecular[3] = 1.0f;     // a
+
+	// shininess
+	MaterialShininess = 0.1 * 128;
+
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(0, 0 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+	// *******************************************************
+	// *******************************************************
+
+	// ***** 1st sphere on 2nd column, brass *****
+	// ambient material
+	MaterialAmbient[0] = 0.329412; // r
+	MaterialAmbient[1] = 0.223529; // g
+	MaterialAmbient[2] = 0.027451; // b
+	MaterialAmbient[3] = 1.0f;     // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.780392; // r
+	MaterialDiffuse[1] = 0.568627; // g
+	MaterialDiffuse[2] = 0.113725; // b
+	MaterialDiffuse[3] = 1.0f;     // a
+
+	// specular material
+	MaterialSpecular[0] = 0.992157; // r
+	MaterialSpecular[1] = 0.941176; // g
+	MaterialSpecular[2] = 0.807843; // b
+	MaterialSpecular[3] = 1.0f;     // a
+
+	// shininess
+	MaterialShininess = 0.21794872 * 128;
+
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(1 * viewportWidth, 5 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 2nd sphere on 2nd column, bronze *****
+	// ambient material
+	MaterialAmbient[0] = 0.2125; // r
+	MaterialAmbient[1] = 0.1275; // g
+	MaterialAmbient[2] = 0.054;  // b
+	MaterialAmbient[3] = 1.0f;   // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.714;   // r
+	MaterialDiffuse[1] = 0.4284;  // g
+	MaterialDiffuse[2] = 0.18144; // b
+	MaterialDiffuse[3] = 1.0f;    // a
+
+	// specular material
+	MaterialSpecular[0] = 0.393548; // r
+	MaterialSpecular[1] = 0.271906; // g
+	MaterialSpecular[2] = 0.166721; // b
+	MaterialSpecular[3] = 1.0f;     // a
+
+	// shininess
+	MaterialShininess = 0.2 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(1 * viewportWidth, 4 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 3rd sphere on 2nd column, chrome *****
+	// ambient material
+	MaterialAmbient[0] = 0.25; // r
+	MaterialAmbient[1] = 0.25; // g
+	MaterialAmbient[2] = 0.25; // b
+	MaterialAmbient[3] = 1.0f; // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.4;  // r
+	MaterialDiffuse[1] = 0.4;  // g
+	MaterialDiffuse[2] = 0.4;  // b
+	MaterialDiffuse[3] = 1.0f; // a
+
+	// specular material
+	MaterialSpecular[0] = 0.774597; // r
+	MaterialSpecular[1] = 0.774597; // g
+	MaterialSpecular[2] = 0.774597; // b
+	MaterialSpecular[3] = 1.0f;     // a
+
+	// shininess
+	MaterialShininess = 0.6 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(1 * viewportWidth, 3 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 4th sphere on 2nd column, copper *****
+	// ambient material
+	MaterialAmbient[0] = 0.19125; // r
+	MaterialAmbient[1] = 0.0735;  // g
+	MaterialAmbient[2] = 0.0225;  // b
+	MaterialAmbient[3] = 1.0f;    // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.7038;  // r
+	MaterialDiffuse[1] = 0.27048; // g
+	MaterialDiffuse[2] = 0.0828;  // b
+	MaterialDiffuse[3] = 1.0f;    // a
+
+	// specular material
+	MaterialSpecular[0] = 0.256777; // r
+	MaterialSpecular[1] = 0.137622; // g
+	MaterialSpecular[2] = 0.086014; // b
+	MaterialSpecular[3] = 1.0f;     // a
+
+	// shininess
+	MaterialShininess = 0.1 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(1 * viewportWidth, 2 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 5th sphere on 2nd column, gold *****
+	// ambient material
+	MaterialAmbient[0] = 0.24725; // r
+	MaterialAmbient[1] = 0.1995;  // g
+	MaterialAmbient[2] = 0.0745;  // b
+	MaterialAmbient[3] = 1.0f;    // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.75164; // r
+	MaterialDiffuse[1] = 0.60648; // g
+	MaterialDiffuse[2] = 0.22648; // b
+	MaterialDiffuse[3] = 1.0f;    // a
+
+	// specular material
+	MaterialSpecular[0] = 0.628281; // r
+	MaterialSpecular[1] = 0.555802; // g
+	MaterialSpecular[2] = 0.366065; // b
+	MaterialSpecular[3] = 1.0f;     // a
+
+	// shininess
+	MaterialShininess = 0.4 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(1 * viewportWidth, 1 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 6th sphere on 2nd column, silver *****
+	// ambient material
+	MaterialAmbient[0] = 0.19225; // r
+	MaterialAmbient[1] = 0.19225; // g
+	MaterialAmbient[2] = 0.19225; // b
+	MaterialAmbient[3] = 1.0f;    // a
+	
+	// diffuse material
+	MaterialDiffuse[0] = 0.50754; // r
+	MaterialDiffuse[1] = 0.50754; // g
+	MaterialDiffuse[2] = 0.50754; // b
+	MaterialDiffuse[3] = 1.0f;    // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.508273; // r
+	MaterialSpecular[1] = 0.508273; // g
+	MaterialSpecular[2] = 0.508273; // b
+	MaterialSpecular[3] = 1.0f;     // a
+	
+	// shininess
+	MaterialShininess = 0.4 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(1 * viewportWidth, 0 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+	// *******************************************************
+	// *******************************************************
+
+	// ***** 1st sphere on 3rd column, black *****
+	// ambient material
+	MaterialAmbient[0] = 0.0;  // r
+	MaterialAmbient[1] = 0.0;  // g
+	MaterialAmbient[2] = 0.0;  // b
+	MaterialAmbient[3] = 1.0f; // a
+	
+	// diffuse material
+	MaterialDiffuse[0] = 0.01; // r
+	MaterialDiffuse[1] = 0.01; // g
+	MaterialDiffuse[2] = 0.01; // b
+	MaterialDiffuse[3] = 1.0f; // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.50; // r
+	MaterialSpecular[1] = 0.50; // g
+	MaterialSpecular[2] = 0.50; // b
+	MaterialSpecular[3] = 1.0f; // a
+	
+	// shininess
+	MaterialShininess = 0.25 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(2 * viewportWidth, 5 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 2nd sphere on 3rd column, cyan *****
+	// ambient material
+	MaterialAmbient[0] = 0.0;  // r
+	MaterialAmbient[1] = 0.1;  // g
+	MaterialAmbient[2] = 0.06; // b
+	MaterialAmbient[3] = 1.0f; // a
+	
+	// diffuse material
+	MaterialDiffuse[0] = 0.0;        // r
+	MaterialDiffuse[1] = 0.50980392; // g
+	MaterialDiffuse[2] = 0.50980392; // b
+	MaterialDiffuse[3] = 1.0f;       // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.50196078; // r
+	MaterialSpecular[1] = 0.50196078; // g
+	MaterialSpecular[2] = 0.50196078; // b
+	MaterialSpecular[3] = 1.0f;       // a
+	
+	// shininess
+	MaterialShininess = 0.25 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(2 * viewportWidth, 4 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 3rd sphere on 2nd column, green *****
+	// ambient material
+	MaterialAmbient[0] = 0.0;  // r
+	MaterialAmbient[1] = 0.0;  // g
+	MaterialAmbient[2] = 0.0;  // b
+	MaterialAmbient[3] = 1.0f; // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.1;  // r
+	MaterialDiffuse[1] = 0.35; // g
+	MaterialDiffuse[2] = 0.1;  // b
+	MaterialDiffuse[3] = 1.0f; // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.45; // r
+	MaterialSpecular[1] = 0.55; // g
+	MaterialSpecular[2] = 0.45; // b
+	MaterialSpecular[3] = 1.0f; // a
+	
+	// shininess
+	MaterialShininess = 0.25 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(2 * viewportWidth, 3 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 4th sphere on 3rd column, red *****
+	// ambient material
+	MaterialAmbient[0] = 0.0;  // r
+	MaterialAmbient[1] = 0.0;  // g
+	MaterialAmbient[2] = 0.0;  // b
+	MaterialAmbient[3] = 1.0f; // a
+	
+	// diffuse material
+	MaterialDiffuse[0] = 0.5;  // r
+	MaterialDiffuse[1] = 0.0;  // g
+	MaterialDiffuse[2] = 0.0;  // b
+	MaterialDiffuse[3] = 1.0f; // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.7;  // r
+	MaterialSpecular[1] = 0.6;  // g
+	MaterialSpecular[2] = 0.6;  // b
+	MaterialSpecular[3] = 1.0f; // a
+	
+	// shininess
+	MaterialShininess = 0.25 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(2 * viewportWidth, 2 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 5th sphere on 3rd column, white *****
+	// ambient material
+	MaterialAmbient[0] = 0.0;  // r
+	MaterialAmbient[1] = 0.0;  // g
+	MaterialAmbient[2] = 0.0;  // b
+	MaterialAmbient[3] = 1.0f; // a
+	
+	// diffuse material
+	MaterialDiffuse[0] = 0.55; // r
+	MaterialDiffuse[1] = 0.55; // g
+	MaterialDiffuse[2] = 0.55; // b
+	MaterialDiffuse[3] = 1.0f; // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.70; // r
+	MaterialSpecular[1] = 0.70; // g
+	MaterialSpecular[2] = 0.70; // b
+	MaterialSpecular[3] = 1.0f; // a
+	
+	// shininess
+	MaterialShininess = 0.25 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(2 * viewportWidth, 1 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 6th sphere on 3rd column, yellow plastic *****
+	// ambient material
+	MaterialAmbient[0] = 0.0;  // r
+	MaterialAmbient[1] = 0.0;  // g
+	MaterialAmbient[2] = 0.0;  // b
+	MaterialAmbient[3] = 1.0f; // a
+	
+	// diffuse material
+	MaterialDiffuse[0] = 0.5;  // r
+	MaterialDiffuse[1] = 0.5;  // g
+	MaterialDiffuse[2] = 0.0;  // b
+	MaterialDiffuse[3] = 1.0f; // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.60; // r
+	MaterialSpecular[1] = 0.60; // g
+	MaterialSpecular[2] = 0.50; // b
+	MaterialSpecular[3] = 1.0f; // a
+	
+	// shininess
+	MaterialShininess = 0.25 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(2 * viewportWidth, 0 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+	// *******************************************************
+	// *******************************************************
+
+	// ***** 1st sphere on 4th column, black *****
+	// ambient material
+	MaterialAmbient[0] = 0.02; // r
+	MaterialAmbient[1] = 0.02; // g
+	MaterialAmbient[2] = 0.02; // b
+	MaterialAmbient[3] = 1.0f; // a
+	
+	// diffuse material
+	MaterialDiffuse[0] = 0.01; // r
+	MaterialDiffuse[1] = 0.01; // g
+	MaterialDiffuse[2] = 0.01; // b
+	MaterialDiffuse[3] = 1.0f; // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.4;  // r
+	MaterialSpecular[1] = 0.4;  // g
+	MaterialSpecular[2] = 0.4;  // b
+	MaterialSpecular[3] = 1.0f; // a
+	
+	// shininess
+	MaterialShininess = 0.078125 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(3 * viewportWidth, 5 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 2nd sphere on 4th column, cyan *****
+	// ambient material
+	MaterialAmbient[0] = 0.0;  // r
+	MaterialAmbient[1] = 0.05; // g
+	MaterialAmbient[2] = 0.05; // b
+	MaterialAmbient[3] = 1.0f; // a
+	
+	// diffuse material
+	MaterialDiffuse[0] = 0.4;  // r
+	MaterialDiffuse[1] = 0.5;  // g
+	MaterialDiffuse[2] = 0.5;  // b
+	MaterialDiffuse[3] = 1.0f; // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.04; // r
+	MaterialSpecular[1] = 0.7;  // g
+	MaterialSpecular[2] = 0.7;  // b
+	MaterialSpecular[3] = 1.0f; // a
+	
+	// shininess
+	MaterialShininess = 0.078125 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(3 * viewportWidth, 4 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 3rd sphere on 4th column, green *****
+	// ambient material
+	MaterialAmbient[0] = 0.0;  // r
+	MaterialAmbient[1] = 0.05; // g
+	MaterialAmbient[2] = 0.0;  // b
+	MaterialAmbient[3] = 1.0f; // a
+	
+	// diffuse material
+	MaterialDiffuse[0] = 0.4;  // r
+	MaterialDiffuse[1] = 0.5;  // g
+	MaterialDiffuse[2] = 0.4;  // b
+	MaterialDiffuse[3] = 1.0f; // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.04; // r
+	MaterialSpecular[1] = 0.7;  // g
+	MaterialSpecular[2] = 0.04; // b
+	MaterialSpecular[3] = 1.0f; // a
+	
+	// shininess
+	MaterialShininess = 0.078125 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(3 * viewportWidth, 3 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 4th sphere on 4th column, red *****
+	// ambient material
+	MaterialAmbient[0] = 0.05; // r
+	MaterialAmbient[1] = 0.0;  // g
+	MaterialAmbient[2] = 0.0;  // b
+	MaterialAmbient[3] = 1.0f; // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.5;  // r
+	MaterialDiffuse[1] = 0.4;  // g
+	MaterialDiffuse[2] = 0.4;  // b
+	MaterialDiffuse[3] = 1.0f; // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.7;  // r
+	MaterialSpecular[1] = 0.04; // g
+	MaterialSpecular[2] = 0.04; // b
+	MaterialSpecular[3] = 1.0f; // a
+	
+	// shininess
+	MaterialShininess = 0.078125 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(3 * viewportWidth, 2 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 5th sphere on 4th column, white *****
+	// ambient material
+	MaterialAmbient[0] = 0.05; // r
+	MaterialAmbient[1] = 0.05; // g
+	MaterialAmbient[2] = 0.05; // b
+	MaterialAmbient[3] = 1.0f; // a
+
+	// diffuse material
+	MaterialDiffuse[0] = 0.5;  // r
+	MaterialDiffuse[1] = 0.5;  // g
+	MaterialDiffuse[2] = 0.5;  // b
+	MaterialDiffuse[3] = 1.0f; // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.7;  // r
+	MaterialSpecular[1] = 0.7;  // g
+	MaterialSpecular[2] = 0.7;  // b
+	MaterialSpecular[3] = 1.0f; // a
+	
+	// shininess
+	MaterialShininess = 0.078125 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(3 * viewportWidth, 1 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+
+	// ***** 6th sphere on 4th column, yellow rubber *****
+	// ambient material
+	MaterialAmbient[0] = 0.05; // r
+	MaterialAmbient[1] = 0.05; // g
+	MaterialAmbient[2] = 0.0;  // b
+	MaterialAmbient[3] = 1.0f; // a
+	
+	// diffuse material
+	MaterialDiffuse[0] = 0.5;  // r
+	MaterialDiffuse[1] = 0.5;  // g
+	MaterialDiffuse[2] = 0.4;  // b
+	MaterialDiffuse[3] = 1.0f; // a
+	
+	// specular material
+	MaterialSpecular[0] = 0.7;  // r
+	MaterialSpecular[1] = 0.7;  // g
+	MaterialSpecular[2] = 0.04; // b
+	MaterialSpecular[3] = 1.0f; // a
+	
+	// shininess
+	MaterialShininess = 0.078125 * 128;
+	
+	if (bLight == True)
+	{
+		glUniform3fv(laUniform, 1, LightAmbient);
+		glUniform3fv(ldUniform, 1, LightDiffuse);
+		glUniform3fv(lsUniform, 1, LightSpecular);
+		glUniform4fv(lightPositionUniform, 1, LightPosition);
+
+		glUniform3fv(kaUniform, 1, MaterialAmbient);
+		glUniform3fv(kdUniform, 1, MaterialDiffuse);
+		glUniform3fv(ksUniform, 1, MaterialSpecular);
+		glUniform1f(materialShininessUniform, MaterialShininess);
+	}
+
+	// geometry
+	translationMatrix = mat4::identity();
+	modelMatrix = mat4::identity();
+	translationMatrix = vmath::translate(0.0f, 0.0f, zVal);
+	modelMatrix = translationMatrix;
+	glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
+	glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, viewMatrix);
+	glUniformMatrix4fv(projectionMatrixUniform, 1, GL_FALSE, perspectiveProjectionMatrix);
+	glViewport(3 * viewportWidth, 0 * viewportHeight, viewportWidth, viewportHeight);
+	glBindVertexArray(vao_Sphere);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
+	glDrawElements(GL_TRIANGLES, gNumElements, GL_UNSIGNED_SHORT, 0);
+	glBindVertexArray(0);
+	// *******************************************************
+	// *******************************************************
+	// *******************************************************
 }
 
 void uninitialize(void)
@@ -759,7 +2074,7 @@ void uninitialize(void)
 		glDeleteVertexArrays(1, &vao_Sphere);
 		vao_Sphere = 0;
 	}
-	
+
 	// Shader uninitialization
 	if (shaderProgramObject)
 	{
