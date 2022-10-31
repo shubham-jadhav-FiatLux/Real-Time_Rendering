@@ -4,6 +4,10 @@
 #include <memory.h>			// For memset()
 //#include <Mmsystem.h>		// For Sound API
 
+// OpenAL
+#include <AL/al.h>
+#include <AL/alc.h>
+
 #define _USE_MATH_DEFINES 1
 #include <math.h>			// For Trigonometric Functions
 
@@ -20,6 +24,7 @@
 // Macros
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
+
 
 // Global Variables
 Display *display = NULL;
@@ -78,6 +83,23 @@ int flagTemp = 0;
 // OpenGL Related Variables
 GLXContext glxContext;
 
+// *********************
+ALCdevice *device;
+ALCcontext *context;
+
+ALfloat listenerOri[] = { 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f };
+ALuint source;
+ALuint buffer;
+ALsizei size, freq;
+ALenum format;
+ALvoid *data;
+ALboolean loop = AL_FALSE;
+
+//WaveInfo *wave;
+char *bufferData;
+int ret;
+
+
 // Entry-Point Function
 int main(void)
 {
@@ -88,6 +110,7 @@ int main(void)
 	void draw(void);
 	void update(void);
 	void uninitialize(void);
+	void sound(void);
 
 	// Local Variables
 	int defaultScreen;
@@ -203,6 +226,10 @@ int main(void)
 	else
 		fprintf(gpFile, "Succeed.\n");
 
+
+	sound();
+
+
 	// Message Loop
 	while (bDone == False)
 	{
@@ -212,6 +239,7 @@ int main(void)
 			switch (event.type)
 			{
 			case MapNotify:
+				//sound();
 				break;
 
 			case FocusIn:
@@ -312,6 +340,7 @@ int initialize(void)
 {
 	// Function Declarations
 	void resize(int, int);
+	//void sound();
 	
 	// Code
 	glxContext = glXCreateContext(display, visualInfo, NULL, True);
@@ -330,6 +359,8 @@ int initialize(void)
 
 	// Create Quadric
 	quadric = gluNewQuadric();			// It Internally Calls Malloc, So Dont Use Inside Display()
+
+	//sound();
 
 	// Warmup resize() Call
 	resize(WIN_WIDTH, WIN_HEIGHT);
@@ -543,6 +574,46 @@ void update(void)
 		z -= 0.0035f;
 	else if (z <= -1.0f && flagNegativeZ == 1)
 		z += 0.003f;
+}
+
+void sound(void)
+{
+	
+device = alcOpenDevice(NULL);
+
+context = alcCreateContext(device, NULL);
+if (!alcMakeContextCurrent(context))
+{
+fprintf(gpFile, "failed context\n");
+}
+alListener3f(AL_POSITION, 0, 0, 1.0f);
+// check for errors
+alListener3f(AL_VELOCITY, 0, 0, 0);
+// check for errors
+alListenerfv(AL_ORIENTATION, listenerOri);
+
+alGenSources((ALuint)1, &source);
+// check for errors
+
+alSourcef(source, AL_PITCH, 1);
+// check for errors
+alSourcef(source, AL_GAIN, 1);
+// check for errors
+alSource3f(source, AL_POSITION, 0, 0, 0);
+// check for errors
+alSource3f(source, AL_VELOCITY, 0, 0, 0);
+// check for errors
+alSourcei(source, AL_LOOPING, AL_FALSE);
+
+alutLoadWAVFile("dulhan_chali_pahen_chali.wav", &format, &data, &size, &freq, &loop);
+
+alGenBuffers((ALuint)1, &buffer);
+
+alBufferData(buffer, format, data, size, freq);
+
+alSourcei(source, AL_BUFFER, buffer);
+alSourcePlay(source);
+
 }
 
 void I(float x, float y, float width)
@@ -1361,6 +1432,14 @@ void uninitialize(void)
 		XCloseDisplay(display);
 		display = NULL;
 	}
+
+	// OpenAL
+	alDeleteSources(1, &source);
+	alDeleteBuffers(1, &buffer);
+	device = alcGetContextsDevice(context);
+	alcMakeContextCurrent(NULL);
+	alcDestroyContext(context);
+	alcCloseDevice(device);
 	
 	if (quadric)
 	{

@@ -32,11 +32,12 @@ FILE* gpFile = NULL;
 // OpenGL Related Variables
 GLXContext glxContext;
 
+GLUquadric* quadric = NULL;
 float anglePyramid = 0.0f;
 Bool gbLight = False;
 
 GLfloat LightAmbient[] = { 0.2f, 0.2f, 0.2f, 1.0f };
-GLfloat LightDiffuse[] = { 1.0f, 0.0f, 0.0f, 1.0f };			// Red
+GLfloat LightDiffuse[] = { 0.3f, 0.3f, 0.3f, 1.0f };			// Red
 GLfloat LightSpecular[] = { 1.0f, 0.0f, 0.0f, 1.0f };
 GLfloat LightPosition[] = { 0.0f, 0.0f, 6.0f, 1.0f };
 GLfloat spot_direction[] = { 0.0f, 0.0f, -1.0f, 1.0f };
@@ -314,15 +315,18 @@ int initialise(void)
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, LightDiffuse);
 	glLightfv(GL_LIGHT0, GL_SPECULAR, LightSpecular);
 	glLightfv(GL_LIGHT0, GL_POSITION, LightPosition);
-	glLightf(GL_LIGHT0, GL_SPOT_CUTOFF, 6.0f);
+	glLightf(GL_LIGHT0, GL_SPOT_CUTOFF, 2.0f);
 	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, spot_direction);
-	glLightf(GL_LIGHT0, GL_SPOT_EXPONENT, 2.0f);
+	glLightf(GL_LIGHT0, GL_SPOT_EXPONENT, 4.0f);
 	glEnable(GL_LIGHT0);
 
 	glMaterialfv(GL_FRONT, GL_AMBIENT, MaterialAmbient);
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, MaterialDiffuse);
 	glMaterialfv(GL_FRONT, GL_SPECULAR, MaterialSpecular);
 	glMaterialf(GL_FRONT, GL_SHININESS, MaterialShininess);
+
+	// Create Quadric
+	quadric = gluNewQuadric();			// It Internally Calls Malloc, So Dont Use Inside Display()
 
 	// Warmup resize() Call
 	resize(WIN_WIDTH, WIN_HEIGHT);
@@ -352,8 +356,10 @@ void draw(void)
 	glLoadIdentity();
 
 	glTranslatef(0.0f, 0.0f, -4.0f);
-	glRotatef(anglePyramid, 0.0f, 1.0f, 0.0f);			// Spin
+	//glRotatef(anglePyramid, 0.0f, 1.0f, 0.0f);			// Spin
 	
+
+	/*
 	glBegin(GL_TRIANGLES);
 
 		// Front Face
@@ -381,7 +387,11 @@ void draw(void)
 		glVertex3f(-1.0f, -1.0f, 1.0f);
 	
 	glEnd();
-	
+	*/
+
+	// Draw Sphere
+	gluSphere(quadric, 1.0f, 50, 50);
+
 	glXSwapBuffers(display, window);
 }
 
