@@ -1,34 +1,34 @@
 Log File Successfully Opened.
 Found Framebuffer Configurations Are 28.
 VisualInfo = 0x33 Found sampleBuffers = 0 And samples = 0
-VisualInfo = 0x1378 Found sampleBuffers = 0 And samples = 0
-VisualInfo = 0x1520 Found sampleBuffers = 0 And samples = 0
+VisualInfo = 0x1380 Found sampleBuffers = 0 And samples = 0
 VisualInfo = 0x1522 Found sampleBuffers = 0 And samples = 0
-VisualInfo = 0x1420 Found sampleBuffers = 1 And samples = 2
-VisualInfo = 0x1424 Found sampleBuffers = 1 And samples = 2
-VisualInfo = 0x1564 Found sampleBuffers = 1 And samples = 2
-VisualInfo = 0x1568 Found sampleBuffers = 1 And samples = 2
-VisualInfo = 0x1421 Found sampleBuffers = 1 And samples = 4
-VisualInfo = 0x1425 Found sampleBuffers = 1 And samples = 4
-VisualInfo = 0x1565 Found sampleBuffers = 1 And samples = 4
-VisualInfo = 0x1569 Found sampleBuffers = 1 And samples = 4
-VisualInfo = 0x1422 Found sampleBuffers = 1 And samples = 8
-VisualInfo = 0x1426 Found sampleBuffers = 1 And samples = 8
-VisualInfo = 0x1566 Found sampleBuffers = 1 And samples = 8
-VisualInfo = 0x1570 Found sampleBuffers = 1 And samples = 8
-VisualInfo = 0x1423 Found sampleBuffers = 1 And samples = 16
-VisualInfo = 0x1427 Found sampleBuffers = 1 And samples = 16
-VisualInfo = 0x1567 Found sampleBuffers = 1 And samples = 16
-VisualInfo = 0x1571 Found sampleBuffers = 1 And samples = 16
-VisualInfo = 0x1377 Found sampleBuffers = 0 And samples = 0
+VisualInfo = 0x1524 Found sampleBuffers = 0 And samples = 0
+VisualInfo = 0x1422 Found sampleBuffers = 1 And samples = 2
+VisualInfo = 0x1426 Found sampleBuffers = 1 And samples = 2
+VisualInfo = 0x1566 Found sampleBuffers = 1 And samples = 2
+VisualInfo = 0x1570 Found sampleBuffers = 1 And samples = 2
+VisualInfo = 0x1423 Found sampleBuffers = 1 And samples = 4
+VisualInfo = 0x1427 Found sampleBuffers = 1 And samples = 4
+VisualInfo = 0x1567 Found sampleBuffers = 1 And samples = 4
+VisualInfo = 0x1571 Found sampleBuffers = 1 And samples = 4
+VisualInfo = 0x1424 Found sampleBuffers = 1 And samples = 8
+VisualInfo = 0x1428 Found sampleBuffers = 1 And samples = 8
+VisualInfo = 0x1568 Found sampleBuffers = 1 And samples = 8
+VisualInfo = 0x1572 Found sampleBuffers = 1 And samples = 8
+VisualInfo = 0x1425 Found sampleBuffers = 1 And samples = 16
+VisualInfo = 0x1429 Found sampleBuffers = 1 And samples = 16
+VisualInfo = 0x1569 Found sampleBuffers = 1 And samples = 16
+VisualInfo = 0x1573 Found sampleBuffers = 1 And samples = 16
 VisualInfo = 0x1379 Found sampleBuffers = 0 And samples = 0
-VisualInfo = 0x1521 Found sampleBuffers = 0 And samples = 0
+VisualInfo = 0x1381 Found sampleBuffers = 0 And samples = 0
 VisualInfo = 0x1523 Found sampleBuffers = 0 And samples = 0
-VisualInfo = 0x180 Found sampleBuffers = 0 And samples = 0
-VisualInfo = 0x1941 Found sampleBuffers = 0 And samples = 0
-VisualInfo = 0x1952 Found sampleBuffers = 0 And samples = 0
-VisualInfo = 0x1953 Found sampleBuffers = 0 And samples = 0
-VisualId Of Best VisualInfo Is 0x1423
+VisualInfo = 0x1525 Found sampleBuffers = 0 And samples = 0
+VisualInfo = 0x182 Found sampleBuffers = 0 And samples = 0
+VisualInfo = 0x1943 Found sampleBuffers = 0 And samples = 0
+VisualInfo = 0x1954 Found sampleBuffers = 0 And samples = 0
+VisualInfo = 0x1955 Found sampleBuffers = 0 And samples = 0
+VisualId Of Best VisualInfo Is 0x1425
 Found Support To 4.6 Version.
 Direct Rendering i.e. H/W Rendering Is Supported.
 OpenGL Vendor: Intel

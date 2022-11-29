@@ -653,13 +653,13 @@ void draw(void)
 	if (keyPressed == 1)
 	{
 		texCoord[0] = 0.5f;
-		texCoord[1] = 0.0f;
+		texCoord[1] = 0.5f;
 		texCoord[2] = 0.0f;
-		texCoord[3] = 0.0f;
+		texCoord[3] = 0.5f;
 		texCoord[4] = 0.0f;
-		texCoord[5] = 0.5f;
+		texCoord[5] = 1.0f;
 		texCoord[6] = 0.5f;
-		texCoord[7] = 0.5f;
+		texCoord[7] = 1.0f;
 
 		glUniform1i(keypressUniform, 1);
 	}

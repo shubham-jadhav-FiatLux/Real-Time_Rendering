@@ -571,8 +571,7 @@ int initialize(void)
 	// Here Starts OpenGL Code
 	glClearDepth(1.0f);
 	glEnable(GL_DEPTH_TEST);
-	glDepthFunc(GL_LEQUAL);
-	// glShadeModel(),glHint() Deprecated In PP 
+	glDepthFunc(GL_LEQUAL);                  // glShadeModel(),glHint() Deprecated In PP 
 
 	// Clear The Screen Using Black Color
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);

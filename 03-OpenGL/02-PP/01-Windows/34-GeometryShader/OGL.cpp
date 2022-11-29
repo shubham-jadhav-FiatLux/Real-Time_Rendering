@@ -573,9 +573,6 @@ void display(void)
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 
 	glBindVertexArray(0);
-	// Here There Should Be Magical Code
-	// ...
-	// ...
 	 
 	// Unuse The Shader Program Object
 	glUseProgram(0);
@@ -586,7 +583,6 @@ void display(void)
 void update(void)
 {
 	// Code
-
 }
 
 void uninitialize(void)

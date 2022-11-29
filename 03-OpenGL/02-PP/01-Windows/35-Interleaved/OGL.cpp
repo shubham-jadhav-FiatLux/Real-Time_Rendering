@@ -635,7 +635,7 @@ int initialize(void)
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LEQUAL);							// glShadeModel(),glHint() Deprecated In PP 
 
-	// Clear The Screen Using Blue Color
+	// Clear The Screen Using Black Color
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 	if (LoadGLTexture(&texture_marble, MAKEINTRESOURCE(IDBITMAP_MARBLE)) == FALSE)

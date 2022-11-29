@@ -439,7 +439,6 @@ void DrawMoon(void)
 	// Self Rotation Of Moon
 	glRotatef((GLfloat)hour, 0.0f, 0.0f, 1.0f);
 
-	// Draw Earth
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
 	quadric = gluNewQuadric();

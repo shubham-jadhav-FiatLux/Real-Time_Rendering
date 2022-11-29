@@ -417,28 +417,35 @@ void GraphPaperLines()
 	glBegin(GL_LINES);
 
 	glColor3f(0.0f, 0.0f, 255.0f);
-
+	
 	for (float y = 1.0f, x = 1.0f; y > 0.0f; y -= 0.05f)
 	{
 		glVertex3f(-x, y, 0.0f);
 		glVertex3f(x, y, 0.0f);
+		
 	}
+	fprintf(gpFile, "\n\n");
 	for (float y = -1.0f, x = 1.0f; y < 0.0f; y += 0.05f)
 	{
 		glVertex3f(-x, y, 0.0f);
 		glVertex3f(x, y, 0.0f);
+		
 	}
-
+	fprintf(gpFile, "\n\n");
 	for (float x = -1.0f, y = 1.0f; x < 0.0f; x += 0.05f)
 	{
 		glVertex3f(x, y, 0.0f);
 		glVertex3f(x, -y, 0.0f);
+		
 	}
+	fprintf(gpFile, "\n\n");
 	for (float x = 1.0f, y = 1.0f; x > 0.0f; x -= 0.05f)
 	{
 		glVertex3f(x, y, 0.0f);
 		glVertex3f(x, -y, 0.0f);
+		
 	}
+	
 
 	glEnd();
 }
@@ -461,13 +468,15 @@ void DrawCircle(void)
 {
 	// Code
 	glBegin(GL_LINE_LOOP);
-
+	fprintf(gpFile, "\n\n");
+	fprintf(gpFile, "----------------------------------------------------\n");
 	glColor3f(255.0f, 255.0f, 0.0f);
 	for (float i = 0.0f; i <= 360.0f; i += 0.5f)
 	{
 		glVertex3f(0.5f * cos(i / 180.f * M_PI), 0.5f * sin(i / 180.f * M_PI), 0.0f);
+		fprintf(gpFile, "%f, %f\n", 0.5f * cos(i / 180.f * M_PI), 0.5f * sin(i / 180.f * M_PI), 0.0f);
 	}
-
+	fprintf(gpFile, "----------------------------------------------------\n");
 	glEnd();
 }
 
