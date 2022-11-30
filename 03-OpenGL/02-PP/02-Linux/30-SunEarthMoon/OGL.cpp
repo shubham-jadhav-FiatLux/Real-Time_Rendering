@@ -694,7 +694,7 @@ void draw(void)
 		//modelMatrix = modelMatrix * rotationMatrix;
 		//glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
 
-		rotationMatrix = vmath::rotate((GLfloat)day, 0.0f, 0.0f, 1.0f);
+		rotationMatrix = vmath::rotate((GLfloat)day, 0.0f, 1.0f, 0.0f);
 		modelMatrix = modelMatrix * rotationMatrix;
 		glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
 
