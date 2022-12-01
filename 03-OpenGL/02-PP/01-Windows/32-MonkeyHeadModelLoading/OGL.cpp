@@ -854,13 +854,6 @@ void uninitialize(void)
 		vbo_Elements = 0;
 	}
 
-	/*
-	if (vbo_Normals)
-	{
-		glDeleteBuffers(1, &vbo_Sphere_Normals);
-		vbo_Sphere_Normals = 0;
-	}
-	*/
 	if (vbo_Position)
 	{
 		glDeleteBuffers(1, &vbo_Position);
