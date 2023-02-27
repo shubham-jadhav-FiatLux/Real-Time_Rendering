@@ -1,0 +1,22 @@
+Log File Successfully Opened.
+CreateDXGIFactory() Succeeded.
+
+---------------------------------------------------------------------
+Graphic Card Name = Intel(R) UHD Graphics 620.
+Graphic Card Memory(VRAM) = 1 GB.
+-----------------------------------------------------------------------
+
+D3D11 Obtained Hardware Driver.
+D3D Obtained 11.0 Feature Level.
+D3DCompile() Succeeded For Vertex Shader.
+ID3D11Device :: CreateVertexShader() Succeeded.
+D3DCompile() Succeeded For Pixel Shader.
+ID3D11Device :: CreatePixelShader() Succeeded.
+gpID3D11Device :: CreateInputLayout() Succeeded.
+gpID3D11Device :: CreateBuffer() Succeeded For Triangle Position.
+gpID3D11Device :: CreateBuffer() Succeeded For Triangle Color.
+gpID3D11Device :: CreateBuffer() Succeeded For Square Position.
+gpID3D11Device :: CreateBuffer() Succeeded For Square Color.
+gpID3D11Device :: CreateBuffer() Succeeded For Constant Buffer.
+initialize : resize() Succeeded.
+initialize() Succeeded.

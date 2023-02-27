@@ -1,0 +1,5 @@
+Log File Successfully Opened.
+CreateDXGIFactory() Succeeded.
+Graphic Card Name = Intel(R) UHD Graphics 620.
+Graphic Card Memory(VRAM) = 1 GB.
+initialize() Succeeded.

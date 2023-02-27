@@ -1,0 +1,4 @@
+#include <Windows.h>
+#include "D3D.h"
+
+MYICON ICON Coffee.ico
