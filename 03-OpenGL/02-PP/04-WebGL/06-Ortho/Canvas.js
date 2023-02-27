@@ -190,14 +190,14 @@ function initialize(){
     vao = gl.createVertexArray();
     gl.bindVertexArray(vao);
 
-    // vbo
-    vbo = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
-    gl.bufferData(gl.ARRAY_BUFFER, triangleVertices, gl.STATIC_DRAW);
-    gl.vertexAttribPointer(webglMacros.SBJ_ATTRIBUTE_POSITION, 3, gl.FLOAT, false, 0, 0);
-    gl.enableVertexAttribArray(webglMacros.SBJ_ATTRIBUTE_POSITION);
+        // vbo
+        vbo = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
+        gl.bufferData(gl.ARRAY_BUFFER, triangleVertices, gl.STATIC_DRAW);
+        gl.vertexAttribPointer(webglMacros.SBJ_ATTRIBUTE_POSITION, 3, gl.FLOAT, false, 0, 0);
+        gl.enableVertexAttribArray(webglMacros.SBJ_ATTRIBUTE_POSITION);
+        gl.bindBuffer(gl.ARRAY_BUFFER, null);
 
-    gl.bindBuffer(gl.ARRAY_BUFFER, null);
     gl.bindVertexArray(null);
 
     gl.clearDepth(1.0);
@@ -312,17 +312,17 @@ function mouseDown() {
 function uninitialize() {
 
     // Code
+    if (vbo) {
+        gl.deleteBuffer(vbo);
+        vbo = null;
+    }
+
     if (vao)
     {
         gl.deleteVertexArray(vao);
         vao = null;
     }
-
-    if (vbo)
-    {
-        gl.deleteBuffer(vbo);
-        vbo = null;
-    }
+   
 
     if (shaderProgramObject)
     {

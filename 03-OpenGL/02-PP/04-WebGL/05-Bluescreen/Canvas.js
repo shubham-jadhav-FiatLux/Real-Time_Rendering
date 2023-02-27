@@ -79,7 +79,7 @@ function toggleFullscreen() {
 function initialize(){
 
     // Code
-    // Get WbGL 2 Context From Canvas
+    // Get WebGL 2 Context From Canvas
     var context = canvas.getContext("webgl2");
     if (!context)
         console.log("Obtaining WebGL 2.0 Context Failed !\n");
