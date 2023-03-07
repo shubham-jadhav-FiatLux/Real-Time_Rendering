@@ -755,7 +755,7 @@ function display_sphere(textureWidth, textureHeight)
     sphere.draw();
 
     // Update The Scene
-    update_sphere();
+    //update_sphere();
 
     // Unuse The Shader Program Object
     gl.useProgram(null);

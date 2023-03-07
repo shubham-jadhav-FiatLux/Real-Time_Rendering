@@ -797,6 +797,7 @@ int main(int argc, char* argv[])
         "vec3 phong_ads_light;" \
         "if (u_lightingEnabled == 1)" \
         "{" \
+        "vec3 array[3];" \
         "vec3 normalized_tranformedNormals = normalize(transformedNormals);" \
         "vec3 normalized_viewerVector = normalize(viewerVector);" \
         "vec3 ambient[3];" \
@@ -811,8 +812,9 @@ int main(int argc, char* argv[])
         "diffuse[i] = u_ld[i] * u_kd * max(dot(normalized_lightDirection[i], normalized_tranformedNormals), 0.0);" \
         "reflectionVector[i] = reflect(-normalized_lightDirection[i], normalized_tranformedNormals);" \
         "specular[i] = u_ls[i] * u_ks * pow(max(dot(reflectionVector[i], normalized_viewerVector), 0.0), u_materialShininess);" \
-        "phong_ads_light += ambient[i] + diffuse[i] + specular[i];" \
+        "array[i] = ambient[i] + diffuse[i] + specular[i];" \
         "}" \
+        "phong_ads_light = array[0] + array[1] + array[2];" \
         "}" \
         "else" \
         "{" \

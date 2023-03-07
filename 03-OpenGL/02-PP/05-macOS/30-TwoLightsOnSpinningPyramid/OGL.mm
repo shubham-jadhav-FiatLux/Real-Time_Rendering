@@ -388,6 +388,7 @@ int main(int argc, char* argv[])
         "{" \
         "if (u_lightingEnabled == 1)" \
         "{" \
+        "vec3 array[2];" \
         "vec4 eyeCoordinates = u_viewMatrix * u_modelMatrix * a_position;" \
         "mat3 normalMatrix = mat3(u_viewMatrix * u_modelMatrix);" \
         "vec3 transformedNormals = normalize(normalMatrix * a_normal);" \
@@ -404,8 +405,9 @@ int main(int argc, char* argv[])
         "diffuse[i] = u_ld[i] * u_kd * max(dot(lightDirection[i], transformedNormals), 0.0);" \
         "reflectionVector[i] = reflect(-lightDirection[i], transformedNormals);" \
         "specular[i] = u_ls[i] * u_ks * pow(max(dot(reflectionVector[i], viewerVector), 0.0), u_materialShininess);" \
-        "phong_ads_light = phong_ads_light + ambient[i] + diffuse[i] + specular[i];" \
+        "array[i] = ambient[i] + diffuse[i] + specular[i];" \
         "}" \
+        "phong_ads_light = array[0] + array[1];" \
         "}" \
         "else" \
         "{" \
