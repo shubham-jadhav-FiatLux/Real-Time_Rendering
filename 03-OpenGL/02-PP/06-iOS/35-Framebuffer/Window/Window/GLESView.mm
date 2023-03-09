@@ -178,8 +178,6 @@ using namespace vmath;
         // Get color render buffer width into backing height
         glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &backingHeight);
         
-        printf("In InitWithFrame :%d\t%d\n", backingWidth, backingHeight);
-        
         // Create depth render buffer
         glGenRenderbuffers(1, &depthRenderBuffer);
         
@@ -249,11 +247,7 @@ using namespace vmath;
 - (void)layoutSubviews
 {
     // Code
-    // Create Framebuffer
-    //glGenFramebuffers(1, &defaultFramebuffer);
-    
-    // Bind with above framebuffer
-    //glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
     
     glBindRenderbuffer(GL_RENDERBUFFER, colorRenderBuffer);
 
@@ -270,8 +264,7 @@ using namespace vmath;
     
     // Get color render buffer width into backing height
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &backingHeight);
-
-    /*
+    
     // Create depth render buffer
     glGenRenderbuffers(1, &depthRenderBuffer);
     
@@ -283,22 +276,21 @@ using namespace vmath;
     
     // set framebuffer according to render buffer
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthRenderBuffer);
-*/
-    bFBOResult = [self createFBO : FBO_WIDTH : FBO_HEIGHT];
-    // Call Our Resize here
-    [self resize:backingWidth :backingHeight];
-    
-    //Call drawView After resize
-    [self drawView:self];
     
     // Check the status of the framebuffer
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
     {
-        printf("Incomplete Framebuffer In Layout SubViews.\n");
-        //[self uninitialize];
-        //[self release];
-        //exit(0);
+        printf("Incomplete Framebuffer In layoutSubviews.\n");
+        [self uninitialize];
+        [self release];
+        exit(0);
     }
+    
+    // Call Our Resize here
+    [self resize:backingWidth :backingHeight];
+    
+    // Call drawView After resize
+    [self drawView:self];
 }
 
 /*
@@ -311,14 +303,17 @@ using namespace vmath;
 - (void)drawView: (id)sender
 {
     // Code
+    if (bFBOResult == true)
+    {
+        [self display_sphere : FBO_WIDTH : FBO_HEIGHT];
+        [self update_sphere];
+    }
+    
     // Set context as the current context
     [EAGLContext setCurrentContext:eaglContext];
     
     // Bind with framebuffer
     glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
-    //glBindFramebuffer(GL_FRAMEBUFFER, depthRenderBuffer);
-    
-    
     
     // Call Our display And update Here
     [self display];
@@ -327,10 +322,6 @@ using namespace vmath;
     
     // Bind With color render buffer
     glBindRenderbuffer(GL_RENDERBUFFER, colorRenderBuffer);
-    //glBindRenderbuffer(GL_RENDERBUFFER, rbo);
-    
-    //glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, rbo);
-    
     
     
     [eaglContext presentRenderbuffer:GL_RENDERBUFFER];
@@ -453,7 +444,7 @@ using namespace vmath;
         "{" \
         "FragColor = texture(u_textureSampler, a_texcoord_out);" \
         "}";
-    
+
     GLuint fragmentShaderObject = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fragmentShaderObject, 1, (const GLchar**)&fragmentShaderSourceCode, NULL);
     glCompileShader(fragmentShaderObject);
@@ -615,32 +606,29 @@ using namespace vmath;
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
     
-    // Clear The Screen Using White Color
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-
+    
     // Enabling The Texture
-    //glEnable(GL_TEXTURE_2D);
-    
+    glEnable(GL_TEXTURE_2D);
+
     perspectiveProjectionMatrix = mat4::identity();
-    
+
+
     // FBO Code
-    //bFBOResult = [self createFBO : FBO_WIDTH : FBO_HEIGHT];
-    //bFBOResult = [self createFBO : FBO_WIDTH : FBO_HEIGHT];
+    bFBOResult = [self createFBO : FBO_WIDTH : FBO_HEIGHT];
     int iRetVal;
-    //if (bFBOResult == true)
+    if (bFBOResult == true)
     {
         iRetVal = [self initialize_sphere : FBO_WIDTH : FBO_HEIGHT];
 
-        if (iRetVal)
-            printf("Error Initializing Sphere\n");
         // Here There Should Be Error Checking Of FBO
-        //printf("FBO Succeded\n");
     }
-    //else
+    else
     {
-        //printf("Create FBO Failed...\n");
-        //return -6;
+        printf("Create FBO Failed...\n");
+        return -6;
     }
+    
     
     return 0;
 }
@@ -653,7 +641,6 @@ using namespace vmath;
     // Code
     // Check Available Renderbuffer Size
     glGetIntegerv(GL_MAX_RENDERBUFFER_SIZE, &maxRenderbufferSize);
-    printf("%d\n", maxRenderbufferSize);
     if (maxRenderbufferSize < textureWidth || maxRenderbufferSize < textureHeight)
     {
         printf("Insufficient Render Buffer Size \n");
@@ -667,13 +654,10 @@ using namespace vmath;
     // Create Renderbuffer Object
     glGenRenderbuffers(1, &rbo);
     glBindRenderbuffer(GL_RENDERBUFFER, rbo);
-    
 
     // Storage And Format Of The Renderbuffer
     glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, textureWidth, textureHeight);
 
-    printf("In FBO : %d\t%d\n", textureWidth, textureHeight);
-    
     // Create Empty Texture For Upcoming Target Scene
     glGenTextures(1, &fbo_texture);
     glBindTexture(GL_TEXTURE_2D, fbo_texture);
@@ -705,9 +689,8 @@ using namespace vmath;
         return false;
     }
 
-    //glBindFramebuffer(GL_FRAMEBUFFER, 0);
-    //glBindRenderbuffer(GL_RENDERBUFFER, 0);
-    printf("Inside FBO\n");
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
     return true;
 }
 
@@ -772,6 +755,8 @@ using namespace vmath;
                 glGetShaderInfoLog(vertexShaderObject_pf, infoLogLength, &written, log);
                 printf("Vertex Shader Compilation Log: %s\n", log);
                 free(log);
+                [self uninitialize_sphere];
+                [self release];
                 exit(0);
             }
         }
@@ -847,6 +832,8 @@ using namespace vmath;
                 printf("Fragment Shader Compilation Log: %s\n", log);
                 free(log);
                 [self uninitialize_sphere];
+                [self release];
+                exit(0);
             }
         }
     }
@@ -878,6 +865,8 @@ using namespace vmath;
                 printf("Shader Program Link Log: %s\n", log);
                 free(log);
                 [self uninitialize_sphere];
+                [self release];
+                exit(0);
             }
         }
     }
@@ -901,6 +890,8 @@ using namespace vmath;
     ksUniform_sphere = glGetUniformLocation(shaderProgramObject_sphere, "u_ks");
     materialShininessUniform_sphere = glGetUniformLocation(shaderProgramObject_sphere, "u_materialShininess");
     lightingEnabledUniform_sphere = glGetUniformLocation(shaderProgramObject_sphere, "u_lightingEnabled");
+
+
 
     // Initialize Sphere
     [self initializeSphere : 30 : 30 : 0.5];
@@ -928,7 +919,7 @@ using namespace vmath;
     glGenBuffers(1, &vbo_Sphere_Elements);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_Sphere_Elements);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, gNumElements * sizeof(GLuint), sphere_elements, GL_STATIC_DRAW);
-    //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
     glBindVertexArray(0);
 
@@ -999,7 +990,6 @@ using namespace vmath;
     if (!sphere_vertices || !sphere_normals || !sphere_texcoords || !sphere_elements)
     {
         printf("failed to allpcate memeory for sphere data\n");
-        
         exit(1);
     }
 
@@ -1055,6 +1045,9 @@ using namespace vmath;
 - (void)resize :(int)width :(int)height
 {
     // Code
+    winWidth = width;
+    winHeight = height;
+    
     if (height <= 0)
         height = 1;
     
@@ -1076,25 +1069,12 @@ using namespace vmath;
 
 - (void)display
 {
-    // Function Declaration
-    void display_sphere(GLint, GLint);
-    void update_sphere(void);
-
     // Code
-    
-    if (bFBOResult == true)
-    {
-        [self display_sphere : FBO_WIDTH : FBO_HEIGHT];
-        [self update_sphere];
-    }
-
     glClearColor(0.3f, 0.3f, 0.3f, 1.0f);
     [self resize : winWidth : winHeight];
-    
-    // Code
-    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glClear(GL_COLORglGenRenderbuffers | GL_DEPTH_BUFFER_BIT);
- 
+
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
     // Use The Shader Program Object
     glUseProgram(shaderProgramObject);
 
@@ -1152,17 +1132,11 @@ using namespace vmath;
 {
     // Code
     glBindFramebuffer(GL_FRAMEBUFFER, fbo);
-    //glBindFramebuffer(GL_FRAMEBUFFER, fbo);
-
-    // Create Renderbuffer Object
-    //glGenRenderbuffers(1, &rbo);
-    //glBindRenderbuffer(GL_RENDERBUFFER, rbo);
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     [self resize_sphere : textureWidth : textureHeight];
 
-    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glClear(GL_COLORglGenRenderbuffers | GL_DEPTH_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // Use The Shader Program Object
     glUseProgram(shaderProgramObject_sphere);
@@ -1200,8 +1174,6 @@ using namespace vmath;
         glUniform1i(lightingEnabledUniform_sphere, 0);
     }
 
-    
-    
     glBindVertexArray(vao_Sphere);
 
     // Draw, either by 'glDrawTriangles()' or 'glDrawArrays()' or 'glDrawElements()'
@@ -1234,7 +1206,6 @@ using namespace vmath;
     lights_sphere[2].lightPosition_sphere[1] = 10 * cos(lightAngleZero_sphere * 3.14f / 180.0f);
 
 }
-
 
 - (void)uninitialize
 {
