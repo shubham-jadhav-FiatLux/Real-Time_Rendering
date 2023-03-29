@@ -32,10 +32,8 @@ var requestAnimationFrame = window.requestAnimationFrame ||
                             window.oRequestAnimationFrame ||
                             window.msRequestAnimationFrame;
 
-// Push-Pop Related Variables
-var SIZE = 50;
-var Stack = new Array(SIZE);
-var top = -1;
+// Push Pop Related Variables
+//let myStack = new Stack();
 
 function main() {
 
@@ -125,12 +123,15 @@ function initialize(){
         "#version 300 es" +
         "\n" +
         "in vec4 a_position;" +
+        "in vec4 a_color;" +
         "uniform mat4 u_modelMatrix;" +
         "uniform mat4 u_viewMatrix;" +
         "uniform mat4 u_projectionMatrix;" +
+        "out vec4 a_color_out;" +
         "void main(void)" +
         "{" +
         "gl_Position = u_projectionMatrix * u_viewMatrix * u_modelMatrix * a_position;" +
+        "a_color_out = a_color;" +
         "}";
 
     var vertexShaderObject = gl.createShader(gl.VERTEX_SHADER);
@@ -152,10 +153,11 @@ function initialize(){
         "#version 300 es" +
         "\n" +
         "precision highp float;" +
+        "in vec4 a_color_out;" +
         "out vec4 FragColor;" +
         "void main(void)" +
         "{" +
-        "FragColor = vec4(1.0, 0.0, 0.0, 1.0);" +
+        "FragColor = vec4(1.0,1.0,1.0,1.0);" +
         "}";
 
     var fragmentShaderObject = gl.createShader(gl.FRAGMENT_SHADER);
@@ -178,6 +180,7 @@ function initialize(){
     gl.attachShader(shaderProgramObject, fragmentShaderObject);
     // Prelinking Shader Attribute Binding
     gl.bindAttribLocation(shaderProgramObject, webglMacros.SBJ_ATTRIBUTE_POSITION, "a_position");
+    gl.bindAttribLocation(shaderProgramObject, webglMacros.SBJ_ATTRIBUTE_COLOR, "a_color");
     // Shader Program Linking
     gl.linkProgram(shaderProgramObject);
     // Link Error Checking
@@ -197,7 +200,7 @@ function initialize(){
 
     // Sphere
     sphere = new Mesh();
-    makeSphere(sphere, 1.0, 30, 30);
+    makeSphere(sphere, 0.5, 30, 30);
 
     gl.clearDepth(1.0);
     gl.enable(gl.DEPTH_TEST);
@@ -246,41 +249,40 @@ function display() {
     var modelMatrix = mat4.create();
     var viewMatrix = mat4.create();
 
-    mat4.translate(translationMatrix, translationMatrix, [0.0, 0.0, -13.0]);
+    mat4.translate(translationMatrix, translationMatrix, [0.0, 0.0, -3.0]);
     mat4.multiply(modelMatrix, modelMatrix, translationMatrix);
 
     gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
     gl.uniformMatrix4fv(viewMatrixUniform, false, viewMatrix);
     gl.uniformMatrix4fv(projectionMatrixUniform, false, perspectiveProjectionMatrix);
 
-    //sglPushMatrix(modelMatrix);
-        mat4.scale(modelMatrix, scaleMatrix, [0.5, 0.5, 0.5]);
-        gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
+    let myStack = new Stack();
+
+    //myStack.push(mat4.clone(modelMatrix));
+        
+        //gl.glVertexAttrib3f(webglMacros.SBJ_ATTRIBUTE_COLOR, 1.0, 1.0, 0.0);
         sphere.draw();
-    //modelMatrix = sglPopMatrix();
+    //modelMatrix = myStack.pop();
     
-    /*
-    //sglPushMatrix(modelMatrix);
+    
+    myStack.push(mat4.clone(modelMatrix));
 
         mat4.rotateY(rotationMatrix, rotationMatrix, year);
         mat4.multiply(modelMatrix, modelMatrix, rotationMatrix);
         gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
 
-        mat4.translate(translationMatrix, translationMatrix, [2.5, 0.0, 0.0]);
+        mat4.translate(translationMatrix, translationMatrix, [1.5, 0.0, 0.0]);
         mat4.multiply(modelMatrix, modelMatrix, translationMatrix);
         gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
 
-        var modelMatrix_temp = mat4.create();
-        modelMatrix_temp = modelMatrix;
         // Draw Moon
-        //drawMoon(modelMatrix_temp);
-        //drawMoon(modelMatrix);
-   
+        drawMoon(modelMatrix);
+
         //mat4.scale(modelMatrix, scaleMatrix, [0.3, 0.3, 0.3]);
         //mat4.multiply(modelMatrix, modelMatrix, scaleMatrix);
         //gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
     
-        mat4.translate(translationMatrix, translationMatrix, [1.5, 0.0, 0.0]);
+        mat4.translate(translationMatrix, translationMatrix, [-1.5, 0.0, 0.0]);
         mat4.multiply(modelMatrix, modelMatrix, translationMatrix);
         gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
 
@@ -289,9 +291,9 @@ function display() {
         gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
 
         sphere.draw();
-        
-    //sglPopMatrix();
-    */
+    
+    modelMatrix = myStack.pop();
+    
     // Unuse The Shader Program Object
     gl.useProgram(null);
 
@@ -312,17 +314,19 @@ function drawMoon(modelMatrix)
     var scaleMatrix = mat4.create();
 
     // code
-    //sglPushMatrix(modelMatrix);
+    let myStack = new Stack();
 
-        //mat4.scale(modelMatrix, scaleMatrix, [1.5, 1.5, 1.5]);
-        //mat4.multiply(modelMatrix, modelMatrix, scaleMatrix);
-        //gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
+    myStack.push(mat4.clone(modelMatrix));
+
+        //mat4.scale(modelMatrix, scaleMatrix, [1.0, 1.0, 1.0]);
+        mat4.multiply(modelMatrix, modelMatrix, scaleMatrix);
+        gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
 
         mat4.rotateY(rotationMatrix, rotationMatrix, day);
         mat4.multiply(modelMatrix, modelMatrix, rotationMatrix);
         gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
 
-        mat4.translate(translationMatrix, translationMatrix, [1.5, 0.0, 0.0]);
+        mat4.translate(translationMatrix, translationMatrix, [2.3, 0.0, 0.0]);
         mat4.multiply(modelMatrix, modelMatrix, translationMatrix);
         gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
 
@@ -332,9 +336,10 @@ function drawMoon(modelMatrix)
 
         sphere.draw();
 
-    //sglPopMatrix();
+    modelMatrix = myStack.pop();
 }
 
+/*
 function sglPushMatrix(modelmatrix)
 {
     // Code
@@ -366,6 +371,7 @@ function sglPopMatrix()
         return tempVar;
     }
 }
+*/
 
 // Keyboard Event Listener
 function keyDown(event) {
@@ -450,3 +456,30 @@ function uninitialize() {
         shaderProgramObject = null;
     }
 }
+
+class Stack {
+    constructor() {
+        this.data = [];
+    }
+
+    //push
+    push(data) {
+        this.data.push(data);
+    }
+
+    //pop
+    pop() {
+        if (this.isStackEmpty()) {
+            return "Stack is Empty!!!";
+        }
+        return this.data.pop();
+    }
+
+    //printStack
+    isStackEmpty() {
+        if (this.data.length == 0)
+            return true;
+        return false;
+    }
+};
+

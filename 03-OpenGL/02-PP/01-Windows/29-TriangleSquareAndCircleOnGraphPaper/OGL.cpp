@@ -503,12 +503,12 @@ int initialize(void)
 	const GLfloat triangleVertices[] =
 										{
 											0.0f, 0.5f,
-											0.5f * (float)cos(225 / 180.f * M_PI), 0.5f * (float)sin(225 / 180.f * M_PI),
+											0.5f * (float)Math.cos(225 / 180.f * Math.PI), 0.5f * (float)Math.sin(225 / 180.f * Math.PI),
 
-											0.5f * (float)cos(225 / 180.f * M_PI), 0.5f * (float)sin(225 / 180.f * M_PI),
-											0.5f * (float)cos(315 / 180.f * M_PI), 0.5f * (float)sin(315 / 180.f * M_PI),
+											0.5f * (float)Math.cos(225 / 180.f * Math.PI), 0.5f * (float)Math.sin(225 / 180.f * Math.PI),
+											0.5f * (float)Math.cos(315 / 180.f * Math.PI), 0.5f * (float)Math.sin(315 / 180.f * Math.PI),
 
-											0.5f * (float)cos(315 / 180.f * M_PI), 0.5f * (float)sin(315 / 180.f * M_PI),
+											0.5f * (float)Math.cos(315 / 180.f * Math.PI), 0.5f * (float)Math.sin(315 / 180.f * Math.PI),
 											0.0f, 0.5f,
 										};
 

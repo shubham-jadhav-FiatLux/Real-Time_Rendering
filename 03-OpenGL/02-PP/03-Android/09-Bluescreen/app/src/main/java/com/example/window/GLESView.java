@@ -16,6 +16,7 @@ public class GLESView extends GLSurfaceView implements OnDoubleTapListener, OnGe
 
 	private GestureDetector gestureDetector;
 	private Context context;
+	private int shaderProgramObject;
 
 	GLESView(Context _context){
 		
@@ -37,8 +38,14 @@ public class GLESView extends GLSurfaceView implements OnDoubleTapListener, OnGe
 	public void onSurfaceCreated(GL10 gl, EGLConfig config) {
 	
 		// Code
-		String version = gl.glGetString(GL10.GL_VERSION);
-		System.out.println("SBJ: " + version);
+		String glesVersion = gl.glGetString(GL10.GL_VERSION);
+		System.out.println("SBJ: " + glesVersion);
+
+		String renderer = gl.glGetString(GL10.GL_RENDERER);
+		System.out.println("SBJ: " + renderer);
+
+		String glslVersion = gl.glGetString(GLES32.GL_SHADING_LANGUAGE_VERSION);
+		System.out.println("SBJ: " + glslVersion);
 
 		initialize();
 	}
@@ -113,6 +120,7 @@ public class GLESView extends GLSurfaceView implements OnDoubleTapListener, OnGe
 	@Override
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
 
+		uninitialize();
 		System.exit(0);
 		return true;
 	}
@@ -131,8 +139,107 @@ public class GLESView extends GLSurfaceView implements OnDoubleTapListener, OnGe
 
 	// Custom Private Functions
 	private void initialize() {
-	
+
 		// Code
+		// Vertex Shader
+		final String vertexShaderSourceCode = String.format
+		(
+			"#version 320 es" +
+			"\n" +
+			"void main(void)" +
+			"{" +
+			"}"
+		);
+
+		// Creating Shader Object
+		int vertexShaderObject = GLES32.glCreateShader(GLES32.GL_VERTEX_SHADER);
+		// Giving Shader Code To Shader Object 
+		GLES32.glShaderSource(vertexShaderObject, vertexShaderSourceCode);
+		// Compile The Shader
+		GLES32.glCompileShader(vertexShaderObject);
+		// Error Checking
+		int status[] = new int[1];
+		int infoLogLength[] = new int[1];
+		String log = null;
+		GLES32.glGetShaderiv(vertexShaderObject, GLES32.GL_COMPILE_STATUS, status, 0);
+		if (status[0] == GLES32.GL_FALSE)
+		{
+			GLES32.glGetShaderiv(vertexShaderObject, GLES32.GL_INFO_LOG_LENGTH, infoLogLength, 0);
+			if (infoLogLength[0] > 0)
+			{
+				log = GLES32.glGetShaderInfoLog(vertexShaderObject);
+				System.out.println("SBJ : " + "Vertex Shader Compilation Log: " + log);
+				uninitialize();
+				System.exit(0);
+			}
+		}
+
+
+		// Fragment Shader
+		final String fragmentShaderSourceCode = String.format
+		(
+			"#version 320 es" +
+			"\n" +
+			"precision highp float;" +
+			"void main(void)" +
+			"{" +
+			"}"
+		);
+
+		// Creating Shader Object
+		int fragmentShaderObject = GLES32.glCreateShader(GLES32.GL_FRAGMENT_SHADER);
+		// Giving Shader Code To Shader Object 
+		GLES32.glShaderSource(fragmentShaderObject, fragmentShaderSourceCode);
+		// Compile The Shader
+		GLES32.glCompileShader(fragmentShaderObject);
+		// Error Checking
+		status[0] = 0;
+		infoLogLength[0] = 0;
+		log = null;
+		GLES32.glGetShaderiv(fragmentShaderObject, GLES32.GL_COMPILE_STATUS, status, 0);
+		if (status[0] == GLES32.GL_FALSE)
+		{
+			GLES32.glGetShaderiv(fragmentShaderObject, GLES32.GL_INFO_LOG_LENGTH, infoLogLength, 0);
+			if (infoLogLength[0] > 0)
+			{
+				log = GLES32.glGetShaderInfoLog(fragmentShaderObject);
+				System.out.println("SBJ : " + "Fragment Shader Compilation Log: " + log);
+				uninitialize();
+				System.exit(0);
+			}
+		}
+
+
+		// Shader Program Object
+		shaderProgramObject = GLES32.glCreateProgram();
+		GLES32.glAttachShader(shaderProgramObject, vertexShaderObject);
+		GLES32.glAttachShader(shaderProgramObject, fragmentShaderObject);
+		GLES32.glLinkProgram(shaderProgramObject);
+		status[0] = 0;
+		infoLogLength[0] = 0;
+		log = null;
+		GLES32.glGetProgramiv(shaderProgramObject, GLES32.GL_LINK_STATUS, status, 0);
+		if (status[0] == GLES32.GL_FALSE)
+		{
+			GLES32.glGetProgramiv(shaderProgramObject, GLES32.GL_INFO_LOG_LENGTH, infoLogLength, 0);
+			if (infoLogLength[0] > 0)
+			{
+				log = GLES32.glGetProgramInfoLog(shaderProgramObject);
+				System.out.println("SBJ : " + "Shader Program Link Log: " + log);
+				uninitialize();
+				System.exit(0);
+			}
+		}
+
+
+		// Here Starts OpenGL Code
+		GLES32.glClearDepthf(1.0f);
+		GLES32.glEnable(GLES32.GL_DEPTH_TEST);
+		GLES32.glDepthFunc(GLES32.GL_LEQUAL);
+
+		//  Enable Culling
+		GLES32.glEnable(GLES32.GL_CULL_FACE);
+
 		GLES32.glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 	}
 
@@ -147,6 +254,41 @@ public class GLESView extends GLSurfaceView implements OnDoubleTapListener, OnGe
 		// Code
 		GLES32.glClear(GLES32.GL_COLOR_BUFFER_BIT | GLES32.GL_DEPTH_BUFFER_BIT);
 
+		GLES32.glUseProgram(shaderProgramObject);
+
+		// Here There Should Be Magical Code
+
+		GLES32.glUseProgram(0);
+
 		requestRender();
+	}
+
+	private void uninitialize(){
+
+		// Code
+
+		// Shader uninitialization
+		if (shaderProgramObject > 0)
+		{
+			GLES32.glUseProgram(shaderProgramObject);
+			int retVal[] = new int[1];
+			GLES32.glGetProgramiv(shaderProgramObject, GLES32.GL_ATTACHED_SHADERS, retVal, 0);
+			if (retVal[0] > 0)
+			{
+				int numAttachedShaders = retVal[0];
+				int shaderObjects[] = new int[numAttachedShaders];
+				GLES32.glGetAttachedShaders(shaderProgramObject, numAttachedShaders, retVal, 0, shaderObjects, 0);
+				for (int i = 0; i < numAttachedShaders; i++)
+				{
+					GLES32.glDetachShader(shaderProgramObject, shaderObjects[i]);
+					GLES32.glDeleteShader(shaderObjects[i]);
+					shaderObjects[i] = 0;
+				}
+			}
+			
+			GLES32.glUseProgram(0);
+			GLES32.glDeleteProgram(shaderProgramObject);
+			shaderProgramObject = 0;
+		}
 	}
 }

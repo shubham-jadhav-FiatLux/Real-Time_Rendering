@@ -489,7 +489,7 @@ int initialize(void)
 
 										};
 
-	const GLfloat pyramidTexcoord[] =		{
+	const GLfloat pyramidTexcoord[] =	{
 											0.5, 1.0, // front-top
 											0.0, 0.0, // front-left
 											1.0, 0.0, // front-right
@@ -594,7 +594,7 @@ int initialize(void)
 
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-		// vbo For Color
+		// vbo For Texcoord
 		glGenBuffers(1, &vbo_pyramid_texcoord);
 		glBindBuffer(GL_ARRAY_BUFFER, vbo_pyramid_texcoord);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(pyramidTexcoord), pyramidTexcoord, GL_STATIC_DRAW);
@@ -618,7 +618,7 @@ int initialize(void)
 
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-		// vbo For Color
+		// vbo For Texcoord
 		glGenBuffers(1, &vbo_cube_texcoord);
 		glBindBuffer(GL_ARRAY_BUFFER, vbo_cube_texcoord);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(cubeTexcoord), cubeTexcoord, GL_STATIC_DRAW);

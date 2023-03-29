@@ -1,13 +1,15 @@
 package com.example.window;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 import android.graphics.Color;
-import android.view.View;
-import android.view.Window;
 import android.content.pm.ActivityInfo;
+
+// For Fullscreen
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,12 +21,15 @@ public class MainActivity extends AppCompatActivity {
                                                                     // onDestroy => WM_DESTROY
                                                                     // onPaint => WM_PAINT
 
-        // Making Fullscren
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | 
-                                                         View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
-                                                         View.SYSTEM_UI_FLAG_IMMERSIVE);            // SYSTEM_UI_FLAG_LAYOUT_STABLE, SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN , SYSTEM_UI_FLAG_HIDE_LAYOUT_NAVIGATION
+        // Hide action bar/title bar
+        getSupportActionBar().hide();
 
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        // Fullscreen
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+
+        // Hiding system bars and ime
+        WindowInsetsControllerCompat windowInsetsControllerCompat = WindowCompat.getInsetsController(getWindow(), getWindow().getDecorView());
+        windowInsetsControllerCompat.hide(WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.ime());
 
         // Forced Landscape Orientation
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);

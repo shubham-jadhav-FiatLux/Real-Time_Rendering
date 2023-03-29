@@ -27,10 +27,15 @@ var modelMatrixUniform = new Array(2);
 var viewMatrixUniform = new Array(2);
 var projectionMatrixUniform = new Array(2);
 
-var laUniform = new Array([2][3]);				// Ambient
-var ldUniform = new Array([2][3]);				// Diffuse
-var lsUniform = new Array([2][3]);				// Specular
-var lightPositionUniform = new Array([2][3]);
+let laUniform_pv = new Array([3]);				// Ambient
+let ldUniform_pv = new Array([3]);				// Diffuse
+let lsUniform_pv = new Array([3]);				// Specular
+let lightPositionUniform_pv = new Array([3]);
+
+let laUniform_pf = new Array([3]);				// Ambient
+let ldUniform_pf = new Array([3]);				// Diffuse
+let lsUniform_pf = new Array([3]);				// Specular
+let lightPositionUniform_pf = new Array([3]);
 
 var kaUniform = new Array(2);
 var kdUniform = new Array(2);
@@ -286,8 +291,7 @@ function initialize(){
         "uniform vec3 u_ks;" +
         "uniform float u_materialShininess;" +
         "out vec4 FragColor;" +
-        "precision highp int;" +
-        "uniform int u_lightingEnabled;" +
+        "uniform highp int u_lightingEnabled;" +
         "void main(void)" +
         "{" +
         "vec3 phong_ads_light;" +
@@ -354,18 +358,18 @@ function initialize(){
     modelMatrixUniform[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_modelMatrix");
     viewMatrixUniform[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_viewMatrix");
     projectionMatrixUniform[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_projectionMatrix");
-    laUniform[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_la[0]");
-    laUniform[0][1] = gl.getUniformLocation(shaderProgramObject_pv, "u_la[1]");
-    laUniform[0][2] = gl.getUniformLocation(shaderProgramObject_pv, "u_la[2]");
-    ldUniform[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_ld[0]");
-    ldUniform[0][1] = gl.getUniformLocation(shaderProgramObject_pv, "u_ld[1]");
-    ldUniform[0][2] = gl.getUniformLocation(shaderProgramObject_pv, "u_ld[2]");
-    lsUniform[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_ls[0]");
-    lsUniform[0][1] = gl.getUniformLocation(shaderProgramObject_pv, "u_ls[1]");
-    lsUniform[0][2] = gl.getUniformLocation(shaderProgramObject_pv, "u_ls[2]");
-    lightPositionUniform[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_lightPosition[0]");
-    lightPositionUniform[0][1] = gl.getUniformLocation(shaderProgramObject_pv, "u_lightPosition[1]");
-    lightPositionUniform[0][2] = gl.getUniformLocation(shaderProgramObject_pv, "u_lightPosition[2]");
+    laUniform_pv[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_la[0]");
+    laUniform_pv[1] = gl.getUniformLocation(shaderProgramObject_pv, "u_la[1]");
+    laUniform_pv[2] = gl.getUniformLocation(shaderProgramObject_pv, "u_la[2]");
+    ldUniform_pv[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_ld[0]");
+    ldUniform_pv[1] = gl.getUniformLocation(shaderProgramObject_pv, "u_ld[1]");
+    ldUniform_pv[2] = gl.getUniformLocation(shaderProgramObject_pv, "u_ld[2]");
+    lsUniform_pv[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_ls[0]");
+    lsUniform_pv[1] = gl.getUniformLocation(shaderProgramObject_pv, "u_ls[1]");
+    lsUniform_pv[2] = gl.getUniformLocation(shaderProgramObject_pv, "u_ls[2]");
+    lightPositionUniform_pv[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_lightPosition[0]");
+    lightPositionUniform_pv[1] = gl.getUniformLocation(shaderProgramObject_pv, "u_lightPosition[1]");
+    lightPositionUniform_pv[2] = gl.getUniformLocation(shaderProgramObject_pv, "u_lightPosition[2]");
     kaUniform[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_ka");
     kdUniform[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_kd");
     ksUniform[0] = gl.getUniformLocation(shaderProgramObject_pv, "u_ks");
@@ -394,18 +398,18 @@ function initialize(){
     modelMatrixUniform[1] = gl.getUniformLocation(shaderProgramObject_pf, "u_modelMatrix");
     viewMatrixUniform[1] = gl.getUniformLocation(shaderProgramObject_pf, "u_viewMatrix");
     projectionMatrixUniform[1] = gl.getUniformLocation(shaderProgramObject_pf, "u_projectionMatrix");
-    laUniform[1] = gl.getUniformLocation(shaderProgramObject_pv, "u_la[0]");
-    laUniform[1][1] = gl.getUniformLocation(shaderProgramObject_pv, "u_la[1]");
-    laUniform[1][2] = gl.getUniformLocation(shaderProgramObject_pv, "u_la[2]");
-    ldUniform[1] = gl.getUniformLocation(shaderProgramObject_pv, "u_ld[0]");
-    ldUniform[1][1] = gl.getUniformLocation(shaderProgramObject_pv, "u_ld[1]");
-    ldUniform[1][2] = gl.getUniformLocation(shaderProgramObject_pv, "u_ld[2]");
-    lsUniform[1] = gl.getUniformLocation(shaderProgramObject_pv, "u_ls[0]");
-    lsUniform[1][1] = gl.getUniformLocation(shaderProgramObject_pv, "u_ls[1]");
-    lsUniform[1][2] = gl.getUniformLocation(shaderProgramObject_pv, "u_ls[2]");
-    lightPositionUniform[1] = gl.getUniformLocation(shaderProgramObject_pv, "u_lightPosition[0]");
-    lightPositionUniform[1][1] = gl.getUniformLocation(shaderProgramObject_pv, "u_lightPosition[1]");
-    lightPositionUniform[1][2] = gl.getUniformLocation(shaderProgramObject_pv, "u_lightPosition[2]");
+    laUniform_pf[0] = gl.getUniformLocation(shaderProgramObject_pf, "u_la[0]");
+    laUniform_pf[1] = gl.getUniformLocation(shaderProgramObject_pf, "u_la[1]");
+    laUniform_pf[2] = gl.getUniformLocation(shaderProgramObject_pf, "u_la[2]");
+    ldUniform_pf[0] = gl.getUniformLocation(shaderProgramObject_pf, "u_ld[0]");
+    ldUniform_pf[1] = gl.getUniformLocation(shaderProgramObject_pf, "u_ld[1]");
+    ldUniform_pf[2] = gl.getUniformLocation(shaderProgramObject_pf, "u_ld[2]");
+    lsUniform_pf[0] = gl.getUniformLocation(shaderProgramObject_pf, "u_ls[0]");
+    lsUniform_pf[1] = gl.getUniformLocation(shaderProgramObject_pf, "u_ls[1]");
+    lsUniform_pf[2] = gl.getUniformLocation(shaderProgramObject_pf, "u_ls[2]");
+    lightPositionUniform_pf[0] = gl.getUniformLocation(shaderProgramObject_pf, "u_lightPosition[0]");
+    lightPositionUniform_pf[1] = gl.getUniformLocation(shaderProgramObject_pf, "u_lightPosition[1]");
+    lightPositionUniform_pf[2] = gl.getUniformLocation(shaderProgramObject_pf, "u_lightPosition[2]");
     kaUniform[1] = gl.getUniformLocation(shaderProgramObject_pf, "u_ka");
     kdUniform[1] = gl.getUniformLocation(shaderProgramObject_pf, "u_kd");
     ksUniform[1] = gl.getUniformLocation(shaderProgramObject_pf, "u_ks");
@@ -494,10 +498,10 @@ function display() {
             
                 for (var j = 0; j < 3; j++)
                 {
-                    gl.uniform3fv(laUniform[0][j], lightAmbient[j]);
-                    gl.uniform3fv(ldUniform[0][j], lightDiffuse[j]);
-                    gl.uniform3fv(lsUniform[0][j], lightSpecular[j]);
-                    gl.uniform4fv(lightPositionUniform[0][j], lightPosition[j]);
+                    gl.uniform3fv(laUniform_pv[j], lightAmbient[j]);
+                    gl.uniform3fv(ldUniform_pv[j], lightDiffuse[j]);
+                    gl.uniform3fv(lsUniform_pv[j], lightSpecular[j]);
+                    gl.uniform4fv(lightPositionUniform_pv[j], lightPosition[j]);
                 }
                 gl.uniform3fv(kaUniform[0], materialAmbient);
                 gl.uniform3fv(kdUniform[0], materialDiffuse);
@@ -522,17 +526,12 @@ function display() {
         {
             gl.uniform1i(lightingEnabledUniform[1], 1);
 
-            gl.uniform3fv(laUniform[1][0], lightAmbient[0]);
-            gl.uniform3fv(ldUniform[1][0], lightDiffuse[0]);
-            gl.uniform3fv(lsUniform[1][0], lightSpecular[0]);
-            gl.uniform4fv(lightPositionUniform[1][0], lightPosition[0]);
-
-            for (var i = 1; i < 3; i++)
+            for (var i = 0; i < 3; i++)
             {
-                gl.uniform3fv(laUniform[1][i], lightAmbient[i]);
-                gl.uniform3fv(ldUniform[1][i], lightDiffuse[i]);
-                gl.uniform3fv(lsUniform[1][i], lightSpecular[i]);
-                gl.uniform4fv(lightPositionUniform[1][i], lightPosition[i]);
+                gl.uniform3fv(laUniform_pf[i], lightAmbient[i]);
+                gl.uniform3fv(ldUniform_pf[i], lightDiffuse[i]);
+                gl.uniform3fv(lsUniform_pf[i], lightSpecular[i]);
+                gl.uniform4fv(lightPositionUniform_pf[i], lightPosition[i]);
             }
 
             gl.uniform3fv(kaUniform[1], materialAmbient);

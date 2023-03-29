@@ -6,7 +6,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.window"
+        applicationId "com.example.bluescreen"
         minSdk 21
         targetSdk 33
         versionCode 1
