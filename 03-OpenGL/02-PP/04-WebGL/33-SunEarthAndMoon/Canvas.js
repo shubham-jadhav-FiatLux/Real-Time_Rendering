@@ -157,7 +157,7 @@ function initialize(){
         "out vec4 FragColor;" +
         "void main(void)" +
         "{" +
-        "FragColor = vec4(1.0,1.0,1.0,1.0);" +
+        "FragColor = a_color_out;" +
         "}";
 
     var fragmentShaderObject = gl.createShader(gl.FRAGMENT_SHADER);
@@ -252,20 +252,21 @@ function display() {
     mat4.translate(translationMatrix, translationMatrix, [0.0, 0.0, -3.0]);
     mat4.multiply(modelMatrix, modelMatrix, translationMatrix);
 
-    gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
-    gl.uniformMatrix4fv(viewMatrixUniform, false, viewMatrix);
-    gl.uniformMatrix4fv(projectionMatrixUniform, false, perspectiveProjectionMatrix);
-
     let myStack = new Stack();
 
-    //myStack.push(mat4.clone(modelMatrix));
+    myStack.push(modelMatrix);
+
+        gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
+        gl.uniformMatrix4fv(viewMatrixUniform, false, viewMatrix);
+        gl.uniformMatrix4fv(projectionMatrixUniform, false, perspectiveProjectionMatrix);
         
-        //gl.glVertexAttrib3f(webglMacros.SBJ_ATTRIBUTE_COLOR, 1.0, 1.0, 0.0);
+        gl.vertexAttrib3f(webglMacros.SBJ_ATTRIBUTE_COLOR, 1.0, 1.0, 0.0);
         sphere.draw();
-    //modelMatrix = myStack.pop();
+
+    modelMatrix = myStack.pop();
     
     
-    myStack.push(mat4.clone(modelMatrix));
+    myStack.push(modelMatrix);
 
         mat4.rotateY(rotationMatrix, rotationMatrix, year);
         mat4.multiply(modelMatrix, modelMatrix, rotationMatrix);
@@ -276,8 +277,30 @@ function display() {
         gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
 
         // Draw Moon
-        drawMoon(modelMatrix);
+        // drawMoon(modelMatrix);
 
+        //mat4.scale(modelMatrix, scaleMatrix, [0.75, 0.75, 0.75]);
+        //mat4.multiply(modelMatrix, modelMatrix, scaleMatrix);
+        //gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
+
+        mat4.rotateY(rotationMatrix, rotationMatrix, day);
+        mat4.multiply(modelMatrix, modelMatrix, rotationMatrix);
+        gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
+
+        mat4.translate(translationMatrix, translationMatrix, [1.3, 0.0, 0.0]);
+        mat4.multiply(modelMatrix, modelMatrix, translationMatrix);
+        gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
+
+        mat4.rotateZ(rotationMatrix, rotationMatrix, hour);
+        mat4.multiply(modelMatrix, modelMatrix, rotationMatrix);
+        gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
+
+        gl.vertexAttrib3f(webglMacros.SBJ_ATTRIBUTE_COLOR, 1.0, 1.0, 0.0);
+
+        sphere.draw();
+
+    modelMatrix = myStack.pop();
+    /*
         //mat4.scale(modelMatrix, scaleMatrix, [0.3, 0.3, 0.3]);
         //mat4.multiply(modelMatrix, modelMatrix, scaleMatrix);
         //gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
@@ -293,7 +316,8 @@ function display() {
         sphere.draw();
     
     modelMatrix = myStack.pop();
-    
+    */
+
     // Unuse The Shader Program Object
     gl.useProgram(null);
 
@@ -316,9 +340,9 @@ function drawMoon(modelMatrix)
     // code
     let myStack = new Stack();
 
-    myStack.push(mat4.clone(modelMatrix));
+    //myStack.push(modelMatrix);
 
-        //mat4.scale(modelMatrix, scaleMatrix, [1.0, 1.0, 1.0]);
+        mat4.scale(modelMatrix, scaleMatrix, [0.75, 0.75, 0.75]);
         mat4.multiply(modelMatrix, modelMatrix, scaleMatrix);
         gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
 
@@ -334,9 +358,11 @@ function drawMoon(modelMatrix)
         mat4.multiply(modelMatrix, modelMatrix, rotationMatrix);
         gl.uniformMatrix4fv(modelMatrixUniform, false, modelMatrix);
 
+        gl.vertexAttrib3f(webglMacros.SBJ_ATTRIBUTE_COLOR, 1.0, 1.0, 0.0);
+
         sphere.draw();
 
-    modelMatrix = myStack.pop();
+    //modelMatrix = myStack.pop();
 }
 
 /*
