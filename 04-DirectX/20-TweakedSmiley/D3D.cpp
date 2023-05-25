@@ -1196,6 +1196,7 @@ void display(void)
 	}
 	else
 	{
+		//gpID3D11DeviceContext->PSSetSamplers(1, 1, &gpID3D11SamplerState_Texture);
 		//gpID3D11DeviceContext->PSSetSamplers(0, 0, NULL);
 	}
 
