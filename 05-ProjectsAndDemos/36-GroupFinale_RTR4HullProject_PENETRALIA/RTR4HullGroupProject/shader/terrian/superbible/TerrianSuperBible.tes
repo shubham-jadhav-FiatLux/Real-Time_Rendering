@@ -1,0 +1,106 @@
+
+layout(quads, fractional_odd_spacing) in;
+uniform sampler2D u_textureDisplacement;
+uniform mat4 u_modelMatrix;
+uniform mat4 u_viewMatrix;
+uniform mat4 u_projectionMatrix;
+uniform float u_dmapDepth;
+in vec2 tcs_texcoord_out[];
+out vec2 texcoord;
+
+uniform int u_bLight;
+out vec3 world_coord;
+out vec3 eye_coord;
+out vec3 out_normal;
+
+struct DirLight {
+	vec4 direction;	
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+};
+uniform DirLight u_dirLight[1];
+
+void main(void)
+{
+	/*vec2 tc1 = mix(tcs_texcoord_out[0], tcs_texcoord_out[1], gl_TessCoord.x);
+	vec2 tc2 = mix(tcs_texcoord_out[2], tcs_texcoord_out[3], gl_TessCoord.x);
+	vec2 tc = mix(tc2, tc1, gl_TessCoord.y);*/
+
+	float u = gl_TessCoord.x;
+    float v = gl_TessCoord.y;
+
+    vec2 t00 = tcs_texcoord_out[0];
+    vec2 t01 = tcs_texcoord_out[1];
+    vec2 t10 = tcs_texcoord_out[2];
+    vec2 t11 = tcs_texcoord_out[3];
+
+	vec2 t0 = (t01 - t00) * u + t00;
+    vec2 t1 = (t11 - t10) * u + t10;
+    vec2 tc = (t1 - t0) * v + t0;
+
+	vec4 p1 = mix(gl_in[0].gl_Position, gl_in[1].gl_Position, gl_TessCoord.x);
+	vec4 p2 = mix(gl_in[2].gl_Position, gl_in[3].gl_Position, gl_TessCoord.x);
+	vec4 p = mix(p2, p1, gl_TessCoord.y);
+
+	vec4 p00 = gl_in[0].gl_Position;
+	vec4 p01 = gl_in[1].gl_Position;
+	vec4 p10 = gl_in[2].gl_Position;
+	vec4 p11 = gl_in[3].gl_Position;
+
+	vec4 uVec = p01 - p00;
+	vec4 vVec = p10 - p00;
+	vec4 normal = (vec4(cross(vVec.xyz, uVec.xyz), 0.0));
+
+	p.y +=  texture(u_textureDisplacement, tc).r * u_dmapDepth;
+
+	vec4 P_eye = u_viewMatrix * p;
+	out_normal = normal.xyz;
+	texcoord = tc;
+	world_coord = p.xyz;
+	eye_coord = P_eye.xyz;
+	gl_Position = u_projectionMatrix * P_eye;
+};
+
+
+/*
+layout(quads, fractional_odd_spacing) in;
+in vec2 tcs_texcoord_out[];
+uniform sampler2D u_textureDisplacement;
+uniform mat4 u_viewMatrix;
+uniform mat4 u_modelMatrix;
+uniform mat4 u_projectionMatrix;
+uniform float u_dmapDepth;
+out vec2 texcoord;
+out vec3 world_coord;
+out vec3 eye_coord;
+out vec3 out_normal;
+void main(void)
+{
+	vec2 tc1 = mix(tcs_texcoord_out[0], tcs_texcoord_out[1], gl_TessCoord.x);
+	vec2 tc2 = mix(tcs_texcoord_out[2], tcs_texcoord_out[3], gl_TessCoord.x);
+	vec2 tc = mix(tc2, tc1, gl_TessCoord.y);
+	vec4 p1 = mix(gl_in[0].gl_Position, gl_in[1].gl_Position, gl_TessCoord.x);
+	vec4 p2 = mix(gl_in[2].gl_Position, gl_in[3].gl_Position, gl_TessCoord.x);
+	vec4 p = mix(p2, p1, gl_TessCoord.y);
+
+	vec4 p00 = gl_in[0].gl_Position;
+	vec4 p01 = gl_in[1].gl_Position;
+	vec4 p10 = gl_in[2].gl_Position;
+	vec4 p11 = gl_in[3].gl_Position;
+
+	vec4 uVec = p01 - p00;
+	vec4 vVec = p10 - p00;
+	vec4 normal = vec4(cross(vVec.xyz, uVec.xyz), 0.0);
+
+	p.y +=  texture(u_textureDisplacement, tc).r * u_dmapDepth;
+
+	vec4 P_eye = u_viewMatrix * u_modelMatrix * p;
+	out_normal = normal.xyz;
+	texcoord = tc;
+	world_coord = p.xyz;
+	eye_coord = P_eye.xyz;
+	gl_Position = u_projectionMatrix * P_eye;
+};
+
+*/

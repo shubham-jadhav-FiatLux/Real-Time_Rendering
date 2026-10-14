@@ -97,3 +97,6 @@ xcuserdata/
 *.apk
 *.aab
 .idea/
+
+# Large uncompressed terrain heightmaps (>100MB)
+Heightmap_Base_Variant_01_8192x8192.png

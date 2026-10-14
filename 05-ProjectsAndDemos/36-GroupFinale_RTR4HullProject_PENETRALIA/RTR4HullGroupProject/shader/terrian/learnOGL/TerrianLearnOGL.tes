@@ -1,0 +1,61 @@
+
+layout(quads, fractional_odd_spacing, ccw) in;
+
+uniform sampler2D u_heightMap;
+uniform mat4 u_modelMatrix;
+uniform mat4 u_viewMatrix;
+uniform mat4 u_projectionMatrix;
+
+in vec2 tcs_texcoord_out[];
+
+out float out_height;
+out vec2 out_texcoord;
+
+uniform int u_bLight;
+out vec3 world_coord;
+out vec3 eye_coord;
+out vec3 out_normal;
+
+struct DirLight {
+	vec4 direction;	
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular;
+};
+uniform DirLight u_dirLight[1];
+
+void main(void)
+{
+	float u = gl_TessCoord.x;
+    float v = gl_TessCoord.y;
+
+    vec2 t00 = tcs_texcoord_out[0];
+    vec2 t01 = tcs_texcoord_out[1];
+    vec2 t10 = tcs_texcoord_out[2];
+    vec2 t11 = tcs_texcoord_out[3];
+
+	vec2 t0 = (t01 - t00) * u + t00;
+    vec2 t1 = (t11 - t10) * u + t10;
+    vec2 texCoord = (t1 - t0) * v + t0;
+
+	out_texcoord = texCoord;
+
+	out_height =  texture(u_heightMap, texCoord).y * 2048.0 - 512.0;
+
+	vec4 p00 = gl_in[0].gl_Position;
+	vec4 p01 = gl_in[1].gl_Position;
+	vec4 p10 = gl_in[2].gl_Position;
+	vec4 p11 = gl_in[3].gl_Position;
+
+	vec4 uVec = p01 - p00;
+	vec4 vVec = p10 - p00;
+	vec4 normal = (vec4(cross(vVec.xyz, uVec.xyz), 0.0));
+	out_normal = vec3(normal);
+	normal= normalize(normal);
+	vec4 p0 = (p01 - p00) * u + p00;
+    vec4 p1 = (p11 - p10) * u + p10;
+    vec4 p = (p1 - p0) * v + p0 + normal * out_height;
+
+	world_coord = vec3(u_modelMatrix * p);
+	gl_Position = u_projectionMatrix * u_viewMatrix * u_modelMatrix * p;
+};

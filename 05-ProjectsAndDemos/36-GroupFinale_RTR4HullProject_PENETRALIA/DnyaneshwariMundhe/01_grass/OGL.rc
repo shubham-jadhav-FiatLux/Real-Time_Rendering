@@ -1,0 +1,7 @@
+
+#include"OGL.h"
+
+MYICON ICON WindowIco.ico
+IDBITMAP_GRASS BITMAP grass.bmp
+IDBITMAP_FLOWMAP BITMAP flowmap.bmp
+

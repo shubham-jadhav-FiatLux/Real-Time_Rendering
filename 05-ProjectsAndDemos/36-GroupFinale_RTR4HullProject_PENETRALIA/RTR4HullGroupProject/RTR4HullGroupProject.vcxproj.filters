@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Effects">
+      <UniqueIdentifier>{a2dcc9a0-33e2-45d5-b936-39feb73bad60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Helpers">
+      <UniqueIdentifier>{b45c6c52-767a-40ee-b796-5814b13f50f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes">
+      <UniqueIdentifier>{1cc14833-9b77-4192-980c-7fc721416846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Shapes">
+      <UniqueIdentifier>{55139af3-342d-4f9f-912e-a015f0cbe001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Effects">
+      <UniqueIdentifier>{d35bf43d-6b11-4010-8b44-03fddc0b23f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Helpers">
+      <UniqueIdentifier>{b0c28762-5518-4802-bd8b-3de29be3e6fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shapes">
+      <UniqueIdentifier>{612faace-fa53-449e-b1b8-1ec785b5508a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Test">
+      <UniqueIdentifier>{ffdd4476-27c4-415c-ae4c-26a27e8013d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Test">
+      <UniqueIdentifier>{b37afc3d-4841-4364-861b-ff2be2d6cae6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{45df2c2c-4fc1-4338-aeb5-c22798ef5839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{5ec903df-d331-4932-9088-75c1aa65313c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\lights">
+      <UniqueIdentifier>{4a3f0faa-64ba-48a9-bffd-c70747d4387f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\font">
+      <UniqueIdentifier>{64de52d7-17b6-40be-b657-32f7afc142f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Effects\model_loading">
+      <UniqueIdentifier>{7fd8318c-43cf-4b26-be9f-12fdd918ae6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Effects\static_model">
+      <UniqueIdentifier>{c3906e04-12ea-481f-b481-50a15de405f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Effects\dynamic_model">
+      <UniqueIdentifier>{b2d100d4-bcee-4460-9d0e-5e70b5508710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Effects\model_loading\static_model">
+      <UniqueIdentifier>{ed14c70c-4bf9-440c-bc12-a4c74c517a93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Effects\model_loading\dynamic_model">
+      <UniqueIdentifier>{68dd5a4e-264a-4b13-ae6c-63c1fe31afd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Effects\atmospheric scattering">
+      <UniqueIdentifier>{cf574997-ca81-4e20-b5f5-95ec901a0f6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Effects\atmospheric scattering">
+      <UniqueIdentifier>{90d1d666-e544-481e-99e2-7db8799b3ec0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\texture">
+      <UniqueIdentifier>{dedc29e3-2bf8-41cd-bc41-95069b997cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\atmospheric scattering">
+      <UniqueIdentifier>{631d5972-8345-4928-85b0-b215e63acd5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\color">
+      <UniqueIdentifier>{28de60d2-f18a-4c8a-872a-7989ed8af57c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\ocean">
+      <UniqueIdentifier>{8058b8b5-f1bf-4ba5-a322-5383afd35bae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{bf2a0db5-218d-4cf4-920f-30cf515d92ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{84da2b21-86e4-4837-9dca-5900e0845163}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\grass">
+      <UniqueIdentifier>{3ad9ed4b-136d-46ac-b416-db7d2a940bc1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Camera.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\PhongLightShader.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\TextureShader.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Common.cpp">
+      <Filter>Source Files\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Loadtexture_stbi.cpp">
+      <Filter>Source Files\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CubeRender.cpp">
+      <Filter>Source Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DefaultScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Cubemap.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\VolumetricLight.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\PointLight.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\SpotLight.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Shader.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Texture.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\FontShader.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="test\source\TestFont.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\utils\Logger.cpp">
+      <Filter>Source Files\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="test\source\TestStaticModel.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\StaticModelShader.cpp">
+      <Filter>Source Files\Effects\model_loading\static_model</Filter>
+    </ClCompile>
+    <ClCompile Include="source\VideoRendering.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\QuadRender.cpp">
+      <Filter>Source Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\FrameBuffer.cpp">
+      <Filter>Source Files\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AtmosphereScatteringShader.cpp">
+      <Filter>Source Files\Effects\atmospheric scattering</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AtmosphereScattering.cpp">
+      <Filter>Source Files\Effects\atmospheric scattering</Filter>
+    </ClCompile>
+    <ClCompile Include="test\source\TestEffect.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ColorShader.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ocean\OceanShader.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Terrian\TerrianSuperBibleShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Terrian\TerrianSuperBible.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test\source\TestTransformModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\utils\Configuration.cpp">
+      <Filter>Source Files\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="test\source\TestBloom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\bloom\BloomLearnOGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\bloom\BloomLearnOGLShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\msaa\MSAAShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test\source\TestMSAA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\water\WaterShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\water\Water.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scene\Scene0_Banner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scene\Scene1_OpeningScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scenes\Scene00.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scenes\Scene01.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\scenes\Scene02.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\engine\Presenter.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="source\engine\SceneQueue.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="source\engine\Synchronizer.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Terrian\TerrianLearnOGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Terrian\TerrianLearnOGLShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\engine\UniformBuffer.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="test\source\TestDownloadedStaticModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test\source\TestPointLight.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\grass\Grass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\grass\GrassShader.cpp">
+      <Filter>Source Files\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\model\BoatModel.cpp">
+      <Filter>Source Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Rain\RainVertical.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Rain\RainVerticalShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\CubeRender.h">
+      <Filter>Header Files\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Camera.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PhongLightShader.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TextureShader.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Common.h">
+      <Filter>Header Files\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Loadtexture_stbi.h">
+      <Filter>Header Files\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="common\stb_image.h">
+      <Filter>Header Files\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="common\vmath.h">
+      <Filter>Header Files\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DefaultScene.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Cubemap.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PointLight.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SpotLight.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VolumetricLight.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Shader.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Texture.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FontShader.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="test\header\TestEffect.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\header\TestFont.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utils\Logger.h">
+      <Filter>Header Files\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="test\header\TestStaticModel.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="include\StaticModelShader.h">
+      <Filter>Header Files\Effects\static_model</Filter>
+    </ClInclude>
+    <ClInclude Include="common\static_model_loading\StaticMesh.h">
+      <Filter>Header Files\Effects\static_model</Filter>
+    </ClInclude>
+    <ClInclude Include="common\static_model_loading\StaticModel.h">
+      <Filter>Header Files\Effects\static_model</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VideoRendering.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\QuadRender.h">
+      <Filter>Header Files\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FrameBuffer.h">
+      <Filter>Header Files\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AtmosphereScatteringShader.h">
+      <Filter>Header Files\Effects\atmospheric scattering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AtmosphereScattering.h">
+      <Filter>Header Files\Effects\atmospheric scattering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ColorShader.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OceanShader.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Ocean.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\terrian\TerrianSuperBibleShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\terrian\TerrianSuperBible.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\transform_model\TransformModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test\header\TestTransformModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utils\Configuration.h">
+      <Filter>Header Files\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="test\header\TestBloom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bloom\BloomLearnOGL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\bloom\BloomLearnOGLShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\msaa\MSAAShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test\header\TestMSAA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\water\WaterShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\water\Water.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scene\Scene0_Banner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scene\Scene1_OpeningScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scenes\Scene00.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scenes\Scene01.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\scenes\Scene02.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\engine\Presenter.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\engine\SceneQueue.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\engine\Synchronizer.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\terrian\TerrianLearnOGL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\terrian\TerrianLearnOGLShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\engine\UniformBuffer.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\engine\ShaderLayouts.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="test\header\TestDownloadedStaticModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\test\TestPointLight.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="include\grass\GrassShader.h">
+      <Filter>Header Files\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\grass\Grass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\model\BoatModel.h">
+      <Filter>Header Files\Shapes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader\Lights\PointLight.frag">
+      <Filter>Shader\lights</Filter>
+    </None>
+    <None Include="shader\Lights\PointLight.vert">
+      <Filter>Shader\lights</Filter>
+    </None>
+    <None Include="shader\Lights\PhongADSLight.vert">
+      <Filter>Shader\lights</Filter>
+    </None>
+    <None Include="shader\font\FontShader.frag">
+      <Filter>Shader\font</Filter>
+    </None>
+    <None Include="shader\font\FontShader.vert">
+      <Filter>Shader\font</Filter>
+    </None>
+    <None Include="shader\lights\SpotLight.vert">
+      <Filter>Shader\lights</Filter>
+    </None>
+    <None Include="shader\lights\SpotLight.frag">
+      <Filter>Shader\lights</Filter>
+    </None>
+    <None Include="shader\TextureShader.frag">
+      <Filter>Shader\texture</Filter>
+    </None>
+    <None Include="shader\TextureShader.vert">
+      <Filter>Shader\texture</Filter>
+    </None>
+    <None Include="shader\lights\PhongADSLight.frag">
+      <Filter>Shader\lights</Filter>
+    </None>
+    <None Include="shader\atmosphericscattering\SkyFromAtmosphereShader.frag">
+      <Filter>Shader\atmospheric scattering</Filter>
+    </None>
+    <None Include="shader\atmosphericscattering\SkyFromAtmosphereShader.vert">
+      <Filter>Shader\atmospheric scattering</Filter>
+    </None>
+    <None Include="shader\ColorShader.frag">
+      <Filter>Shader\color</Filter>
+    </None>
+    <None Include="shader\ColorShader.vert">
+      <Filter>Shader\color</Filter>
+    </None>
+    <None Include="shader\ocean\Ocean.frag">
+      <Filter>Shader\ocean</Filter>
+    </None>
+    <None Include="shader\ocean\Ocean.Vert">
+      <Filter>Shader\ocean</Filter>
+    </None>
+    <None Include="shader\terrian\superbible\TerrianSuperBible.tes" />
+    <None Include="shader\terrian\superbible\TerrianSuperBible.vert" />
+    <None Include="shader\bloom\learnOGL\BlurShader.frag" />
+    <None Include="shader\bloom\learnOGL\BlurShader.vert" />
+    <None Include="shader\bloom\learnOGL\BloomBrightnessShader.frag" />
+    <None Include="shader\bloom\learnOGL\BloomBrightnessShader.vert" />
+    <None Include="shader\bloom\learnOGL\BloomShader.frag" />
+    <None Include="shader\bloom\learnOGL\BloomShader.vert" />
+    <None Include="shader\msaa\MSAAShader.frag" />
+    <None Include="shader\msaa\MSAAShader.vert" />
+    <None Include="shader\static_model_loading\StaticModelLoadingShader.frag" />
+    <None Include="shader\static_model_loading\StaticModelLoadingShader.vert" />
+    <None Include="shader\water\WaterShader.frag" />
+    <None Include="shader\water\WaterShader.vert" />
+    <None Include="shader\terrian\superbible\TerrianSuperBible.frag" />
+    <None Include="shader\terrian\superbible\TerrianSuperBible.tcs" />
+    <None Include="shader\terrian\learnOGL\TerrianLearnOGL.frag" />
+    <None Include="shader\terrian\learnOGL\TerrianLearnOGL.tcs" />
+    <None Include="shader\terrian\learnOGL\TerrianLearnOGL.vert" />
+    <None Include="shader\terrian\learnOGL\TerrianLearnOGL.tes" />
+    <None Include="shader\grass\GrassShader.frag">
+      <Filter>Shader\grass</Filter>
+    </None>
+    <None Include="shader\grass\GrassShader.gs">
+      <Filter>Shader\grass</Filter>
+    </None>
+    <None Include="shader\grass\GrassShader.vert">
+      <Filter>Shader\grass</Filter>
+    </None>
+    <None Include="shader\Rain\RainVertical.vert" />
+    <None Include="shader\Rain\RainVertical.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="source\ocean\OceanScene.cu" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+#pragma once
+#include "Common.h"
+bool InitializeBloomLearnOGL(void);
+void DisplayBloomLearnOGL(void);
+bool UpdateBloomLearnOGL(void);
+void UninitializeBloomLearnOGL(void);
+void SetHDRFBO(void);
+void UnSetHDRFBO(void);
+void SetBrightnessFBO(void);
+void UnSetBrightnessFBO(void);
+void SetBlurFBO(void);
+void UnSetBlurFBO(void);
+void SetBloom(void);
+void UnSetBloom(void);

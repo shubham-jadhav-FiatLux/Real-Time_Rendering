@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{ad14f9be-84be-40cd-94af-e41d60b9188e}</ProjectGuid>
+    <RootNamespace>RTR4HullGroupProject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.0.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)external-lib\glew\include;$(ProjectDir)\common;$(ProjectDir)include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)external-lib\glew\include;$(ProjectDir)\common;$(ProjectDir)include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)test\header;$(SolutionDir)include;$(SolutionDir)external-lib\freetype\include;$(SolutionDir)common;$(SolutionDir)external-lib\assimp\include;$(SolutionDir)external-lib\glew\include;$(SolutionDir)external-lib\ffmpeg\include;$(SolutionDir)external-lib\ktx-format;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\external-lib\glew\lib\Release\x64;$(SolutionDir)\external-lib\assimp\lib\Debug;$(SolutionDir)\external-lib\freetype\lib\Debug;$(SolutionDir)\external-lib\ffmpeg\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freetyped.lib;assimp-vc142-mtd.lib;glew32.lib;cufft.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)test\header;$(SolutionDir)include;$(SolutionDir)external-lib\freetype\include;$(SolutionDir)common;$(SolutionDir)external-lib\assimp\include;$(SolutionDir)external-lib\glew\include;$(SolutionDir)external-lib\ffmpeg\include;$(SolutionDir)external-lib\ktx-format;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.0\lib\x64;$(SolutionDir)\external-lib\freetype\lib\Debug;$(SolutionDir)\external-lib\assimp\lib\Release;$(SolutionDir)\external-lib\glew\lib\Release\x64;$(SolutionDir)\external-lib\ffmpeg\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cufft.lib;freetyped.lib;glew32.lib;assimp-vc142-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source\AtmosphereScattering.cpp" />
+    <ClCompile Include="source\bloom\BloomLearnOGL.cpp" />
+    <ClCompile Include="source\bloom\BloomLearnOGLShader.cpp" />
+    <ClCompile Include="source\Camera.cpp" />
+    <ClCompile Include="source\ColorShader.cpp" />
+    <ClCompile Include="source\Common.cpp" />
+    <ClCompile Include="source\Cubemap.cpp" />
+    <ClCompile Include="source\CubeRender.cpp" />
+    <ClCompile Include="source\DefaultScene.cpp" />
+    <ClCompile Include="source\engine\Presenter.cpp" />
+    <ClCompile Include="source\engine\SceneQueue.cpp" />
+    <ClCompile Include="source\engine\Synchronizer.cpp" />
+    <ClCompile Include="source\engine\UniformBuffer.cpp" />
+    <ClCompile Include="source\FontShader.cpp" />
+    <ClCompile Include="source\FrameBuffer.cpp" />
+    <ClCompile Include="source\grass\Grass.cpp" />
+    <ClCompile Include="source\grass\GrassShader.cpp" />
+    <ClCompile Include="source\Loadtexture_stbi.cpp" />
+    <ClCompile Include="source\Main.cpp" />
+    <ClCompile Include="source\model\BoatModel.cpp" />
+    <ClCompile Include="source\msaa\MSAAShader.cpp" />
+    <ClCompile Include="source\ocean\OceanShader.cpp" />
+    <ClCompile Include="source\PhongLightShader.cpp" />
+    <ClCompile Include="source\PointLight.cpp" />
+    <ClCompile Include="source\QuadRender.cpp" />
+    <ClCompile Include="source\Rain\RainVertical.cpp" />
+    <ClCompile Include="source\Rain\RainVerticalShader.cpp" />
+    <ClCompile Include="source\scene\Scene0_Banner.cpp" />
+    <ClCompile Include="source\scene\Scene1_OpeningScene.cpp" />
+    <ClCompile Include="source\scenes\Scene00.cpp" />
+    <ClCompile Include="source\scenes\Scene01.cpp" />
+    <ClCompile Include="source\scenes\Scene02.cpp" />
+    <ClCompile Include="source\Shader.cpp" />
+    <ClCompile Include="source\AtmosphereScatteringShader.cpp" />
+    <ClCompile Include="source\SpotLight.cpp" />
+    <ClCompile Include="source\StaticModelShader.cpp" />
+    <ClCompile Include="source\Terrian\TerrianLearnOGL.cpp" />
+    <ClCompile Include="source\Terrian\TerrianLearnOGLShader.cpp" />
+    <ClCompile Include="source\Terrian\TerrianSuperBible.cpp" />
+    <ClCompile Include="source\Terrian\TerrianSuperBibleShader.cpp" />
+    <ClCompile Include="source\Texture.cpp" />
+    <ClCompile Include="source\TextureShader.cpp" />
+    <ClCompile Include="source\utils\Configuration.cpp" />
+    <ClCompile Include="source\utils\Logger.cpp" />
+    <ClCompile Include="source\VideoRendering.cpp" />
+    <ClCompile Include="source\VolumetricLight.cpp" />
+    <ClCompile Include="source\water\Water.cpp" />
+    <ClCompile Include="source\water\WaterShader.cpp" />
+    <ClCompile Include="test\source\TestBloom.cpp" />
+    <ClCompile Include="test\source\TestDownloadedStaticModel.cpp" />
+    <ClCompile Include="test\source\TestEffect.cpp" />
+    <ClCompile Include="test\source\TestFont.cpp" />
+    <ClCompile Include="test\source\TestMSAA.cpp" />
+    <ClCompile Include="test\source\TestPointLight.cpp" />
+    <ClCompile Include="test\source\TestStaticModel.cpp" />
+    <ClCompile Include="test\source\TestTransformModel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\Common.h" />
+    <ClInclude Include="common\Loadtexture_stbi.h" />
+    <ClInclude Include="common\static_model_loading\StaticMesh.h" />
+    <ClInclude Include="common\static_model_loading\StaticModel.h" />
+    <ClInclude Include="common\stb_image.h" />
+    <ClInclude Include="common\vmath.h" />
+    <ClInclude Include="include\AtmosphereScattering.h" />
+    <ClInclude Include="include\bloom\BloomLearnOGL.h" />
+    <ClInclude Include="include\bloom\BloomLearnOGLShader.h" />
+    <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="include\ColorShader.h" />
+    <ClInclude Include="include\Cubemap.h" />
+    <ClInclude Include="include\CubeRender.h" />
+    <ClInclude Include="include\DefaultScene.h" />
+    <ClInclude Include="include\engine\Presenter.h" />
+    <ClInclude Include="include\engine\SceneQueue.h" />
+    <ClInclude Include="include\engine\ShaderLayouts.h" />
+    <ClInclude Include="include\engine\Synchronizer.h" />
+    <ClInclude Include="include\engine\UniformBuffer.h" />
+    <ClInclude Include="include\FontShader.h" />
+    <ClInclude Include="include\FrameBuffer.h" />
+    <ClInclude Include="include\grass\Grass.h" />
+    <ClInclude Include="include\grass\GrassShader.h" />
+    <ClInclude Include="include\model\BoatModel.h" />
+    <ClInclude Include="include\msaa\MSAAShader.h" />
+    <ClInclude Include="include\OceanShader.h" />
+    <ClInclude Include="include\PhongLightShader.h" />
+    <ClInclude Include="include\PointLight.h" />
+    <ClInclude Include="include\QuadRender.h" />
+    <ClInclude Include="include\scene\Scene0_Banner.h" />
+    <ClInclude Include="include\scene\Scene1_OpeningScene.h" />
+    <ClInclude Include="include\scenes\Scene00.h" />
+    <ClInclude Include="include\scenes\Scene01.h" />
+    <ClInclude Include="include\scenes\Scene02.h" />
+    <ClInclude Include="include\Shader.h" />
+    <ClInclude Include="include\AtmosphereScatteringShader.h" />
+    <ClInclude Include="include\SpotLight.h" />
+    <ClInclude Include="include\StaticModelShader.h" />
+    <ClInclude Include="include\terrian\TerrianLearnOGL.h" />
+    <ClInclude Include="include\terrian\TerrianLearnOGLShader.h" />
+    <ClInclude Include="include\terrian\TerrianSuperBibleShader.h" />
+    <ClInclude Include="include\terrian\TerrianSuperBible.h" />
+    <ClInclude Include="include\test\TestPointLight.h" />
+    <ClInclude Include="include\Texture.h" />
+    <ClInclude Include="include\TextureShader.h" />
+    <ClInclude Include="include\transform_model\TransformModel.h" />
+    <ClInclude Include="include\utils\Configuration.h" />
+    <ClInclude Include="include\utils\Logger.h" />
+    <ClInclude Include="include\VideoRendering.h" />
+    <ClInclude Include="include\VolumetricLight.h" />
+    <ClInclude Include="include\Ocean.h" />
+    <ClInclude Include="include\water\Water.h" />
+    <ClInclude Include="include\water\WaterShader.h" />
+    <ClInclude Include="test\header\TestBloom.h" />
+    <ClInclude Include="test\header\TestDownloadedStaticModel.h" />
+    <ClInclude Include="test\header\TestEffect.h" />
+    <ClInclude Include="test\header\TestFont.h" />
+    <ClInclude Include="test\header\TestMSAA.h" />
+    <ClInclude Include="test\header\TestStaticModel.h" />
+    <ClInclude Include="test\header\TestTransformModel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader\atmosphericscattering\SkyFromAtmosphereShader.frag" />
+    <None Include="shader\atmosphericscattering\SkyFromAtmosphereShader.vert" />
+    <None Include="shader\bloom\learnOGL\BloomBrightnessShader.frag" />
+    <None Include="shader\bloom\learnOGL\BloomBrightnessShader.vert" />
+    <None Include="shader\bloom\learnOGL\BloomShader.frag" />
+    <None Include="shader\bloom\learnOGL\BloomShader.vert" />
+    <None Include="shader\bloom\learnOGL\BlurShader.frag" />
+    <None Include="shader\bloom\learnOGL\BlurShader.vert" />
+    <None Include="shader\ColorShader.frag" />
+    <None Include="shader\ColorShader.vert" />
+    <None Include="shader\font\FontShader.frag" />
+    <None Include="shader\font\FontShader.vert" />
+    <None Include="shader\grass\GrassShader.frag" />
+    <None Include="shader\grass\GrassShader.gs" />
+    <None Include="shader\grass\GrassShader.vert" />
+    <None Include="shader\lights\PhongADSLight.frag" />
+    <None Include="shader\Lights\PhongADSLight.vert" />
+    <None Include="shader\Lights\PointLight.frag" />
+    <None Include="shader\Lights\PointLight.vert" />
+    <None Include="shader\lights\SpotLight.frag" />
+    <None Include="shader\lights\SpotLight.vert" />
+    <None Include="shader\msaa\MSAAShader.frag" />
+    <None Include="shader\msaa\MSAAShader.vert" />
+    <None Include="shader\ocean\Ocean.frag" />
+    <None Include="shader\ocean\Ocean.Vert" />
+    <None Include="shader\Rain\RainVertical.frag" />
+    <None Include="shader\Rain\RainVertical.vert" />
+    <None Include="shader\static_model_loading\StaticModelLoadingShader.frag" />
+    <None Include="shader\static_model_loading\StaticModelLoadingShader.vert" />
+    <None Include="shader\terrian\learnOGL\TerrianLearnOGL.frag" />
+    <None Include="shader\terrian\learnOGL\TerrianLearnOGL.tcs" />
+    <None Include="shader\terrian\learnOGL\TerrianLearnOGL.tes" />
+    <None Include="shader\terrian\learnOGL\TerrianLearnOGL.vert" />
+    <None Include="shader\terrian\superbible\TerrianSuperBible.frag" />
+    <None Include="shader\terrian\superbible\TerrianSuperBible.tcs" />
+    <None Include="shader\terrian\superbible\TerrianSuperBible.tes" />
+    <None Include="shader\terrian\superbible\TerrianSuperBible.vert" />
+    <None Include="shader\TextureShader.frag" />
+    <None Include="shader\TextureShader.vert" />
+    <None Include="shader\water\WaterShader.frag" />
+    <None Include="shader\water\WaterShader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="source\ocean\OceanScene.cu" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.0.targets" />
+  </ImportGroup>
+</Project>
