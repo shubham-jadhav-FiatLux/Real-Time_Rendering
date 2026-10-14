@@ -1,0 +1,10 @@
+#include <Windows.h>
+#include "OGL.h"
+
+MYICON ICON Coffee.ico
+
+IDBITMAP_1 BITMAP "textures/one.bmp"
+IDBITMAP_2 BITMAP "textures/two.bmp"
+IDBITMAP_3 BITMAP "textures/three.bmp"
+IDBITMAP_4 BITMAP "textures/four.bmp"
+

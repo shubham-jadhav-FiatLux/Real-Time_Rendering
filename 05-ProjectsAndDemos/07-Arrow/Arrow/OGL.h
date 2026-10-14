@@ -1,0 +1,21 @@
+#define MYICON 101
+
+#define IDBITMAP_ARROW_TIP 102
+
+#define IDBITMAP_ARROW_TAIL 103
+
+#define IDBITMAP_ARROW_STICK 104
+
+#define IDBITMAP_ARROW_TAIL_REV 105
+
+#define LEFT1 109
+
+#define RIGHT1 110
+
+#define TOP1 111
+
+#define BOTTOM1 106
+
+#define FRONT1 107
+
+#define BACK1 108

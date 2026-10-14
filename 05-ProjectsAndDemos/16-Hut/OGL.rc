@@ -1,0 +1,14 @@
+#include <Windows.h>
+#include "OGL.h"
+
+MYICON ICON Coffee.ico
+
+WALL BITMAP wall.bmp
+
+WALL2 BITMAP wall2.bmp
+
+WALL3 BITMAP wall3.bmp
+
+ROOF BITMAP roof.bmp
+
+ROOF2 BITMAP roof2.bmp

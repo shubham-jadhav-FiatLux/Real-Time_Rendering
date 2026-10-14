@@ -1,0 +1,158 @@
+
+#define GL_TEXTURE_CUBE_MAP               0x8513
+#define GL_CLAMP_TO_EDGE                  0x812F
+#define GL_TEXTURE_WRAP_R                 0x8072
+#define GL_TEXTURE_CUBE_MAP_POSITIVE_X    0x8515
+#define GL_TEXTURE_CUBE_MAP_NEGATIVE_X    0x8516
+#define GL_TEXTURE_CUBE_MAP_POSITIVE_Y    0x8517
+#define GL_TEXTURE_CUBE_MAP_NEGATIVE_Y    0x8518
+#define GL_TEXTURE_CUBE_MAP_POSITIVE_Z    0x8519
+#define GL_TEXTURE_CUBE_MAP_NEGATIVE_Z    0x851A
+#define GL_GENERATE_MIPMAP                0x8191
+
+
+// Cubemap
+TCHAR* facesCubemap[] =
+{
+	MAKEINTRESOURCE(LEFT1), MAKEINTRESOURCE(RIGHT1), MAKEINTRESOURCE(TOP1), MAKEINTRESOURCE(BOTTOM1), MAKEINTRESOURCE(FRONT1),MAKEINTRESOURCE(BACK1)
+};
+
+void cube(void)
+{
+	// Local Variable Declarations
+	GLfloat xCoordinate = 100.0f;
+	GLfloat yCoordinate = 100.0f;
+	GLfloat zCoordinate = 100.0f;
+
+	// Code
+
+	// Front
+	glBegin(GL_QUADS);
+	//glColor3f(1.0f, 0.0f, 0.0f);
+	glTexCoord3f(xCoordinate, yCoordinate, zCoordinate);
+	glVertex3f(xCoordinate, yCoordinate, zCoordinate);
+	glTexCoord3f(-xCoordinate, yCoordinate, zCoordinate);
+	glVertex3f(-xCoordinate, yCoordinate, zCoordinate);
+	glTexCoord3f(-xCoordinate, -yCoordinate, zCoordinate);
+	glVertex3f(-xCoordinate, -yCoordinate, zCoordinate);
+	glTexCoord3f(xCoordinate, -yCoordinate, zCoordinate);
+	glVertex3f(xCoordinate, -yCoordinate, zCoordinate);
+	glEnd();
+
+	// Right
+	glBegin(GL_QUADS);
+	//glColor3f(0.0f, 1.0f, 0.0f);
+	glTexCoord3f(xCoordinate, yCoordinate, -zCoordinate);
+	glVertex3f(xCoordinate, yCoordinate, -zCoordinate);
+	glTexCoord3f(xCoordinate, yCoordinate, zCoordinate);
+	glVertex3f(xCoordinate, yCoordinate, zCoordinate);
+	glTexCoord3f(xCoordinate, -yCoordinate, zCoordinate);
+	glVertex3f(xCoordinate, -yCoordinate, zCoordinate);
+	glTexCoord3f(xCoordinate, -yCoordinate, -zCoordinate);
+	glVertex3f(xCoordinate, -yCoordinate, -zCoordinate);
+	glEnd();
+
+	// Back
+	glBegin(GL_QUADS);
+	//glColor3f(0.0f, 0.0f, 1.0f);
+	glTexCoord3f(-xCoordinate, yCoordinate, -zCoordinate);
+	glVertex3f(-xCoordinate, yCoordinate, -zCoordinate);
+	glTexCoord3f(xCoordinate, yCoordinate, -zCoordinate);
+	glVertex3f(xCoordinate, yCoordinate, -zCoordinate);
+	glTexCoord3f(xCoordinate, -yCoordinate, -zCoordinate);
+	glVertex3f(xCoordinate, -yCoordinate, -zCoordinate);
+	glTexCoord3f(-xCoordinate, -yCoordinate, -zCoordinate);
+	glVertex3f(-xCoordinate, -yCoordinate, -zCoordinate);
+	glEnd();
+
+	// Left
+	glBegin(GL_QUADS);
+	//glColor3f(1.0f, 1.0f, 0.0f);
+	glTexCoord3f(-xCoordinate, yCoordinate, zCoordinate);
+	glVertex3f(-xCoordinate, yCoordinate, zCoordinate);
+	glTexCoord3f(-xCoordinate, yCoordinate, -zCoordinate);
+	glVertex3f(-xCoordinate, yCoordinate, -zCoordinate);
+	glTexCoord3f(-xCoordinate, -yCoordinate, -zCoordinate);
+	glVertex3f(-xCoordinate, -yCoordinate, -zCoordinate);
+	glTexCoord3f(-xCoordinate, -yCoordinate, zCoordinate);
+	glVertex3f(-xCoordinate, -yCoordinate, zCoordinate);
+	glEnd();
+
+	// Top
+	glBegin(GL_QUADS);
+	//glColor3f(1.0f, 0.0f,1.0f);
+	glTexCoord3f(xCoordinate, yCoordinate, -zCoordinate);
+	glVertex3f(xCoordinate, yCoordinate, -zCoordinate);
+	glTexCoord3f(-xCoordinate, yCoordinate, -zCoordinate);
+	glVertex3f(-xCoordinate, yCoordinate, -zCoordinate);
+	glTexCoord3f(-xCoordinate, yCoordinate, zCoordinate);
+	glVertex3f(-xCoordinate, yCoordinate, zCoordinate);
+	glTexCoord3f(xCoordinate, yCoordinate, zCoordinate);
+	glVertex3f(xCoordinate, yCoordinate, zCoordinate);
+	glEnd();
+
+	// Bottom
+	glBegin(GL_QUADS);
+	//glColor3f(0.0f, 1.0f, 1.0f);
+	glTexCoord3f(xCoordinate, -yCoordinate, -zCoordinate);
+	glVertex3f(xCoordinate, -yCoordinate, -zCoordinate);
+	glTexCoord3f(-xCoordinate, -yCoordinate, -zCoordinate);
+	glVertex3f(-xCoordinate, -yCoordinate, -zCoordinate);
+	glTexCoord3f(-xCoordinate, -yCoordinate, zCoordinate);
+	glVertex3f(-xCoordinate, -yCoordinate, zCoordinate);
+	glTexCoord3f(xCoordinate, -yCoordinate, zCoordinate);
+	glVertex3f(xCoordinate, -yCoordinate, zCoordinate);
+	glEnd();
+
+}
+
+
+
+bool LoadGLCubemap()
+{
+	// variable declarations
+	bool bResult = false;
+
+	glGenTextures(1, &cubemapTexture);
+	glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+	for (int i = 0; i < 6; i++)
+	{
+		HBITMAP hBitmap = NULL;
+		BITMAP bmp;
+
+		// code
+		//hBitmap = (HBITMAP)LoadImage(GetModuleHandle(NULL), testing[i], IMAGE_BITMAP, 0, 0, LR_CREATEDIBSECTION);
+		hBitmap = (HBITMAP)LoadImage(GetModuleHandle(NULL), facesCubemap[i], IMAGE_BITMAP, 0, 0, LR_CREATEDIBSECTION);
+		if (hBitmap)
+		{
+			bResult = true;
+			// os function to get image information
+			GetObject(hBitmap, sizeof(BITMAP), &bmp);
+
+			fprintf(gpFile, "bitmap  %d  is loaded\n", i);
+			gluBuild2DMipmaps(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
+				GL_RGB,
+				bmp.bmWidth,
+				bmp.bmHeight,
+				GL_BGR_EXT,
+				GL_UNSIGNED_BYTE,
+				bmp.bmBits);
+
+			//glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, bmp.bmWidth, bmp.bmHeight, 0, GL_BGR_EXT, GL_UNSIGNED_BYTE, bmp.bmBits);
+		}
+		else
+		{
+			fprintf(gpFile, "bitmap  %d  is not loaded\n", i);
+			DestroyWindow(ghwnd);
+		}
+	}
+
+	glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
+	fprintf(gpFile, "End of %s \n", __FUNCTION__);
+	return bResult;
+}

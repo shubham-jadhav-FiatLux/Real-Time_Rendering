@@ -2,6 +2,7 @@
 *.d
 *.wav
 *.mkv
+*.mp4
 *.mtl
 
 # Compiled Object files

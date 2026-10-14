@@ -1,0 +1,19 @@
+#include <Windows.h>
+#include "OGL.h"
+
+MYICON ICON Coffee.ico
+
+//IDBITMAP_CUBE BITMAP cubemap.bmp
+
+RIGHT1 BITMAP RIGHT.bmp
+
+LEFT1 BITMAP LEFT.bmp
+
+TOP1 BITMAP TOP.bmp
+
+BOTTOM1 BITMAP BOTTOM.bmp
+
+FRONT1 BITMAP FRONT.bmp
+
+BACK1 BITMAP BACK.bmp
+

@@ -1,0 +1,75 @@
+#define MYICON 101
+
+#define IDBITMAP_SMOKE 102
+
+#define CUBE_LEFT 103
+
+#define CUBE_RIGHT 104
+
+#define CUBE_TOP 105
+
+#define CUBE_BOTTOM 106
+
+#define CUBE_FRONT 107
+
+#define CUBE_BACK 108
+
+#define TREE_BAMBOO 109
+
+#define TREE_BAMBOOLEAF 110
+
+#define GREEN_GROUND 111
+
+#define HUMAN_SHIRT 112
+
+#define HUMAN_SHIRT2 113
+
+#define HUMAN_PANT 114
+
+#define HUMAN_FACE 115
+
+#define MOUNTAIN 116
+
+#define MOUNTAIN_ONE 117
+
+#define HUT_WALL_ONE 118
+
+//#define HUT_WALL_TWO 119
+
+#define HUT_WALL_THREE 120
+
+#define HUT_ROOF_ONE 121
+
+#define HUT_ROOF_TWO 122
+
+#define HUT_ROOF_THREE 123
+
+#define TREE_LEAVES_ONE 124
+
+#define TREE_LEAVES_TWO 125
+
+#define TREE_TRUNK_ONE 126
+
+#define WATER 127
+
+#define CLIFF_GROUND 128
+
+#define CLIFF_STONE 129
+
+#define CLIFF_STONE2 130
+
+#define TREE_BARK 131
+
+#define EAGLEFEATHER_HEAD 132
+
+#define EAGLEFEATHER_NECK 133
+
+#define EAGLEFEATHER_BODY 134
+
+#define EAGLEFEATHER_TAIL 135
+
+#define EAGLEFEATHER_EYE 136
+
+#define EAGLEFEATHER_LEG 137
+
+#define EAGLEFEATHER_WING 138

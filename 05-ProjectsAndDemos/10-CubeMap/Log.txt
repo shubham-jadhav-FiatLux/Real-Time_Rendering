@@ -1,0 +1,10 @@
+Log File Successfully Opened.
+bitmap  0  is loaded
+bitmap  1  is loaded
+bitmap  2  is loaded
+bitmap  3  is loaded
+bitmap  4  is loaded
+bitmap  5  is loaded
+End of LoadGLCubemap 
+Succeed.
+Log File Successfully Closed.

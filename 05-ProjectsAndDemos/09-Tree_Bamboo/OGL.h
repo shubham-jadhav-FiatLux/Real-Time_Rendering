@@ -1,0 +1,5 @@
+#define MYICON 101
+
+#define IDBITMAP_BAMBOO 102
+
+#define IDBITMAP_BAMBOOLEAF 103

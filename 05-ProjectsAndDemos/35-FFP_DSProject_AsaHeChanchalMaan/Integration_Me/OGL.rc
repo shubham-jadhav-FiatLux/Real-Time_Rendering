@@ -1,0 +1,79 @@
+#include <Windows.h>
+#include "OGL.h"
+
+MYICON ICON Coffee.ico
+
+IDBITMAP_SMOKE BITMAP "Textures\\smoke.bmp"
+
+CUBE_LEFT BITMAP Textures\\LEFT.bmp
+
+CUBE_RIGHT BITMAP Textures\\RIGHT.bmp
+
+CUBE_TOP BITMAP Textures\\TOP.bmp
+
+CUBE_BOTTOM BITMAP Textures\\BOTTOM.bmp
+
+CUBE_FRONT BITMAP Textures\\FRONT.bmp
+
+CUBE_BACK BITMAP Textures\\BACK.bmp
+
+TREE_BAMBOO BITMAP Textures\\Bamboo.bmp
+
+TREE_BAMBOOLEAF BITMAP Textures\\BambooLeaf.bmp
+
+GREEN_GROUND BITMAP Textures\\ground.bmp
+
+HUMAN_SHIRT BITMAP Textures\\shirt.bmp
+
+HUMAN_SHIRT2 BITMAP Textures\\shirt2.bmp
+
+HUMAN_PANT BITMAP Textures\\pant.bmp
+
+HUMAN_FACE BITMAP Textures\\face.bmp
+
+MOUNTAIN BITMAP Textures\\mountain.bmp
+
+MOUNTAIN_ONE BITMAP Textures\\mountain1.bmp
+
+HUT_WALL_ONE BITMAP Textures\\wall1.bmp
+
+//HUT_WALL_TWO BITMAP Textures\\wall2.bmp
+
+HUT_WALL_THREE BITMAP Textures\\wall3.bmp
+
+HUT_ROOF_ONE BITMAP Textures\\roof1.bmp
+
+HUT_ROOF_TWO BITMAP Textures\\roof2.bmp
+
+HUT_ROOF_THREE BITMAP Textures\\roof3.bmp
+
+TREE_LEAVES_ONE BITMAP Textures\\leaves1.bmp
+
+TREE_LEAVES_TWO BITMAP Textures\\leaves2.bmp
+
+TREE_TRUNK_ONE BITMAP Textures\\trunk1.bmp
+
+WATER BITMAP Textures\\water.bmp
+
+CLIFF_GROUND BITMAP Textures\\cliffGround.bmp
+
+CLIFF_STONE BITMAP Textures\\cliffStone.bmp
+
+CLIFF_STONE2 BITMAP Textures\\cliffStone2.bmp
+
+TREE_BARK BITMAP Textures\\bark.bmp
+
+EAGLEFEATHER_HEAD BITMAP Textures\\EagleFeatherHead.bmp
+
+EAGLEFEATHER_NECK BITMAP Textures\\EagleFeatherNeck.bmp
+
+EAGLEFEATHER_BODY BITMAP Textures\\EagleFeatherBody.bmp
+
+EAGLEFEATHER_TAIL BITMAP Textures\\EagleFeatherTail.bmp
+
+EAGLEFEATHER_EYE BITMAP Textures\\EagleFeatherEye.bmp
+
+EAGLEFEATHER_LEG BITMAP Textures\\EagleFeatherLeg.bmp
+
+EAGLEFEATHER_WING BITMAP Textures\\EagleFeatherWing.bmp
+

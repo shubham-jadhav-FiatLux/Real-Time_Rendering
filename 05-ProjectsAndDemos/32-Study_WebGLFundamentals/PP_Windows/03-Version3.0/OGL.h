@@ -1,0 +1,5 @@
+#define MYICON 101
+
+#define IDBITMAP_STAR 102
+
+#define IDBITMAP_SMILEY 103

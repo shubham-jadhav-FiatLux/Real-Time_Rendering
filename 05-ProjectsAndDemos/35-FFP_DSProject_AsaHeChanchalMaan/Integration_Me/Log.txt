@@ -1,0 +1,10317 @@
+Log File Successfully Opened.
+bitmap  0  is loaded
+bitmap  1  is loaded
+bitmap  2  is loaded
+bitmap  3  is loaded
+bitmap  4  is loaded
+bitmap  5  is loaded
+Succeed.
+aeropalne Translation = -3.500000
+count = 4.000000
+aeropalne Translation = -3.460000
+count = 8.000000
+aeropalne Translation = -3.420000
+count = 12.000000
+aeropalne Translation = -3.380000
+count = 16.000000
+aeropalne Translation = -3.340000
+count = 20.000000
+aeropalne Translation = -3.300000
+count = 24.000000
+aeropalne Translation = -3.260000
+count = 28.000000
+aeropalne Translation = -3.220000
+count = 32.000000
+aeropalne Translation = -3.180000
+count = 36.000000
+aeropalne Translation = -3.140000
+count = 40.000000
+aeropalne Translation = -3.100000
+count = 44.000000
+aeropalne Translation = -3.060000
+count = 48.000000
+aeropalne Translation = -3.020000
+count = 52.000000
+aeropalne Translation = -2.980000
+count = 56.000000
+aeropalne Translation = -2.940001
+count = 60.000000
+aeropalne Translation = -2.900001
+count = 64.000000
+aeropalne Translation = -2.860001
+count = 68.000000
+aeropalne Translation = -2.820001
+count = 72.000000
+aeropalne Translation = -2.780001
+count = 76.000000
+aeropalne Translation = -2.740001
+count = 80.000000
+aeropalne Translation = -2.700001
+count = 84.000000
+aeropalne Translation = -2.660001
+count = 88.000000
+aeropalne Translation = -2.620001
+count = 92.000000
+aeropalne Translation = -2.580001
+count = 96.000000
+aeropalne Translation = -2.540001
+count = 100.000000
+aeropalne Translation = -2.500001
+count = 104.000000
+aeropalne Translation = -2.460001
+count = 108.000000
+aeropalne Translation = -2.420001
+count = 112.000000
+aeropalne Translation = -2.380001
+count = 116.000000
+aeropalne Translation = -2.340001
+count = 120.000000
+aeropalne Translation = -2.300001
+count = 124.000000
+aeropalne Translation = -2.260001
+count = 128.000000
+aeropalne Translation = -2.220001
+count = 132.000000
+aeropalne Translation = -2.180001
+count = 136.000000
+aeropalne Translation = -2.140001
+count = 140.000000
+aeropalne Translation = -2.100001
+count = 144.000000
+aeropalne Translation = -2.060001
+count = 148.000000
+aeropalne Translation = -2.020001
+count = 152.000000
+aeropalne Translation = -1.980001
+count = 156.000000
+aeropalne Translation = -1.940001
+count = 160.000000
+aeropalne Translation = -1.900002
+count = 164.000000
+aeropalne Translation = -1.860002
+count = 168.000000
+aeropalne Translation = -1.820002
+count = 172.000000
+aeropalne Translation = -1.780002
+count = 176.000000
+aeropalne Translation = -1.740002
+count = 180.000000
+aeropalne Translation = -1.700002
+count = 184.000000
+aeropalne Translation = -1.660002
+count = 188.000000
+aeropalne Translation = -1.620002
+count = 192.000000
+aeropalne Translation = -1.580002
+count = 196.000000
+aeropalne Translation = -1.540002
+count = 200.000000
+aeropalne Translation = -1.500002
+count = 204.000000
+aeropalne Translation = -1.460002
+count = 208.000000
+aeropalne Translation = -1.420002
+count = 212.000000
+aeropalne Translation = -1.380002
+count = 216.000000
+aeropalne Translation = -1.340002
+count = 220.000000
+aeropalne Translation = -1.300002
+count = 224.000000
+aeropalne Translation = -1.260002
+count = 228.000000
+aeropalne Translation = -1.220002
+count = 232.000000
+aeropalne Translation = -1.180002
+count = 236.000000
+aeropalne Translation = -1.140002
+count = 240.000000
+aeropalne Translation = -1.100002
+count = 244.000000
+aeropalne Translation = -1.060002
+count = 248.000000
+aeropalne Translation = -1.020002
+count = 252.000000
+aeropalne Translation = -0.980002
+count = 256.000000
+aeropalne Translation = -0.940002
+count = 260.000000
+aeropalne Translation = -0.900002
+count = 264.000000
+aeropalne Translation = -0.860002
+count = 268.000000
+aeropalne Translation = -0.820002
+count = 272.000000
+aeropalne Translation = -0.780002
+count = 276.000000
+aeropalne Translation = -0.740002
+count = 280.000000
+aeropalne Translation = -0.700002
+count = 284.000000
+aeropalne Translation = -0.660002
+count = 288.000000
+aeropalne Translation = -0.620002
+count = 292.000000
+aeropalne Translation = -0.580002
+count = 296.000000
+aeropalne Translation = -0.540002
+count = 300.000000
+aeropalne Translation = -0.500002
+count = 304.000000
+aeropalne Translation = -0.460002
+count = 308.000000
+aeropalne Translation = -0.420002
+count = 312.000000
+aeropalne Translation = -0.380002
+count = 316.000000
+aeropalne Translation = -0.340002
+count = 320.000000
+aeropalne Translation = -0.300002
+count = 324.000000
+aeropalne Translation = -0.260002
+count = 328.000000
+aeropalne Translation = -0.220002
+count = 332.000000
+aeropalne Translation = -0.180002
+count = 336.000000
+aeropalne Translation = -0.140002
+count = 340.000000
+aeropalne Translation = -0.100002
+count = 344.000000
+aeropalne Translation = -0.060002
+count = 348.000000
+aeropalne Translation = -0.020002
+count = 352.000000
+aeropalne Translation = 0.019998
+count = 356.000000
+aeropalne Translation = 0.059998
+count = 360.000000
+aeropalne Translation = 0.099998
+count = 364.000000
+aeropalne Translation = 0.139998
+count = 368.000000
+aeropalne Translation = 0.179998
+count = 372.000000
+aeropalne Translation = 0.219998
+count = 376.000000
+aeropalne Translation = 0.259998
+count = 380.000000
+aeropalne Translation = 0.299998
+count = 384.000000
+aeropalne Translation = 0.339998
+count = 388.000000
+aeropalne Translation = 0.379998
+count = 392.000000
+aeropalne Translation = 0.419998
+count = 396.000000
+aeropalne Translation = 0.459998
+count = 400.000000
+aeropalne Translation = 0.499998
+count = 404.000000
+aeropalne Translation = 0.539998
+count = 408.000000
+aeropalne Translation = 0.579998
+count = 412.000000
+aeropalne Translation = 0.619998
+count = 416.000000
+aeropalne Translation = 0.659998
+count = 420.000000
+aeropalne Translation = 0.699998
+count = 424.000000
+aeropalne Translation = 0.739998
+count = 428.000000
+aeropalne Translation = 0.779998
+count = 432.000000
+aeropalne Translation = 0.819998
+count = 436.000000
+aeropalne Translation = 0.859998
+count = 440.000000
+aeropalne Translation = 0.899998
+count = 444.000000
+aeropalne Translation = 0.939998
+count = 448.000000
+aeropalne Translation = 0.979998
+count = 452.000000
+aeropalne Translation = 1.019998
+count = 456.000000
+aeropalne Translation = 1.059998
+count = 460.000000
+aeropalne Translation = 1.099998
+count = 464.000000
+aeropalne Translation = 1.139998
+count = 468.000000
+aeropalne Translation = 1.179998
+count = 472.000000
+aeropalne Translation = 1.219998
+count = 476.000000
+aeropalne Translation = 1.259998
+count = 480.000000
+aeropalne Translation = 1.299998
+count = 484.000000
+aeropalne Translation = 1.339998
+count = 488.000000
+aeropalne Translation = 1.379998
+count = 492.000000
+aeropalne Translation = 1.419998
+count = 496.000000
+aeropalne Translation = 1.459998
+count = 500.000000
+aeropalne Translation = 1.499997
+count = 504.000000
+aeropalne Translation = 1.539997
+count = 508.000000
+aeropalne Translation = 1.579997
+count = 512.000000
+aeropalne Translation = 1.619997
+count = 516.000000
+aeropalne Translation = 1.659997
+count = 520.000000
+aeropalne Translation = 1.699997
+count = 524.000000
+aeropalne Translation = 1.739997
+count = 528.000000
+aeropalne Translation = 1.779997
+count = 532.000000
+aeropalne Translation = 1.819997
+count = 536.000000
+aeropalne Translation = 1.859997
+count = 540.000000
+aeropalne Translation = 1.899997
+count = 544.000000
+aeropalne Translation = 1.939997
+count = 548.000000
+aeropalne Translation = 1.979997
+count = 552.000000
+aeropalne Translation = 2.019997
+count = 556.000000
+aeropalne Translation = 2.059997
+count = 560.000000
+aeropalne Translation = 2.099997
+count = 564.000000
+aeropalne Translation = 2.139997
+count = 568.000000
+aeropalne Translation = 2.179997
+count = 572.000000
+aeropalne Translation = 2.219997
+count = 576.000000
+aeropalne Translation = 2.259997
+count = 580.000000
+aeropalne Translation = 2.299997
+count = 584.000000
+aeropalne Translation = 2.339997
+count = 588.000000
+aeropalne Translation = 2.379997
+count = 592.000000
+aeropalne Translation = 2.419997
+count = 596.000000
+aeropalne Translation = 2.459997
+count = 600.000000
+aeropalne Translation = 2.499997
+count = 604.000000
+aeropalne Translation = 2.539997
+count = 608.000000
+aeropalne Translation = 2.579997
+count = 612.000000
+aeropalne Translation = 2.619997
+count = 616.000000
+aeropalne Translation = 2.659997
+count = 620.000000
+aeropalne Translation = 2.699996
+count = 624.000000
+aeropalne Translation = 2.739996
+count = 628.000000
+aeropalne Translation = 2.779996
+count = 632.000000
+aeropalne Translation = 2.819996
+count = 636.000000
+aeropalne Translation = 2.859996
+count = 640.000000
+aeropalne Translation = 2.899996
+count = 644.000000
+aeropalne Translation = 2.939996
+count = 648.000000
+aeropalne Translation = 2.979996
+count = 652.000000
+aeropalne Translation = 3.019996
+count = 656.000000
+aeropalne Translation = 3.059996
+count = 660.000000
+aeropalne Translation = 3.099996
+count = 664.000000
+aeropalne Translation = 3.139996
+count = 668.000000
+aeropalne Translation = 3.179996
+count = 672.000000
+aeropalne Translation = 3.219996
+count = 676.000000
+aeropalne Translation = 3.259996
+count = 680.000000
+aeropalne Translation = 3.299996
+count = 684.000000
+aeropalne Translation = 3.339996
+count = 688.000000
+aeropalne Translation = 3.379996
+count = 692.000000
+aeropalne Translation = 3.419996
+count = 696.000000
+aeropalne Translation = 3.459996
+count = 700.000000
+aeropalne Translation = 3.499996
+count = 704.000000
+aeropalne Translation = 3.539996
+count = 708.000000
+aeropalne Translation = 3.579996
+count = 712.000000
+aeropalne Translation = 3.619996
+count = 716.000000
+aeropalne Translation = 3.659996
+count = 720.000000
+aeropalne Translation = 3.699996
+count = 724.000000
+aeropalne Translation = 3.739995
+count = 728.000000
+aeropalne Translation = 3.779995
+count = 732.000000
+aeropalne Translation = 3.819995
+count = 736.000000
+aeropalne Translation = 3.859995
+count = 740.000000
+aeropalne Translation = 3.899995
+count = 744.000000
+aeropalne Translation = 3.939995
+count = 748.000000
+aeropalne Translation = 3.979995
+count = 752.000000
+aeropalne Translation = 4.019995
+count = 756.000000
+aeropalne Translation = 4.059995
+count = 760.000000
+aeropalne Translation = 4.099995
+count = 764.000000
+aeropalne Translation = 4.139995
+count = 768.000000
+aeropalne Translation = 4.179995
+count = 772.000000
+aeropalne Translation = 4.219995
+count = 776.000000
+aeropalne Translation = 4.259995
+count = 780.000000
+aeropalne Translation = 4.299995
+count = 784.000000
+aeropalne Translation = 4.339995
+count = 788.000000
+aeropalne Translation = 4.379995
+count = 792.000000
+aeropalne Translation = 4.419995
+count = 796.000000
+aeropalne Translation = 4.459995
+count = 800.000000
+aeropalne Translation = 4.499995
+count = 804.000000
+aeropalne Translation = 4.539995
+count = 808.000000
+aeropalne Translation = 4.579995
+count = 812.000000
+aeropalne Translation = 4.619995
+count = 816.000000
+aeropalne Translation = 4.659995
+count = 820.000000
+aeropalne Translation = 4.699995
+count = 824.000000
+aeropalne Translation = 4.739995
+count = 828.000000
+aeropalne Translation = 4.779994
+count = 832.000000
+aeropalne Translation = 4.819994
+count = 836.000000
+aeropalne Translation = 4.859994
+count = 840.000000
+aeropalne Translation = 4.899994
+count = 844.000000
+aeropalne Translation = 4.939994
+count = 848.000000
+aeropalne Translation = 4.979994
+count = 852.000000
+aeropalne Translation = 5.019994
+count = 856.000000
+aeropalne Translation = 5.019994
+count = 860.000000
+aeropalne Translation = 5.019994
+count = 864.000000
+aeropalne Translation = 5.019994
+count = 868.000000
+aeropalne Translation = 5.019994
+count = 872.000000
+aeropalne Translation = 5.019994
+count = 876.000000
+aeropalne Translation = 5.019994
+count = 880.000000
+aeropalne Translation = 5.019994
+count = 884.000000
+aeropalne Translation = 5.019994
+count = 888.000000
+aeropalne Translation = 5.019994
+count = 892.000000
+aeropalne Translation = 5.019994
+count = 896.000000
+aeropalne Translation = 5.019994
+count = 900.000000
+aeropalne Translation = 5.019994
+count = 904.000000
+aeropalne Translation = 5.019994
+count = 908.000000
+aeropalne Translation = 5.019994
+count = 912.000000
+aeropalne Translation = 5.019994
+count = 916.000000
+aeropalne Translation = 5.019994
+count = 920.000000
+aeropalne Translation = 5.019994
+count = 924.000000
+aeropalne Translation = 5.019994
+count = 928.000000
+aeropalne Translation = 5.019994
+count = 932.000000
+aeropalne Translation = 5.019994
+count = 936.000000
+aeropalne Translation = 5.019994
+count = 940.000000
+aeropalne Translation = 5.019994
+count = 944.000000
+aeropalne Translation = 5.019994
+count = 948.000000
+aeropalne Translation = 5.019994
+count = 952.000000
+aeropalne Translation = 5.019994
+count = 956.000000
+aeropalne Translation = 5.019994
+count = 960.000000
+aeropalne Translation = 5.019994
+count = 964.000000
+aeropalne Translation = 5.019994
+count = 968.000000
+aeropalne Translation = 5.019994
+count = 972.000000
+aeropalne Translation = 5.019994
+count = 976.000000
+aeropalne Translation = 5.019994
+count = 980.000000
+aeropalne Translation = 5.019994
+count = 984.000000
+aeropalne Translation = 5.019994
+count = 988.000000
+aeropalne Translation = 5.019994
+count = 992.000000
+aeropalne Translation = 5.019994
+count = 996.000000
+aeropalne Translation = 5.019994
+count = 1000.000000
+aeropalne Translation = 5.019994
+count = 1004.000000
+aeropalne Translation = 5.019994
+count = 1008.000000
+aeropalne Translation = 5.019994
+count = 1012.000000
+aeropalne Translation = 5.019994
+count = 1016.000000
+aeropalne Translation = 5.019994
+count = 1020.000000
+aeropalne Translation = 5.019994
+count = 1024.000000
+aeropalne Translation = 5.019994
+count = 1028.000000
+aeropalne Translation = 5.019994
+count = 1032.000000
+aeropalne Translation = 5.019994
+count = 1036.000000
+aeropalne Translation = 5.019994
+count = 1040.000000
+aeropalne Translation = 5.019994
+count = 1044.000000
+aeropalne Translation = 5.019994
+count = 1048.000000
+aeropalne Translation = 5.019994
+count = 1052.000000
+aeropalne Translation = 5.019994
+count = 1056.000000
+aeropalne Translation = 5.019994
+count = 1060.000000
+aeropalne Translation = 5.019994
+count = 1064.000000
+aeropalne Translation = 5.019994
+count = 1068.000000
+aeropalne Translation = 5.019994
+count = 1072.000000
+aeropalne Translation = 5.019994
+count = 1076.000000
+aeropalne Translation = 5.019994
+count = 1080.000000
+aeropalne Translation = 5.019994
+count = 1084.000000
+aeropalne Translation = 5.019994
+count = 1088.000000
+aeropalne Translation = 5.019994
+count = 1092.000000
+aeropalne Translation = 5.019994
+count = 1096.000000
+aeropalne Translation = 5.019994
+count = 1100.000000
+aeropalne Translation = 5.019994
+count = 1104.000000
+aeropalne Translation = 5.019994
+count = 1108.000000
+aeropalne Translation = 5.019994
+count = 1112.000000
+aeropalne Translation = 5.019994
+count = 1116.000000
+aeropalne Translation = 5.019994
+count = 1120.000000
+aeropalne Translation = 5.019994
+count = 1124.000000
+aeropalne Translation = 5.019994
+count = 1128.000000
+count = 1132.000000
+count = 1136.000000
+count = 1140.000000
+count = 1144.000000
+count = 1148.000000
+count = 1152.000000
+count = 1156.000000
+count = 1160.000000
+count = 1164.000000
+count = 1168.000000
+count = 1172.000000
+count = 1176.000000
+count = 1180.000000
+count = 1184.000000
+count = 1188.000000
+count = 1192.000000
+count = 1196.000000
+count = 1200.000000
+count = 1204.000000
+count = 1208.000000
+count = 1212.000000
+count = 1216.000000
+count = 1220.000000
+count = 1224.000000
+count = 1228.000000
+count = 1232.000000
+count = 1236.000000
+count = 1240.000000
+count = 1244.000000
+count = 1248.000000
+count = 1252.000000
+count = 1256.000000
+count = 1260.000000
+count = 1264.000000
+count = 1268.000000
+count = 1272.000000
+count = 1276.000000
+count = 1280.000000
+count = 1284.000000
+count = 1288.000000
+count = 1292.000000
+count = 1296.000000
+count = 1300.000000
+count = 1304.000000
+count = 1308.000000
+count = 1312.000000
+count = 1316.000000
+count = 1320.000000
+count = 1324.000000
+count = 1328.000000
+count = 1332.000000
+count = 1336.000000
+count = 1340.000000
+count = 1344.000000
+count = 1348.000000
+count = 1352.000000
+count = 1356.000000
+count = 1360.000000
+count = 1364.000000
+count = 1368.000000
+count = 1372.000000
+count = 1376.000000
+count = 1380.000000
+count = 1384.000000
+count = 1388.000000
+count = 1392.000000
+count = 1396.000000
+count = 1400.000000
+count = 1404.000000
+count = 1408.000000
+count = 1412.000000
+count = 1416.000000
+count = 1420.000000
+count = 1424.000000
+count = 1428.000000
+count = 1432.000000
+count = 1436.000000
+count = 1440.000000
+count = 1444.000000
+count = 1448.000000
+count = 1452.000000
+count = 1456.000000
+count = 1460.000000
+count = 1464.000000
+count = 1468.000000
+count = 1472.000000
+count = 1476.000000
+count = 1480.000000
+count = 1484.000000
+count = 1488.000000
+count = 1492.000000
+count = 1496.000000
+count = 1500.000000
+count = 1504.000000
+count = 1508.000000
+count = 1512.000000
+count = 1516.000000
+count = 1520.000000
+count = 1524.000000
+count = 1528.000000
+count = 1532.000000
+count = 1536.000000
+count = 1540.000000
+count = 1544.000000
+count = 1548.000000
+count = 1552.000000
+count = 1556.000000
+count = 1560.000000
+count = 1564.000000
+count = 1568.000000
+count = 1572.000000
+count = 1576.000000
+count = 1580.000000
+count = 1584.000000
+count = 1588.000000
+count = 1592.000000
+count = 1596.000000
+count = 1600.000000
+count = 1604.000000
+count = 1608.000000
+count = 1612.000000
+count = 1616.000000
+count = 1620.000000
+count = 1624.000000
+count = 1628.000000
+count = 1632.000000
+count = 1636.000000
+count = 1640.000000
+count = 1644.000000
+count = 1648.000000
+count = 1652.000000
+count = 1656.000000
+count = 1660.000000
+count = 1664.000000
+count = 1668.000000
+count = 1672.000000
+count = 1676.000000
+count = 1680.000000
+count = 1684.000000
+count = 1688.000000
+count = 1692.000000
+count = 1696.000000
+count = 1700.000000
+count = 1704.000000
+count = 1708.000000
+count = 1712.000000
+count = 1716.000000
+count = 1720.000000
+count = 1724.000000
+count = 1728.000000
+count = 1732.000000
+count = 1736.000000
+count = 1740.000000
+count = 1744.000000
+count = 1748.000000
+count = 1752.000000
+count = 1756.000000
+count = 1760.000000
+count = 1764.000000
+count = 1768.000000
+count = 1772.000000
+count = 1776.000000
+count = 1780.000000
+count = 1784.000000
+count = 1788.000000
+count = 1792.000000
+count = 1796.000000
+count = 1800.000000
+count = 1804.000000
+count = 1808.000000
+count = 1812.000000
+count = 1816.000000
+count = 1820.000000
+count = 1824.000000
+count = 1828.000000
+count = 1832.000000
+count = 1836.000000
+count = 1840.000000
+count = 1844.000000
+count = 1848.000000
+count = 1852.000000
+count = 1856.000000
+count = 1860.000000
+count = 1864.000000
+count = 1868.000000
+count = 1872.000000
+count = 1876.000000
+count = 1880.000000
+count = 1884.000000
+count = 1888.000000
+count = 1892.000000
+count = 1896.000000
+count = 1900.000000
+count = 1904.000000
+count = 1908.000000
+count = 1912.000000
+count = 1916.000000
+count = 1920.000000
+count = 1924.000000
+count = 1928.000000
+count = 1932.000000
+count = 1936.000000
+count = 1940.000000
+count = 1944.000000
+count = 1948.000000
+count = 1952.000000
+count = 1956.000000
+count = 1960.000000
+count = 1964.000000
+count = 1968.000000
+count = 1972.000000
+count = 1976.000000
+count = 1980.000000
+count = 1984.000000
+count = 1988.000000
+count = 1992.000000
+count = 1996.000000
+count = 2000.000000
+count = 2004.000000
+count = 2008.000000
+count = 2012.000000
+count = 2016.000000
+count = 2020.000000
+count = 2024.000000
+count = 2028.000000
+count = 2032.000000
+count = 2036.000000
+count = 2040.000000
+count = 2044.000000
+count = 2048.000000
+count = 2052.000000
+count = 2056.000000
+count = 2060.000000
+count = 2064.000000
+count = 2068.000000
+count = 2072.000000
+count = 2076.000000
+count = 2080.000000
+count = 2084.000000
+count = 2088.000000
+count = 2092.000000
+count = 2096.000000
+count = 2100.000000
+count = 2104.000000
+count = 2108.000000
+count = 2112.000000
+count = 2116.000000
+count = 2120.000000
+count = 2124.000000
+count = 2128.000000
+count = 2132.000000
+count = 2136.000000
+count = 2140.000000
+count = 2144.000000
+count = 2148.000000
+count = 2152.000000
+count = 2156.000000
+count = 2160.000000
+count = 2164.000000
+count = 2168.000000
+count = 2172.000000
+count = 2176.000000
+count = 2180.000000
+count = 2184.000000
+count = 2188.000000
+count = 2192.000000
+count = 2196.000000
+count = 2200.000000
+count = 2204.000000
+count = 2208.000000
+count = 2212.000000
+count = 2216.000000
+count = 2220.000000
+count = 2224.000000
+count = 2228.000000
+count = 2232.000000
+count = 2236.000000
+count = 2240.000000
+count = 2244.000000
+count = 2248.000000
+count = 2252.000000
+count = 2256.000000
+count = 2260.000000
+count = 2264.000000
+count = 2268.000000
+count = 2272.000000
+count = 2276.000000
+count = 2280.000000
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 1
+1
+
+in Scene 2
+angleOfSceneRotation = 282.000000
+in Scene 2
+angleOfSceneRotation = 274.000000
+in Scene 2
+angleOfSceneRotation = 266.000000
+in Scene 2
+angleOfSceneRotation = 258.000000
+in Scene 2
+angleOfSceneRotation = 250.000000
+in Scene 2
+angleOfSceneRotation = 242.000000
+in Scene 2
+angleOfSceneRotation = 234.000000
+in Scene 2
+angleOfSceneRotation = 226.000000
+in Scene 2
+angleOfSceneRotation = 218.000000
+in Scene 2
+angleOfSceneRotation = 210.000000
+in Scene 2
+angleOfSceneRotation = 202.000000
+in Scene 2
+angleOfSceneRotation = 194.000000
+in Scene 2
+angleOfSceneRotation = 186.000000
+in Scene 2
+angleOfSceneRotation = 178.000000
+in Scene 2
+angleOfSceneRotation = 170.000000
+0
+
+1
+
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -298.440399
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -297.640411
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -296.840424
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -296.040436
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -295.240448
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -294.440460
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -293.640472
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -292.840485
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -292.040497
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -291.240509
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -290.440521
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -289.640533
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -288.840546
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -288.040558
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -287.240570
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -286.440582
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -285.640594
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -284.840607
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -284.040619
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -283.240631
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -282.440643
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -281.640656
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -280.840668
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -280.040680
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -279.240692
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -278.440704
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -277.640717
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -276.840729
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -276.040741
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -275.240753
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -274.440765
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -273.640778
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -272.840790
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -272.040802
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -271.240814
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -270.440826
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -269.640839
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -268.840851
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -268.040863
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -267.240875
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -266.440887
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -265.640900
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -264.840912
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -264.040924
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -263.240936
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -262.440948
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -261.640961
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -260.840973
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -260.040985
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -259.240997
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -258.441010
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -257.641022
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -256.841034
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -256.041046
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -255.241043
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -254.441040
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -253.641037
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -252.841034
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -252.041031
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -251.241028
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -250.441025
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -249.641022
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -248.841019
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -248.041016
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -247.241013
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -246.441010
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -245.641006
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -244.841003
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -244.041000
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -243.240997
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -242.440994
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -241.640991
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -240.840988
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -240.040985
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -239.240982
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -238.440979
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -237.640976
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -236.840973
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -236.040970
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -235.240967
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -234.440964
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -233.640961
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -232.840958
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -232.040955
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -231.240952
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -230.440948
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -229.640945
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -228.840942
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -228.040939
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -227.240936
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -226.440933
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -225.640930
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -224.840927
+in Scene 3
+angleOfSceneRotation = 290.000000
+xCamera = -224.040924
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else if
+
+In scene 4
+Inside else
+
+181.000000
+
+xLookAt = 175.000000
+yLookAt = -436.000000
+zLookAt = -225.000000
+xEagle = 175.000000
+yEagle = -451.000000
+zEagle = -250.000000
+Scene 6
+
+181.500000
+
+xLookAt = 175.000000
+yLookAt = -436.000000
+zLookAt = -225.000000
+xEagle = 175.000000
+yEagle = -451.000000
+zEagle = -250.000000
+In scene 4
+Scene 6
+
+182.000000
+
+xLookAt = 175.803513
+yLookAt = -436.000000
+zLookAt = -235.849594
+xEagle = 175.042831
+yEagle = -451.000000
+zEagle = -253.272125
+In scene 4
+Scene 6
+
+182.500000
+
+xLookAt = 175.684769
+yLookAt = -436.000000
+zLookAt = -236.933945
+xEagle = 175.076141
+yEagle = -451.000000
+zEagle = -254.362442
+In scene 4
+Scene 6
+
+183.000000
+
+xLookAt = 175.575470
+yLookAt = -436.000000
+zLookAt = -238.019287
+xEagle = 175.118973
+yEagle = -451.000000
+zEagle = -255.452423
+In scene 4
+Scene 6
+
+183.500000
+
+xLookAt = 175.475662
+yLookAt = -436.000000
+zLookAt = -239.105530
+xEagle = 175.171310
+yEagle = -451.000000
+zEagle = -256.541992
+In scene 4
+Scene 6
+
+184.000000
+
+xLookAt = 175.385330
+yLookAt = -436.000000
+zLookAt = -240.192612
+xEagle = 175.233154
+yEagle = -451.000000
+zEagle = -257.631073
+In scene 4
+Scene 6
+
+184.500000
+
+xLookAt = 175.304489
+yLookAt = -436.000000
+zLookAt = -241.280441
+xEagle = 175.304489
+yEagle = -451.000000
+zEagle = -258.719574
+In scene 4
+Scene 6
+
+185.000000
+
+xLookAt = 175.233154
+yLookAt = -436.000000
+zLookAt = -242.368927
+xEagle = 175.385330
+yEagle = -451.000000
+zEagle = -259.807373
+In scene 4
+Scene 6
+
+185.500000
+
+xLookAt = 175.171310
+yLookAt = -436.000000
+zLookAt = -243.458008
+xEagle = 175.475662
+yEagle = -451.000000
+zEagle = -260.894470
+In scene 4
+Scene 6
+
+186.000000
+
+xLookAt = 175.118973
+yLookAt = -436.000000
+zLookAt = -244.547577
+xEagle = 175.575470
+yEagle = -451.000000
+zEagle = -261.980713
+In scene 4
+Scene 6
+
+186.500000
+
+xLookAt = 175.076141
+yLookAt = -436.000000
+zLookAt = -245.637558
+xEagle = 175.684769
+yEagle = -451.000000
+zEagle = -263.066071
+In scene 4
+Scene 6
+
+187.000000
+
+xLookAt = 175.042831
+yLookAt = -436.000000
+zLookAt = -246.727875
+xEagle = 175.803513
+yEagle = -451.000000
+zEagle = -264.150391
+In scene 4
+Scene 6
+
+187.500000
+
+xLookAt = 175.019043
+yLookAt = -436.000000
+zLookAt = -247.818451
+xEagle = 175.931732
+yEagle = -451.000000
+zEagle = -265.233673
+In scene 4
+Scene 6
+
+188.000000
+
+xLookAt = 175.004761
+yLookAt = -436.000000
+zLookAt = -248.909180
+xEagle = 176.069397
+yEagle = -451.000000
+zEagle = -266.315765
+In scene 4
+Scene 6
+
+188.500000
+
+xLookAt = 175.000000
+yLookAt = -436.000000
+zLookAt = -250.000000
+xEagle = 176.216492
+yEagle = -451.000000
+zEagle = -267.396637
+In scene 4
+Scene 6
+
+189.000000
+
+xLookAt = 175.004761
+yLookAt = -436.000000
+zLookAt = -251.090820
+xEagle = 176.373016
+yEagle = -451.000000
+zEagle = -268.476166
+In scene 4
+Scene 6
+
+189.500000
+
+xLookAt = 175.019043
+yLookAt = -436.000000
+zLookAt = -252.181549
+xEagle = 176.538956
+yEagle = -451.000000
+zEagle = -269.554321
+In scene 4
+Scene 6
+
+190.000000
+
+xLookAt = 175.042831
+yLookAt = -436.000000
+zLookAt = -253.272125
+xEagle = 176.714294
+yEagle = -451.000000
+zEagle = -270.630951
+In scene 4
+Scene 6
+
+190.500000
+
+xLookAt = 175.076141
+yLookAt = -436.000000
+zLookAt = -254.362442
+xEagle = 176.899033
+yEagle = -451.000000
+zEagle = -271.706024
+In scene 4
+Scene 6
+
+191.000000
+
+xLookAt = 175.118973
+yLookAt = -436.000000
+zLookAt = -255.452423
+xEagle = 177.093140
+yEagle = -451.000000
+zEagle = -272.779449
+In scene 4
+Scene 6
+
+191.500000
+
+xLookAt = 175.171310
+yLookAt = -436.000000
+zLookAt = -256.541992
+xEagle = 177.296600
+yEagle = -451.000000
+zEagle = -273.851135
+In scene 4
+Scene 6
+
+192.000000
+
+xLookAt = 175.233154
+yLookAt = -436.000000
+zLookAt = -257.631073
+xEagle = 177.509415
+yEagle = -451.000000
+zEagle = -274.920990
+In scene 4
+Scene 6
+
+192.500000
+
+xLookAt = 175.304489
+yLookAt = -436.000000
+zLookAt = -258.719574
+xEagle = 177.731552
+yEagle = -451.000000
+zEagle = -275.988953
+In scene 4
+Scene 6
+
+193.000000
+
+xLookAt = 175.385330
+yLookAt = -436.000000
+zLookAt = -259.807373
+xEagle = 177.962997
+yEagle = -451.000000
+zEagle = -277.054962
+In scene 4
+Scene 6
+
+193.500000
+
+xLookAt = 175.475662
+yLookAt = -436.000000
+zLookAt = -260.894470
+xEagle = 178.203735
+yEagle = -451.000000
+zEagle = -278.118896
+In scene 4
+Scene 6
+
+194.000000
+
+xLookAt = 175.575470
+yLookAt = -436.000000
+zLookAt = -261.980713
+xEagle = 178.453766
+yEagle = -451.000000
+zEagle = -279.180664
+In scene 4
+Scene 6
+
+194.500000
+
+xLookAt = 175.684769
+yLookAt = -436.000000
+zLookAt = -263.066071
+xEagle = 178.713028
+yEagle = -451.000000
+zEagle = -280.240234
+In scene 4
+Scene 6
+
+195.000000
+
+xLookAt = 175.803513
+yLookAt = -436.000000
+zLookAt = -264.150391
+xEagle = 178.981552
+yEagle = -451.000000
+zEagle = -281.297485
+In scene 4
+Scene 6
+
+195.500000
+
+xLookAt = 175.931732
+yLookAt = -436.000000
+zLookAt = -265.233673
+xEagle = 179.259277
+yEagle = -451.000000
+zEagle = -282.352386
+In scene 4
+Scene 6
+
+196.000000
+
+xLookAt = 176.069397
+yLookAt = -436.000000
+zLookAt = -266.315765
+xEagle = 179.546188
+yEagle = -451.000000
+zEagle = -283.404785
+In scene 4
+Scene 6
+
+196.500000
+
+xLookAt = 176.216492
+yLookAt = -436.000000
+zLookAt = -267.396637
+xEagle = 179.842285
+yEagle = -451.000000
+zEagle = -284.454681
+In scene 4
+Scene 6
+
+197.000000
+
+xLookAt = 176.373016
+yLookAt = -436.000000
+zLookAt = -268.476166
+xEagle = 180.147537
+yEagle = -451.000000
+zEagle = -285.501923
+In scene 4
+Scene 6
+
+197.500000
+
+xLookAt = 176.538956
+yLookAt = -436.000000
+zLookAt = -269.554321
+xEagle = 180.461899
+yEagle = -451.000000
+zEagle = -286.546478
+In scene 4
+Scene 6
+
+198.000000
+
+xLookAt = 176.714294
+yLookAt = -436.000000
+zLookAt = -270.630951
+xEagle = 180.785385
+yEagle = -451.000000
+zEagle = -287.588226
+In scene 4
+Scene 6
+
+198.500000
+
+xLookAt = 176.899033
+yLookAt = -436.000000
+zLookAt = -271.706024
+xEagle = 181.117935
+yEagle = -451.000000
+zEagle = -288.627136
+In scene 4
+Scene 6
+
+199.000000
+
+xLookAt = 177.093140
+yLookAt = -436.000000
+zLookAt = -272.779449
+xEagle = 181.459549
+yEagle = -451.000000
+zEagle = -289.663086
+In scene 4
+Scene 6
+
+199.500000
+
+xLookAt = 177.296600
+yLookAt = -436.000000
+zLookAt = -273.851135
+xEagle = 181.810181
+yEagle = -451.000000
+zEagle = -290.696014
+In scene 4
+Scene 6
+
+200.000000
+
+xLookAt = 177.509415
+yLookAt = -436.000000
+zLookAt = -274.920990
+xEagle = 182.169815
+yEagle = -451.000000
+zEagle = -291.725861
+In scene 4
+Scene 6
+
+200.500000
+
+xLookAt = 177.731552
+yLookAt = -436.000000
+zLookAt = -275.988953
+xEagle = 182.538422
+yEagle = -451.000000
+zEagle = -292.752533
+In scene 4
+Scene 6
+
+201.000000
+
+xLookAt = 177.962997
+yLookAt = -436.000000
+zLookAt = -277.054962
+xEagle = 182.915970
+yEagle = -451.000000
+zEagle = -293.775909
+In scene 4
+Scene 6
+
+201.500000
+
+xLookAt = 178.203735
+yLookAt = -436.000000
+zLookAt = -278.118896
+xEagle = 183.302444
+yEagle = -451.000000
+zEagle = -294.795990
+In scene 4
+Scene 6
+
+202.000000
+
+xLookAt = 178.453766
+yLookAt = -436.000000
+zLookAt = -279.180664
+xEagle = 183.697800
+yEagle = -451.000000
+zEagle = -295.812653
+In scene 4
+Scene 6
+
+202.500000
+
+xLookAt = 178.713028
+yLookAt = -436.000000
+zLookAt = -280.240234
+xEagle = 184.102020
+yEagle = -451.000000
+zEagle = -296.825836
+In scene 4
+Scene 6
+
+203.000000
+
+xLookAt = 178.981552
+yLookAt = -436.000000
+zLookAt = -281.297485
+xEagle = 184.515060
+yEagle = -451.000000
+zEagle = -297.835419
+In scene 4
+Scene 6
+
+203.500000
+
+xLookAt = 179.259277
+yLookAt = -436.000000
+zLookAt = -282.352386
+xEagle = 184.936890
+yEagle = -451.000000
+zEagle = -298.841400
+In scene 4
+Scene 6
+
+204.000000
+
+xLookAt = 179.546188
+yLookAt = -436.000000
+zLookAt = -283.404785
+xEagle = 185.367493
+yEagle = -451.000000
+zEagle = -299.843628
+In scene 4
+Scene 6
+
+204.500000
+
+xLookAt = 179.842285
+yLookAt = -436.000000
+zLookAt = -284.454681
+xEagle = 185.806824
+yEagle = -451.000000
+zEagle = -300.842072
+In scene 4
+Scene 6
+
+205.000000
+
+xLookAt = 180.147537
+yLookAt = -436.000000
+zLookAt = -285.501923
+xEagle = 186.254837
+yEagle = -451.000000
+zEagle = -301.836670
+In scene 4
+Scene 6
+
+205.500000
+
+xLookAt = 180.461899
+yLookAt = -436.000000
+zLookAt = -286.546478
+xEagle = 186.711533
+yEagle = -451.000000
+zEagle = -302.827271
+In scene 4
+Scene 6
+
+206.000000
+
+xLookAt = 180.785385
+yLookAt = -436.000000
+zLookAt = -287.588226
+xEagle = 187.176834
+yEagle = -451.000000
+zEagle = -303.813873
+In scene 4
+Scene 6
+
+206.500000
+
+xLookAt = 181.117935
+yLookAt = -436.000000
+zLookAt = -288.627136
+xEagle = 187.650742
+yEagle = -451.000000
+zEagle = -304.796387
+In scene 4
+Scene 6
+
+207.000000
+
+xLookAt = 181.459549
+yLookAt = -436.000000
+zLookAt = -289.663086
+xEagle = 188.133209
+yEagle = -451.000000
+zEagle = -305.774719
+In scene 4
+Scene 6
+
+207.500000
+
+xLookAt = 181.810181
+yLookAt = -436.000000
+zLookAt = -290.696014
+xEagle = 188.624191
+yEagle = -451.000000
+zEagle = -306.748810
+In scene 4
+Scene 6
+
+208.000000
+
+xLookAt = 182.169815
+yLookAt = -436.000000
+zLookAt = -291.725861
+xEagle = 189.123642
+yEagle = -451.000000
+zEagle = -307.718567
+In scene 4
+Scene 6
+
+208.500000
+
+xLookAt = 182.538422
+yLookAt = -436.000000
+zLookAt = -292.752533
+xEagle = 189.631546
+yEagle = -451.000000
+zEagle = -308.683960
+In scene 4
+Scene 6
+
+209.000000
+
+xLookAt = 182.915970
+yLookAt = -436.000000
+zLookAt = -293.775909
+xEagle = 190.147858
+yEagle = -451.000000
+zEagle = -309.644836
+In scene 4
+Scene 6
+
+209.500000
+
+xLookAt = 183.302444
+yLookAt = -436.000000
+zLookAt = -294.795990
+xEagle = 190.672531
+yEagle = -451.000000
+zEagle = -310.601196
+In scene 4
+Scene 6
+
+210.000000
+
+xLookAt = 183.697800
+yLookAt = -436.000000
+zLookAt = -295.812653
+xEagle = 191.205536
+yEagle = -451.000000
+zEagle = -311.552948
+In scene 4
+Scene 6
+
+210.500000
+
+xLookAt = 184.102020
+yLookAt = -436.000000
+zLookAt = -296.825836
+xEagle = 191.746826
+yEagle = -451.000000
+zEagle = -312.500000
+In scene 4
+Scene 6
+
+211.000000
+
+xLookAt = 184.515060
+yLookAt = -436.000000
+zLookAt = -297.835419
+xEagle = 192.296356
+yEagle = -451.000000
+zEagle = -313.442291
+In scene 4
+Scene 6
+
+211.500000
+
+xLookAt = 184.936890
+yLookAt = -436.000000
+zLookAt = -298.841400
+xEagle = 192.854080
+yEagle = -451.000000
+zEagle = -314.379761
+In scene 4
+Scene 6
+
+212.000000
+
+xLookAt = 185.367493
+yLookAt = -436.000000
+zLookAt = -299.843628
+xEagle = 193.419983
+yEagle = -451.000000
+zEagle = -315.312317
+In scene 4
+Scene 6
+
+212.500000
+
+xLookAt = 185.806824
+yLookAt = -436.000000
+zLookAt = -300.842072
+xEagle = 193.993988
+yEagle = -451.000000
+zEagle = -316.239899
+In scene 4
+Scene 6
+
+213.000000
+
+xLookAt = 186.254837
+yLookAt = -436.000000
+zLookAt = -301.836670
+xEagle = 194.576065
+yEagle = -451.000000
+zEagle = -317.162445
+In scene 4
+Scene 6
+
+213.500000
+
+xLookAt = 186.711533
+yLookAt = -436.000000
+zLookAt = -302.827271
+xEagle = 195.166183
+yEagle = -451.000000
+zEagle = -318.079865
+In scene 4
+Scene 6
+
+214.000000
+
+xLookAt = 187.176834
+yLookAt = -436.000000
+zLookAt = -303.813873
+xEagle = 195.764267
+yEagle = -451.000000
+zEagle = -318.992126
+In scene 4
+Scene 6
+
+214.500000
+
+xLookAt = 187.650742
+yLookAt = -436.000000
+zLookAt = -304.796387
+xEagle = 196.370300
+yEagle = -451.000000
+zEagle = -319.899109
+In scene 4
+Scene 6
+
+215.000000
+
+xLookAt = 188.133209
+yLookAt = -436.000000
+zLookAt = -305.774719
+xEagle = 196.984222
+yEagle = -451.000000
+zEagle = -320.800781
+In scene 4
+Scene 6
+
+215.500000
+
+xLookAt = 188.624191
+yLookAt = -436.000000
+zLookAt = -306.748810
+xEagle = 197.605988
+yEagle = -451.000000
+zEagle = -321.697052
+In scene 4
+Scene 6
+
+216.000000
+
+xLookAt = 189.123642
+yLookAt = -436.000000
+zLookAt = -307.718567
+xEagle = 198.235565
+yEagle = -451.000000
+zEagle = -322.587860
+In scene 4
+Scene 6
+
+216.500000
+
+xLookAt = 189.631546
+yLookAt = -436.000000
+zLookAt = -308.683960
+xEagle = 198.872879
+yEagle = -451.000000
+zEagle = -323.473145
+In scene 4
+Scene 6
+
+217.000000
+
+xLookAt = 190.147858
+yLookAt = -436.000000
+zLookAt = -309.644836
+xEagle = 199.517899
+yEagle = -451.000000
+zEagle = -324.352844
+In scene 4
+Scene 6
+
+217.500000
+
+xLookAt = 190.672531
+yLookAt = -436.000000
+zLookAt = -310.601196
+xEagle = 200.170563
+yEagle = -451.000000
+zEagle = -325.226868
+In scene 4
+Scene 6
+
+218.000000
+
+xLookAt = 191.205536
+yLookAt = -436.000000
+zLookAt = -311.552948
+xEagle = 200.830826
+yEagle = -451.000000
+zEagle = -326.095184
+In scene 4
+Scene 6
+
+218.500000
+
+xLookAt = 191.746826
+yLookAt = -436.000000
+zLookAt = -312.500000
+xEagle = 201.498657
+yEagle = -451.000000
+zEagle = -326.957672
+In scene 4
+Scene 6
+
+219.000000
+
+xLookAt = 192.296356
+yLookAt = -436.000000
+zLookAt = -313.442291
+xEagle = 202.173981
+yEagle = -451.000000
+zEagle = -327.814331
+In scene 4
+Scene 6
+
+219.500000
+
+xLookAt = 192.854080
+yLookAt = -436.000000
+zLookAt = -314.379761
+xEagle = 202.856750
+yEagle = -451.000000
+zEagle = -328.665039
+In scene 4
+Scene 6
+
+220.000000
+
+xLookAt = 193.419983
+yLookAt = -436.000000
+zLookAt = -315.312317
+xEagle = 203.546921
+yEagle = -451.000000
+zEagle = -329.509766
+In scene 4
+Scene 6
+
+220.500000
+
+xLookAt = 193.993988
+yLookAt = -436.000000
+zLookAt = -316.239899
+xEagle = 204.244446
+yEagle = -451.000000
+zEagle = -330.348450
+In scene 4
+Scene 6
+
+221.000000
+
+xLookAt = 194.576065
+yLookAt = -436.000000
+zLookAt = -317.162445
+xEagle = 204.949249
+yEagle = -451.000000
+zEagle = -331.181000
+In scene 4
+Scene 6
+
+221.500000
+
+xLookAt = 195.166183
+yLookAt = -436.000000
+zLookAt = -318.079865
+xEagle = 205.661301
+yEagle = -451.000000
+zEagle = -332.007385
+In scene 4
+Scene 6
+
+222.000000
+
+xLookAt = 195.764267
+yLookAt = -436.000000
+zLookAt = -318.992126
+xEagle = 206.380539
+yEagle = -451.000000
+zEagle = -332.827515
+In scene 4
+Scene 6
+
+222.500000
+
+xLookAt = 196.370300
+yLookAt = -436.000000
+zLookAt = -319.899109
+xEagle = 207.106903
+yEagle = -451.000000
+zEagle = -333.641327
+In scene 4
+Scene 6
+
+223.000000
+
+xLookAt = 196.984222
+yLookAt = -436.000000
+zLookAt = -320.800781
+xEagle = 207.840332
+yEagle = -451.000000
+zEagle = -334.448761
+In scene 4
+Scene 6
+
+223.500000
+
+xLookAt = 197.605988
+yLookAt = -436.000000
+zLookAt = -321.697052
+xEagle = 208.580780
+yEagle = -451.000000
+zEagle = -335.249786
+In scene 4
+Scene 6
+
+224.000000
+
+xLookAt = 198.235565
+yLookAt = -436.000000
+zLookAt = -322.587860
+xEagle = 209.328201
+yEagle = -451.000000
+zEagle = -336.044312
+In scene 4
+Scene 6
+
+224.500000
+
+xLookAt = 198.872879
+yLookAt = -436.000000
+zLookAt = -323.473145
+xEagle = 210.082520
+yEagle = -451.000000
+zEagle = -336.832306
+In scene 4
+Scene 6
+
+225.000000
+
+xLookAt = 199.517899
+yLookAt = -436.000000
+zLookAt = -324.352844
+xEagle = 210.843689
+yEagle = -451.000000
+zEagle = -337.613647
+In scene 4
+Scene 6
+
+225.500000
+
+xLookAt = 200.170563
+yLookAt = -436.000000
+zLookAt = -325.226868
+xEagle = 211.611649
+yEagle = -451.000000
+zEagle = -338.388336
+In scene 4
+Scene 6
+
+226.000000
+
+xLookAt = 200.830826
+yLookAt = -436.000000
+zLookAt = -326.095184
+xEagle = 212.386337
+yEagle = -451.000000
+zEagle = -339.156311
+In scene 4
+Scene 6
+
+226.500000
+
+xLookAt = 201.498657
+yLookAt = -436.000000
+zLookAt = -326.957672
+xEagle = 213.167709
+yEagle = -451.000000
+zEagle = -339.917480
+In scene 4
+Scene 6
+
+227.000000
+
+xLookAt = 202.173981
+yLookAt = -436.000000
+zLookAt = -327.814331
+xEagle = 213.955673
+yEagle = -451.000000
+zEagle = -340.671783
+In scene 4
+Scene 6
+
+227.500000
+
+xLookAt = 202.856750
+yLookAt = -436.000000
+zLookAt = -328.665039
+xEagle = 214.750198
+yEagle = -451.000000
+zEagle = -341.419220
+In scene 4
+Scene 6
+
+228.000000
+
+xLookAt = 203.546921
+yLookAt = -436.000000
+zLookAt = -329.509766
+xEagle = 215.551224
+yEagle = -451.000000
+zEagle = -342.159668
+In scene 4
+Scene 6
+
+228.500000
+
+xLookAt = 204.244446
+yLookAt = -436.000000
+zLookAt = -330.348450
+xEagle = 216.358673
+yEagle = -451.000000
+zEagle = -342.893097
+In scene 4
+Scene 6
+
+229.000000
+
+xLookAt = 204.949249
+yLookAt = -436.000000
+zLookAt = -331.181000
+xEagle = 217.172501
+yEagle = -451.000000
+zEagle = -343.619476
+In scene 4
+Scene 6
+
+229.500000
+
+xLookAt = 205.661301
+yLookAt = -436.000000
+zLookAt = -332.007385
+xEagle = 217.992615
+yEagle = -451.000000
+zEagle = -344.338684
+In scene 4
+Scene 6
+
+230.000000
+
+xLookAt = 206.380539
+yLookAt = -436.000000
+zLookAt = -332.827515
+xEagle = 218.819000
+yEagle = -451.000000
+zEagle = -345.050751
+In scene 4
+Scene 6
+
+230.500000
+
+xLookAt = 207.106903
+yLookAt = -436.000000
+zLookAt = -333.641327
+xEagle = 219.651550
+yEagle = -451.000000
+zEagle = -345.755554
+In scene 4
+Scene 6
+
+231.000000
+
+xLookAt = 207.840332
+yLookAt = -436.000000
+zLookAt = -334.448761
+xEagle = 220.490219
+yEagle = -451.000000
+zEagle = -346.453064
+In scene 4
+Scene 6
+
+231.500000
+
+xLookAt = 208.580780
+yLookAt = -436.000000
+zLookAt = -335.249786
+xEagle = 221.334946
+yEagle = -451.000000
+zEagle = -347.143250
+In scene 4
+Scene 6
+
+232.000000
+
+xLookAt = 209.328201
+yLookAt = -436.000000
+zLookAt = -336.044312
+xEagle = 222.185669
+yEagle = -451.000000
+zEagle = -347.826019
+In scene 4
+Scene 6
+
+232.500000
+
+xLookAt = 210.082520
+yLookAt = -436.000000
+zLookAt = -336.832306
+xEagle = 223.042313
+yEagle = -451.000000
+zEagle = -348.501343
+In scene 4
+Scene 6
+
+233.000000
+
+xLookAt = 210.843689
+yLookAt = -436.000000
+zLookAt = -337.613647
+xEagle = 223.904816
+yEagle = -451.000000
+zEagle = -349.169159
+In scene 4
+Scene 6
+
+233.500000
+
+xLookAt = 211.611649
+yLookAt = -436.000000
+zLookAt = -338.388336
+xEagle = 224.773117
+yEagle = -451.000000
+zEagle = -349.829437
+In scene 4
+Scene 6
+
+234.000000
+
+xLookAt = 212.386337
+yLookAt = -436.000000
+zLookAt = -339.156311
+xEagle = 225.647156
+yEagle = -451.000000
+zEagle = -350.482117
+In scene 4
+Scene 6
+
+234.500000
+
+xLookAt = 213.167709
+yLookAt = -436.000000
+zLookAt = -339.917480
+xEagle = 226.526840
+yEagle = -451.000000
+zEagle = -351.127136
+In scene 4
+Scene 6
+
+235.000000
+
+xLookAt = 213.955673
+yLookAt = -436.000000
+zLookAt = -340.671783
+xEagle = 227.412125
+yEagle = -451.000000
+zEagle = -351.764435
+In scene 4
+Scene 6
+
+235.500000
+
+xLookAt = 214.750198
+yLookAt = -436.000000
+zLookAt = -341.419220
+xEagle = 228.302948
+yEagle = -451.000000
+zEagle = -352.394012
+In scene 4
+Scene 6
+
+236.000000
+
+xLookAt = 215.551224
+yLookAt = -436.000000
+zLookAt = -342.159668
+xEagle = 229.199219
+yEagle = -451.000000
+zEagle = -353.015778
+In scene 4
+Scene 6
+
+236.500000
+
+xLookAt = 216.358673
+yLookAt = -436.000000
+zLookAt = -342.893097
+xEagle = 230.100891
+yEagle = -451.000000
+zEagle = -353.629700
+In scene 4
+Scene 6
+
+237.000000
+
+xLookAt = 217.172501
+yLookAt = -436.000000
+zLookAt = -343.619476
+xEagle = 231.007874
+yEagle = -451.000000
+zEagle = -354.235718
+In scene 4
+Scene 6
+
+237.500000
+
+xLookAt = 217.992615
+yLookAt = -436.000000
+zLookAt = -344.338684
+xEagle = 231.920120
+yEagle = -451.000000
+zEagle = -354.833832
+In scene 4
+Scene 6
+
+238.000000
+
+xLookAt = 218.819000
+yLookAt = -436.000000
+zLookAt = -345.050751
+xEagle = 232.837555
+yEagle = -451.000000
+zEagle = -355.423920
+In scene 4
+Scene 6
+
+238.500000
+
+xLookAt = 219.651550
+yLookAt = -436.000000
+zLookAt = -345.755554
+xEagle = 233.760086
+yEagle = -451.000000
+zEagle = -356.006012
+In scene 4
+Scene 6
+
+239.000000
+
+xLookAt = 220.490219
+yLookAt = -436.000000
+zLookAt = -346.453064
+xEagle = 234.687683
+yEagle = -451.000000
+zEagle = -356.580017
+In scene 4
+Scene 6
+
+239.500000
+
+xLookAt = 221.334946
+yLookAt = -436.000000
+zLookAt = -347.143250
+xEagle = 235.620239
+yEagle = -451.000000
+zEagle = -357.145905
+In scene 4
+Scene 6
+
+240.000000
+
+xLookAt = 222.185669
+yLookAt = -436.000000
+zLookAt = -347.826019
+xEagle = 236.557709
+yEagle = -451.000000
+zEagle = -357.703644
+In scene 4
+Scene 6
+
+240.500000
+
+xLookAt = 223.042313
+yLookAt = -436.000000
+zLookAt = -348.501343
+xEagle = 237.500000
+yEagle = -451.000000
+zEagle = -358.253174
+In scene 4
+Scene 6
+
+241.000000
+
+xLookAt = 223.904816
+yLookAt = -436.000000
+zLookAt = -349.169159
+xEagle = 238.447052
+yEagle = -451.000000
+zEagle = -358.794464
+In scene 4
+Scene 6
+
+241.500000
+
+xLookAt = 224.773117
+yLookAt = -436.000000
+zLookAt = -349.829437
+xEagle = 239.398804
+yEagle = -451.000000
+zEagle = -359.327454
+In scene 4
+Scene 6
+
+242.000000
+
+xLookAt = 225.647156
+yLookAt = -436.000000
+zLookAt = -350.482117
+xEagle = 240.355148
+yEagle = -451.000000
+zEagle = -359.852142
+In scene 4
+Scene 6
+
+242.500000
+
+xLookAt = 226.526840
+yLookAt = -436.000000
+zLookAt = -351.127136
+xEagle = 241.316055
+yEagle = -451.000000
+zEagle = -360.368439
+In scene 4
+Scene 6
+
+243.000000
+
+xLookAt = 227.412125
+yLookAt = -436.000000
+zLookAt = -351.764435
+xEagle = 242.281418
+yEagle = -451.000000
+zEagle = -360.876343
+In scene 4
+Scene 6
+
+243.500000
+
+xLookAt = 228.302948
+yLookAt = -436.000000
+zLookAt = -352.394012
+xEagle = 243.251190
+yEagle = -451.000000
+zEagle = -361.375824
+In scene 4
+Scene 6
+
+244.000000
+
+xLookAt = 229.199219
+yLookAt = -436.000000
+zLookAt = -353.015778
+xEagle = 244.225281
+yEagle = -451.000000
+zEagle = -361.866791
+In scene 4
+Scene 6
+
+244.500000
+
+xLookAt = 230.100891
+yLookAt = -436.000000
+zLookAt = -353.629700
+xEagle = 245.203613
+yEagle = -451.000000
+zEagle = -362.349243
+In scene 4
+Scene 6
+
+245.000000
+
+xLookAt = 231.007874
+yLookAt = -436.000000
+zLookAt = -354.235718
+xEagle = 246.186111
+yEagle = -451.000000
+zEagle = -362.823151
+In scene 4
+Scene 6
+
+245.500000
+
+xLookAt = 231.920120
+yLookAt = -436.000000
+zLookAt = -354.833832
+xEagle = 247.172714
+yEagle = -451.000000
+zEagle = -363.288483
+In scene 4
+Scene 6
+
+246.000000
+
+xLookAt = 232.837555
+yLookAt = -436.000000
+zLookAt = -355.423920
+xEagle = 248.163345
+yEagle = -451.000000
+zEagle = -363.745148
+In scene 4
+Scene 6
+
+246.500000
+
+xLookAt = 233.760086
+yLookAt = -436.000000
+zLookAt = -356.006012
+xEagle = 249.157913
+yEagle = -451.000000
+zEagle = -364.193176
+In scene 4
+Scene 6
+
+247.000000
+
+xLookAt = 234.687683
+yLookAt = -436.000000
+zLookAt = -356.580017
+xEagle = 250.156372
+yEagle = -451.000000
+zEagle = -364.632507
+In scene 4
+Scene 6
+
+247.500000
+
+xLookAt = 235.620239
+yLookAt = -436.000000
+zLookAt = -357.145905
+xEagle = 251.158615
+yEagle = -451.000000
+zEagle = -365.063110
+In scene 4
+Scene 6
+
+248.000000
+
+xLookAt = 236.557709
+yLookAt = -436.000000
+zLookAt = -357.703644
+xEagle = 252.164566
+yEagle = -451.000000
+zEagle = -365.484955
+In scene 4
+Scene 6
+
+248.500000
+
+xLookAt = 237.500000
+yLookAt = -436.000000
+zLookAt = -358.253174
+xEagle = 253.174179
+yEagle = -451.000000
+zEagle = -365.897980
+In scene 4
+Scene 6
+
+249.000000
+
+xLookAt = 238.447052
+yLookAt = -436.000000
+zLookAt = -358.794464
+xEagle = 254.187347
+yEagle = -451.000000
+zEagle = -366.302185
+In scene 4
+Scene 6
+
+249.500000
+
+xLookAt = 239.398804
+yLookAt = -436.000000
+zLookAt = -359.327454
+xEagle = 255.204010
+yEagle = -451.000000
+zEagle = -366.697540
+In scene 4
+Scene 6
+
+250.000000
+
+xLookAt = 240.355148
+yLookAt = -436.000000
+zLookAt = -359.852142
+xEagle = 256.224091
+yEagle = -451.000000
+zEagle = -367.084015
+In scene 4
+Scene 6
+
+250.500000
+
+xLookAt = 241.316055
+yLookAt = -436.000000
+zLookAt = -360.368439
+xEagle = 257.247467
+yEagle = -451.000000
+zEagle = -367.461578
+In scene 4
+Scene 6
+
+251.000000
+
+xLookAt = 242.281418
+yLookAt = -436.000000
+zLookAt = -360.876343
+xEagle = 258.274139
+yEagle = -451.000000
+zEagle = -367.830200
+In scene 4
+Scene 6
+
+251.500000
+
+xLookAt = 243.251190
+yLookAt = -436.000000
+zLookAt = -361.375824
+xEagle = 259.303986
+yEagle = -451.000000
+zEagle = -368.189819
+In scene 4
+Scene 6
+
+252.000000
+
+xLookAt = 244.225281
+yLookAt = -436.000000
+zLookAt = -361.866791
+xEagle = 260.336914
+yEagle = -451.000000
+zEagle = -368.540466
+In scene 4
+Scene 6
+
+252.500000
+
+xLookAt = 245.203613
+yLookAt = -436.000000
+zLookAt = -362.349243
+xEagle = 261.372864
+yEagle = -451.000000
+zEagle = -368.882050
+In scene 4
+Scene 6
+
+253.000000
+
+xLookAt = 246.186111
+yLookAt = -436.000000
+zLookAt = -362.823151
+xEagle = 262.411774
+yEagle = -451.000000
+zEagle = -369.214630
+In scene 4
+Scene 6
+
+253.500000
+
+xLookAt = 247.172714
+yLookAt = -436.000000
+zLookAt = -363.288483
+xEagle = 263.453522
+yEagle = -451.000000
+zEagle = -369.538086
+In scene 4
+Scene 6
+
+254.000000
+
+xLookAt = 248.163345
+yLookAt = -436.000000
+zLookAt = -363.745148
+xEagle = 264.498077
+yEagle = -451.000000
+zEagle = -369.852478
+In scene 4
+Scene 6
+
+254.500000
+
+xLookAt = 249.157913
+yLookAt = -436.000000
+zLookAt = -364.193176
+xEagle = 265.545319
+yEagle = -451.000000
+zEagle = -370.157715
+In scene 4
+Scene 6
+
+255.000000
+
+xLookAt = 250.156372
+yLookAt = -436.000000
+zLookAt = -364.632507
+xEagle = 266.595215
+yEagle = -451.000000
+zEagle = -370.453796
+In scene 4
+Scene 6
+
+255.500000
+
+xLookAt = 251.158615
+yLookAt = -436.000000
+zLookAt = -365.063110
+xEagle = 267.647614
+yEagle = -451.000000
+zEagle = -370.740723
+In scene 4
+Scene 6
+
+256.000000
+
+xLookAt = 252.164566
+yLookAt = -436.000000
+zLookAt = -365.484955
+xEagle = 268.702515
+yEagle = -451.000000
+zEagle = -371.018463
+In scene 4
+Scene 6
+
+256.500000
+
+xLookAt = 253.174179
+yLookAt = -436.000000
+zLookAt = -365.897980
+xEagle = 269.759766
+yEagle = -451.000000
+zEagle = -371.286957
+In scene 4
+Scene 6
+
+257.000000
+
+xLookAt = 254.187347
+yLookAt = -436.000000
+zLookAt = -366.302185
+xEagle = 270.819336
+yEagle = -451.000000
+zEagle = -371.546234
+In scene 4
+Scene 6
+
+257.500000
+
+xLookAt = 255.204010
+yLookAt = -436.000000
+zLookAt = -366.697540
+xEagle = 271.881104
+yEagle = -451.000000
+zEagle = -371.796265
+In scene 4
+Scene 6
+
+258.000000
+
+xLookAt = 256.224091
+yLookAt = -436.000000
+zLookAt = -367.084015
+xEagle = 272.945038
+yEagle = -451.000000
+zEagle = -372.036987
+In scene 4
+Scene 6
+
+258.500000
+
+xLookAt = 257.247467
+yLookAt = -436.000000
+zLookAt = -367.461578
+xEagle = 274.011047
+yEagle = -451.000000
+zEagle = -372.268463
+In scene 4
+Scene 6
+
+259.000000
+
+xLookAt = 258.274139
+yLookAt = -436.000000
+zLookAt = -367.830200
+xEagle = 275.079010
+yEagle = -451.000000
+zEagle = -372.490601
+In scene 4
+Scene 6
+
+259.500000
+
+xLookAt = 259.303986
+yLookAt = -436.000000
+zLookAt = -368.189819
+xEagle = 276.148865
+yEagle = -451.000000
+zEagle = -372.703400
+In scene 4
+Scene 6
+
+260.000000
+
+xLookAt = 260.336914
+yLookAt = -436.000000
+zLookAt = -368.540466
+xEagle = 277.220551
+yEagle = -451.000000
+zEagle = -372.906860
+In scene 4
+Scene 6
+
+260.500000
+
+xLookAt = 261.372864
+yLookAt = -436.000000
+zLookAt = -368.882050
+xEagle = 278.293976
+yEagle = -451.000000
+zEagle = -373.100983
+In scene 4
+Scene 6
+
+261.000000
+
+xLookAt = 262.411774
+yLookAt = -436.000000
+zLookAt = -369.214630
+xEagle = 279.369049
+yEagle = -451.000000
+zEagle = -373.285706
+In scene 4
+Scene 6
+
+261.500000
+
+xLookAt = 263.453522
+yLookAt = -436.000000
+zLookAt = -369.538086
+xEagle = 280.445679
+yEagle = -451.000000
+zEagle = -373.461029
+In scene 4
+Scene 6
+
+262.000000
+
+xLookAt = 264.498077
+yLookAt = -436.000000
+zLookAt = -369.852478
+xEagle = 281.523834
+yEagle = -451.000000
+zEagle = -373.626984
+In scene 4
+Scene 6
+
+262.500000
+
+xLookAt = 265.545319
+yLookAt = -436.000000
+zLookAt = -370.157715
+xEagle = 282.603363
+yEagle = -451.000000
+zEagle = -373.783508
+In scene 4
+Scene 6
+
+263.000000
+
+xLookAt = 266.595215
+yLookAt = -436.000000
+zLookAt = -370.453796
+xEagle = 283.684235
+yEagle = -451.000000
+zEagle = -373.930603
+In scene 4
+Scene 6
+
+263.500000
+
+xLookAt = 267.647614
+yLookAt = -436.000000
+zLookAt = -370.740723
+xEagle = 284.766327
+yEagle = -451.000000
+zEagle = -374.068268
+In scene 4
+Scene 6
+
+264.000000
+
+xLookAt = 268.702515
+yLookAt = -436.000000
+zLookAt = -371.018463
+xEagle = 285.849609
+yEagle = -451.000000
+zEagle = -374.196472
+In scene 4
+Scene 6
+
+264.500000
+
+xLookAt = 269.759766
+yLookAt = -436.000000
+zLookAt = -371.286957
+xEagle = 286.933929
+yEagle = -451.000000
+zEagle = -374.315247
+In scene 4
+Scene 6
+
+265.000000
+
+xLookAt = 270.819336
+yLookAt = -436.000000
+zLookAt = -371.546234
+xEagle = 288.019287
+yEagle = -451.000000
+zEagle = -374.424530
+In scene 4
+Scene 6
+
+265.500000
+
+xLookAt = 271.881104
+yLookAt = -436.000000
+zLookAt = -371.796265
+xEagle = 289.105530
+yEagle = -451.000000
+zEagle = -374.524323
+In scene 4
+Scene 6
+
+266.000000
+
+xLookAt = 272.945038
+yLookAt = -436.000000
+zLookAt = -372.036987
+xEagle = 290.192627
+yEagle = -451.000000
+zEagle = -374.614655
+In scene 4
+Scene 6
+
+266.500000
+
+xLookAt = 274.011047
+yLookAt = -436.000000
+zLookAt = -372.268463
+xEagle = 291.280426
+yEagle = -451.000000
+zEagle = -374.695496
+In scene 4
+Scene 6
+
+267.000000
+
+xLookAt = 275.079010
+yLookAt = -436.000000
+zLookAt = -372.490601
+xEagle = 292.368927
+yEagle = -451.000000
+zEagle = -374.766846
+In scene 4
+Scene 6
+
+267.500000
+
+xLookAt = 276.148865
+yLookAt = -436.000000
+zLookAt = -372.703400
+xEagle = 293.458008
+yEagle = -451.000000
+zEagle = -374.828705
+In scene 4
+Scene 6
+
+268.000000
+
+xLookAt = 277.220551
+yLookAt = -436.000000
+zLookAt = -372.906860
+xEagle = 294.547577
+yEagle = -451.000000
+zEagle = -374.881042
+In scene 4
+Scene 6
+
+268.500000
+
+xLookAt = 278.293976
+yLookAt = -436.000000
+zLookAt = -373.100983
+xEagle = 295.637573
+yEagle = -451.000000
+zEagle = -374.923859
+In scene 4
+Scene 6
+
+269.000000
+
+xLookAt = 279.369049
+yLookAt = -436.000000
+zLookAt = -373.285706
+xEagle = 296.727875
+yEagle = -451.000000
+zEagle = -374.957153
+In scene 4
+Scene 6
+
+269.500000
+
+xLookAt = 280.445679
+yLookAt = -436.000000
+zLookAt = -373.461029
+xEagle = 297.818451
+yEagle = -451.000000
+zEagle = -374.980957
+In scene 4
+Scene 6
+
+270.000000
+
+xLookAt = 281.523834
+yLookAt = -436.000000
+zLookAt = -373.626984
+xEagle = 298.909180
+yEagle = -451.000000
+zEagle = -374.995239
+In scene 4
+Scene 6
+
+270.500000
+
+xLookAt = 282.603363
+yLookAt = -436.000000
+zLookAt = -373.783508
+xEagle = 300.000000
+yEagle = -451.000000
+zEagle = -375.000000
+In scene 4
+Scene 6
+
+271.000000
+
+xLookAt = 283.684235
+yLookAt = -436.000000
+zLookAt = -373.930603
+xEagle = 301.090820
+yEagle = -451.000000
+zEagle = -374.995239
+In scene 4
+Scene 6
+
+271.500000
+
+xLookAt = 284.766327
+yLookAt = -436.000000
+zLookAt = -374.068268
+xEagle = 302.181549
+yEagle = -451.000000
+zEagle = -374.980957
+In scene 4
+Scene 6
+
+272.000000
+
+xLookAt = 285.849609
+yLookAt = -436.000000
+zLookAt = -374.196472
+xEagle = 303.272125
+yEagle = -451.000000
+zEagle = -374.957153
+In scene 4
+Scene 6
+
+272.500000
+
+xLookAt = 286.933929
+yLookAt = -436.000000
+zLookAt = -374.315247
+xEagle = 304.362427
+yEagle = -451.000000
+zEagle = -374.923859
+In scene 4
+Scene 6
+
+273.000000
+
+xLookAt = 288.019287
+yLookAt = -436.000000
+zLookAt = -374.424530
+xEagle = 305.452423
+yEagle = -451.000000
+zEagle = -374.881042
+In scene 4
+Scene 6
+
+273.500000
+
+xLookAt = 289.105530
+yLookAt = -436.000000
+zLookAt = -374.524323
+xEagle = 306.541992
+yEagle = -451.000000
+zEagle = -374.828705
+In scene 4
+Scene 6
+
+274.000000
+
+xLookAt = 290.192627
+yLookAt = -436.000000
+zLookAt = -374.614655
+xEagle = 307.631073
+yEagle = -451.000000
+zEagle = -374.766846
+In scene 4
+Scene 6
+
+274.500000
+
+xLookAt = 291.280426
+yLookAt = -436.000000
+zLookAt = -374.695496
+xEagle = 308.719574
+yEagle = -451.000000
+zEagle = -374.695496
+In scene 4
+Scene 6
+
+275.000000
+
+xLookAt = 292.368927
+yLookAt = -436.000000
+zLookAt = -374.766846
+xEagle = 309.807373
+yEagle = -451.000000
+zEagle = -374.614655
+In scene 4
+Scene 6
+
+275.500000
+
+xLookAt = 293.458008
+yLookAt = -436.000000
+zLookAt = -374.828705
+xEagle = 310.894470
+yEagle = -451.000000
+zEagle = -374.524323
+In scene 4
+Scene 6
+
+276.000000
+
+xLookAt = 294.547577
+yLookAt = -436.000000
+zLookAt = -374.881042
+xEagle = 311.980713
+yEagle = -451.000000
+zEagle = -374.424530
+In scene 4
+Scene 6
+
+276.500000
+
+xLookAt = 295.637573
+yLookAt = -436.000000
+zLookAt = -374.923859
+xEagle = 313.066071
+yEagle = -451.000000
+zEagle = -374.315247
+In scene 4
+Scene 6
+
+277.000000
+
+xLookAt = 296.727875
+yLookAt = -436.000000
+zLookAt = -374.957153
+xEagle = 314.150391
+yEagle = -451.000000
+zEagle = -374.196472
+In scene 4
+Scene 6
+
+277.500000
+
+xLookAt = 297.818451
+yLookAt = -436.000000
+zLookAt = -374.980957
+xEagle = 315.233673
+yEagle = -451.000000
+zEagle = -374.068268
+In scene 4
+Scene 6
+
+278.000000
+
+xLookAt = 298.909180
+yLookAt = -436.000000
+zLookAt = -374.995239
+xEagle = 316.315765
+yEagle = -451.000000
+zEagle = -373.930603
+In scene 4
+Scene 6
+
+278.500000
+
+xLookAt = 300.000000
+yLookAt = -436.000000
+zLookAt = -375.000000
+xEagle = 317.396637
+yEagle = -451.000000
+zEagle = -373.783508
+In scene 4
+Scene 6
+
+279.000000
+
+xLookAt = 301.090820
+yLookAt = -436.000000
+zLookAt = -374.995239
+xEagle = 318.476166
+yEagle = -451.000000
+zEagle = -373.626984
+In scene 4
+Scene 6
+
+279.500000
+
+xLookAt = 302.181549
+yLookAt = -436.000000
+zLookAt = -374.980957
+xEagle = 319.554321
+yEagle = -451.000000
+zEagle = -373.461029
+In scene 4
+Scene 6
+
+280.000000
+
+xLookAt = 303.272125
+yLookAt = -436.000000
+zLookAt = -374.957153
+xEagle = 320.630951
+yEagle = -451.000000
+zEagle = -373.285706
+In scene 4
+Scene 6
+
+280.500000
+
+xLookAt = 304.362427
+yLookAt = -436.000000
+zLookAt = -374.923859
+xEagle = 321.706024
+yEagle = -451.000000
+zEagle = -373.100983
+In scene 4
+Scene 6
+
+281.000000
+
+xLookAt = 305.452423
+yLookAt = -436.000000
+zLookAt = -374.881042
+xEagle = 322.779449
+yEagle = -451.000000
+zEagle = -372.906860
+In scene 4
+Scene 6
+
+281.500000
+
+xLookAt = 306.541992
+yLookAt = -436.000000
+zLookAt = -374.828705
+xEagle = 323.851135
+yEagle = -451.000000
+zEagle = -372.703400
+In scene 4
+Scene 6
+
+282.000000
+
+xLookAt = 307.631073
+yLookAt = -436.000000
+zLookAt = -374.766846
+xEagle = 324.920990
+yEagle = -451.000000
+zEagle = -372.490601
+In scene 4
+Scene 6
+
+282.500000
+
+xLookAt = 308.719574
+yLookAt = -436.000000
+zLookAt = -374.695496
+xEagle = 325.988953
+yEagle = -451.000000
+zEagle = -372.268463
+In scene 4
+Scene 6
+
+283.000000
+
+xLookAt = 309.807373
+yLookAt = -436.000000
+zLookAt = -374.614655
+xEagle = 327.054962
+yEagle = -451.000000
+zEagle = -372.036987
+In scene 4
+Scene 6
+
+283.500000
+
+xLookAt = 310.894470
+yLookAt = -436.000000
+zLookAt = -374.524323
+xEagle = 328.118896
+yEagle = -451.000000
+zEagle = -371.796265
+In scene 4
+Scene 6
+
+284.000000
+
+xLookAt = 311.980713
+yLookAt = -436.000000
+zLookAt = -374.424530
+xEagle = 329.180664
+yEagle = -451.000000
+zEagle = -371.546234
+In scene 4
+Scene 6
+
+284.500000
+
+xLookAt = 313.066071
+yLookAt = -436.000000
+zLookAt = -374.315247
+xEagle = 330.240234
+yEagle = -451.000000
+zEagle = -371.286957
+In scene 4
+Scene 6
+
+285.000000
+
+xLookAt = 314.150391
+yLookAt = -436.000000
+zLookAt = -374.196472
+xEagle = 331.297485
+yEagle = -451.000000
+zEagle = -371.018463
+In scene 4
+Scene 6
+
+285.500000
+
+xLookAt = 315.233673
+yLookAt = -436.000000
+zLookAt = -374.068268
+xEagle = 332.352386
+yEagle = -451.000000
+zEagle = -370.740723
+In scene 4
+Scene 6
+
+286.000000
+
+xLookAt = 316.315765
+yLookAt = -436.000000
+zLookAt = -373.930603
+xEagle = 333.404785
+yEagle = -451.000000
+zEagle = -370.453796
+In scene 4
+Scene 6
+
+286.500000
+
+xLookAt = 317.396637
+yLookAt = -436.000000
+zLookAt = -373.783508
+xEagle = 334.454681
+yEagle = -451.000000
+zEagle = -370.157715
+In scene 4
+Scene 6
+
+287.000000
+
+xLookAt = 318.476166
+yLookAt = -436.000000
+zLookAt = -373.626984
+xEagle = 335.501923
+yEagle = -451.000000
+zEagle = -369.852478
+In scene 4
+Scene 6
+
+287.500000
+
+xLookAt = 319.554321
+yLookAt = -436.000000
+zLookAt = -373.461029
+xEagle = 336.546478
+yEagle = -451.000000
+zEagle = -369.538086
+In scene 4
+Scene 6
+
+288.000000
+
+xLookAt = 320.630951
+yLookAt = -436.000000
+zLookAt = -373.285706
+xEagle = 337.588226
+yEagle = -451.000000
+zEagle = -369.214630
+In scene 4
+Scene 6
+
+288.500000
+
+xLookAt = 321.706024
+yLookAt = -436.000000
+zLookAt = -373.100983
+xEagle = 338.627136
+yEagle = -451.000000
+zEagle = -368.882050
+In scene 4
+Scene 6
+
+289.000000
+
+xLookAt = 322.779449
+yLookAt = -436.000000
+zLookAt = -372.906860
+xEagle = 339.663086
+yEagle = -451.000000
+zEagle = -368.540466
+In scene 4
+Scene 6
+
+289.500000
+
+xLookAt = 323.851135
+yLookAt = -436.000000
+zLookAt = -372.703400
+xEagle = 340.696014
+yEagle = -451.000000
+zEagle = -368.189819
+In scene 4
+Scene 6
+
+290.000000
+
+xLookAt = 324.920990
+yLookAt = -436.000000
+zLookAt = -372.490601
+xEagle = 341.725861
+yEagle = -451.000000
+zEagle = -367.830200
+In scene 4
+Scene 6
+
+290.500000
+
+xLookAt = 325.988953
+yLookAt = -436.000000
+zLookAt = -372.268463
+xEagle = 342.752533
+yEagle = -451.000000
+zEagle = -367.461578
+In scene 4
+Scene 6
+
+291.000000
+
+xLookAt = 327.054962
+yLookAt = -436.000000
+zLookAt = -372.036987
+xEagle = 343.775909
+yEagle = -451.000000
+zEagle = -367.084015
+In scene 4
+Scene 6
+
+291.500000
+
+xLookAt = 328.118896
+yLookAt = -436.000000
+zLookAt = -371.796265
+xEagle = 344.795990
+yEagle = -451.000000
+zEagle = -366.697540
+In scene 4
+Scene 6
+
+292.000000
+
+xLookAt = 329.180664
+yLookAt = -436.000000
+zLookAt = -371.546234
+xEagle = 345.812653
+yEagle = -451.000000
+zEagle = -366.302185
+In scene 4
+Scene 6
+
+292.500000
+
+xLookAt = 330.240234
+yLookAt = -436.000000
+zLookAt = -371.286957
+xEagle = 346.825836
+yEagle = -451.000000
+zEagle = -365.897980
+In scene 4
+Scene 6
+
+293.000000
+
+xLookAt = 331.297485
+yLookAt = -436.000000
+zLookAt = -371.018463
+xEagle = 347.835419
+yEagle = -451.000000
+zEagle = -365.484955
+In scene 4
+Scene 6
+
+293.500000
+
+xLookAt = 332.352386
+yLookAt = -436.000000
+zLookAt = -370.740723
+xEagle = 348.841400
+yEagle = -451.000000
+zEagle = -365.063110
+In scene 4
+Scene 6
+
+294.000000
+
+xLookAt = 333.404785
+yLookAt = -436.000000
+zLookAt = -370.453796
+xEagle = 349.843628
+yEagle = -451.000000
+zEagle = -364.632507
+In scene 4
+Scene 6
+
+294.500000
+
+xLookAt = 334.454681
+yLookAt = -436.000000
+zLookAt = -370.157715
+xEagle = 350.842072
+yEagle = -451.000000
+zEagle = -364.193176
+In scene 4
+Scene 6
+
+295.000000
+
+xLookAt = 335.501923
+yLookAt = -436.000000
+zLookAt = -369.852478
+xEagle = 351.836670
+yEagle = -451.000000
+zEagle = -363.745148
+In scene 4
+Scene 6
+
+295.500000
+
+xLookAt = 336.546478
+yLookAt = -436.000000
+zLookAt = -369.538086
+xEagle = 352.827271
+yEagle = -451.000000
+zEagle = -363.288483
+In scene 4
+Scene 6
+
+296.000000
+
+xLookAt = 337.588226
+yLookAt = -436.000000
+zLookAt = -369.214630
+xEagle = 353.813873
+yEagle = -451.000000
+zEagle = -362.823151
+In scene 4
+Scene 6
+
+296.500000
+
+xLookAt = 338.627136
+yLookAt = -436.000000
+zLookAt = -368.882050
+xEagle = 354.796387
+yEagle = -451.000000
+zEagle = -362.349243
+In scene 4
+Scene 6
+
+297.000000
+
+xLookAt = 339.663086
+yLookAt = -436.000000
+zLookAt = -368.540466
+xEagle = 355.774719
+yEagle = -451.000000
+zEagle = -361.866791
+In scene 4
+Scene 6
+
+297.500000
+
+xLookAt = 340.696014
+yLookAt = -436.000000
+zLookAt = -368.189819
+xEagle = 356.748810
+yEagle = -451.000000
+zEagle = -361.375824
+In scene 4
+Scene 6
+
+298.000000
+
+xLookAt = 341.725861
+yLookAt = -436.000000
+zLookAt = -367.830200
+xEagle = 357.718567
+yEagle = -451.000000
+zEagle = -360.876343
+In scene 4
+Scene 6
+
+298.500000
+
+xLookAt = 342.752533
+yLookAt = -436.000000
+zLookAt = -367.461578
+xEagle = 358.683960
+yEagle = -451.000000
+zEagle = -360.368439
+In scene 4
+Scene 6
+
+299.000000
+
+xLookAt = 343.775909
+yLookAt = -436.000000
+zLookAt = -367.084015
+xEagle = 359.644836
+yEagle = -451.000000
+zEagle = -359.852142
+In scene 4
+Scene 6
+
+299.500000
+
+xLookAt = 344.795990
+yLookAt = -436.000000
+zLookAt = -366.697540
+xEagle = 360.601196
+yEagle = -451.000000
+zEagle = -359.327454
+In scene 4
+Scene 6
+
+300.000000
+
+xLookAt = 345.812653
+yLookAt = -436.000000
+zLookAt = -366.302185
+xEagle = 361.552948
+yEagle = -451.000000
+zEagle = -358.794464
+In scene 4
+Scene 6
+
+300.500000
+
+xLookAt = 346.825836
+yLookAt = -436.000000
+zLookAt = -365.897980
+xEagle = 362.500000
+yEagle = -451.000000
+zEagle = -358.253174
+In scene 4
+Scene 6
+
+301.000000
+
+xLookAt = 347.835419
+yLookAt = -436.000000
+zLookAt = -365.484955
+xEagle = 363.442291
+yEagle = -451.000000
+zEagle = -357.703644
+In scene 4
+Scene 6
+
+301.500000
+
+xLookAt = 348.841400
+yLookAt = -436.000000
+zLookAt = -365.063110
+xEagle = 364.379761
+yEagle = -451.000000
+zEagle = -357.145905
+In scene 4
+Scene 6
+
+302.000000
+
+xLookAt = 349.843628
+yLookAt = -436.000000
+zLookAt = -364.632507
+xEagle = 365.312317
+yEagle = -451.000000
+zEagle = -356.580017
+In scene 4
+Scene 6
+
+302.500000
+
+xLookAt = 350.842072
+yLookAt = -436.000000
+zLookAt = -364.193176
+xEagle = 366.239899
+yEagle = -451.000000
+zEagle = -356.006012
+In scene 4
+Scene 6
+
+303.000000
+
+xLookAt = 351.836670
+yLookAt = -436.000000
+zLookAt = -363.745148
+xEagle = 367.162445
+yEagle = -451.000000
+zEagle = -355.423920
+In scene 4
+Scene 6
+
+303.500000
+
+xLookAt = 352.827271
+yLookAt = -436.000000
+zLookAt = -363.288483
+xEagle = 368.079865
+yEagle = -451.000000
+zEagle = -354.833832
+In scene 4
+Scene 6
+
+304.000000
+
+xLookAt = 353.813873
+yLookAt = -436.000000
+zLookAt = -362.823151
+xEagle = 368.992126
+yEagle = -451.000000
+zEagle = -354.235718
+In scene 4
+Scene 6
+
+304.500000
+
+xLookAt = 354.796387
+yLookAt = -436.000000
+zLookAt = -362.349243
+xEagle = 369.899109
+yEagle = -451.000000
+zEagle = -353.629700
+In scene 4
+Scene 6
+
+305.000000
+
+xLookAt = 355.774719
+yLookAt = -436.000000
+zLookAt = -361.866791
+xEagle = 370.800781
+yEagle = -451.000000
+zEagle = -353.015778
+In scene 4
+Scene 6
+
+305.500000
+
+xLookAt = 356.748810
+yLookAt = -436.000000
+zLookAt = -361.375824
+xEagle = 371.697052
+yEagle = -451.000000
+zEagle = -352.394012
+In scene 4
+Scene 6
+
+306.000000
+
+xLookAt = 357.718567
+yLookAt = -436.000000
+zLookAt = -360.876343
+xEagle = 372.587860
+yEagle = -451.000000
+zEagle = -351.764435
+In scene 4
+Scene 6
+
+306.500000
+
+xLookAt = 358.683960
+yLookAt = -436.000000
+zLookAt = -360.368439
+xEagle = 373.473145
+yEagle = -451.000000
+zEagle = -351.127136
+In scene 4
+Scene 6
+
+307.000000
+
+xLookAt = 359.644836
+yLookAt = -436.000000
+zLookAt = -359.852142
+xEagle = 374.352844
+yEagle = -451.000000
+zEagle = -350.482117
+In scene 4
+Scene 6
+
+307.500000
+
+xLookAt = 360.601196
+yLookAt = -436.000000
+zLookAt = -359.327454
+xEagle = 375.226868
+yEagle = -451.000000
+zEagle = -349.829437
+In scene 4
+Scene 6
+
+308.000000
+
+xLookAt = 361.552948
+yLookAt = -436.000000
+zLookAt = -358.794464
+xEagle = 376.095184
+yEagle = -451.000000
+zEagle = -349.169159
+In scene 4
+Scene 6
+
+308.500000
+
+xLookAt = 362.500000
+yLookAt = -436.000000
+zLookAt = -358.253174
+xEagle = 376.957672
+yEagle = -451.000000
+zEagle = -348.501343
+In scene 4
+Scene 6
+
+309.000000
+
+xLookAt = 363.442291
+yLookAt = -436.000000
+zLookAt = -357.703644
+xEagle = 377.814331
+yEagle = -451.000000
+zEagle = -347.826019
+In scene 4
+Scene 6
+
+309.500000
+
+xLookAt = 364.379761
+yLookAt = -436.000000
+zLookAt = -357.145905
+xEagle = 378.665039
+yEagle = -451.000000
+zEagle = -347.143250
+In scene 4
+Scene 6
+
+310.000000
+
+xLookAt = 365.312317
+yLookAt = -436.000000
+zLookAt = -356.580017
+xEagle = 379.509766
+yEagle = -451.000000
+zEagle = -346.453064
+In scene 4
+Scene 6
+
+310.500000
+
+xLookAt = 366.239899
+yLookAt = -436.000000
+zLookAt = -356.006012
+xEagle = 380.348450
+yEagle = -451.000000
+zEagle = -345.755554
+In scene 4
+Scene 6
+
+311.000000
+
+xLookAt = 367.162445
+yLookAt = -436.000000
+zLookAt = -355.423920
+xEagle = 381.181000
+yEagle = -451.000000
+zEagle = -345.050751
+In scene 4
+Scene 6
+
+311.500000
+
+xLookAt = 368.079865
+yLookAt = -436.000000
+zLookAt = -354.833832
+xEagle = 382.007385
+yEagle = -451.000000
+zEagle = -344.338684
+In scene 4
+Scene 6
+
+312.000000
+
+xLookAt = 368.992126
+yLookAt = -436.000000
+zLookAt = -354.235718
+xEagle = 382.827515
+yEagle = -451.000000
+zEagle = -343.619476
+In scene 4
+Scene 6
+
+312.500000
+
+xLookAt = 369.899109
+yLookAt = -436.000000
+zLookAt = -353.629700
+xEagle = 383.641327
+yEagle = -451.000000
+zEagle = -342.893097
+In scene 4
+Scene 6
+
+313.000000
+
+xLookAt = 370.800781
+yLookAt = -436.000000
+zLookAt = -353.015778
+xEagle = 384.448761
+yEagle = -451.000000
+zEagle = -342.159668
+In scene 4
+Scene 6
+
+313.500000
+
+xLookAt = 371.697052
+yLookAt = -436.000000
+zLookAt = -352.394012
+xEagle = 385.249786
+yEagle = -451.000000
+zEagle = -341.419220
+In scene 4
+Scene 6
+
+314.000000
+
+xLookAt = 372.587860
+yLookAt = -436.000000
+zLookAt = -351.764435
+xEagle = 386.044312
+yEagle = -451.000000
+zEagle = -340.671783
+In scene 4
+Scene 6
+
+314.500000
+
+xLookAt = 373.473145
+yLookAt = -436.000000
+zLookAt = -351.127136
+xEagle = 386.832306
+yEagle = -451.000000
+zEagle = -339.917480
+In scene 4
+Scene 6
+
+315.000000
+
+xLookAt = 374.352844
+yLookAt = -436.000000
+zLookAt = -350.482117
+xEagle = 387.613647
+yEagle = -451.000000
+zEagle = -339.156311
+In scene 4
+Scene 6
+
+315.500000
+
+xLookAt = 375.226868
+yLookAt = -436.000000
+zLookAt = -349.829437
+xEagle = 388.388336
+yEagle = -451.000000
+zEagle = -338.388336
+In scene 4
+Scene 6
+
+316.000000
+
+xLookAt = 376.095184
+yLookAt = -436.000000
+zLookAt = -349.169159
+xEagle = 389.156311
+yEagle = -451.000000
+zEagle = -337.613647
+In scene 4
+Scene 6
+
+316.500000
+
+xLookAt = 376.957672
+yLookAt = -436.000000
+zLookAt = -348.501343
+xEagle = 389.917480
+yEagle = -451.000000
+zEagle = -336.832306
+In scene 4
+Scene 6
+
+317.000000
+
+xLookAt = 377.814331
+yLookAt = -436.000000
+zLookAt = -347.826019
+xEagle = 390.671783
+yEagle = -451.000000
+zEagle = -336.044312
+In scene 4
+Scene 6
+
+317.500000
+
+xLookAt = 378.665039
+yLookAt = -436.000000
+zLookAt = -347.143250
+xEagle = 391.419220
+yEagle = -451.000000
+zEagle = -335.249786
+In scene 4
+Scene 6
+
+318.000000
+
+xLookAt = 379.509766
+yLookAt = -436.000000
+zLookAt = -346.453064
+xEagle = 392.159668
+yEagle = -451.000000
+zEagle = -334.448761
+In scene 4
+Scene 6
+
+318.500000
+
+xLookAt = 380.348450
+yLookAt = -436.000000
+zLookAt = -345.755554
+xEagle = 392.893097
+yEagle = -451.000000
+zEagle = -333.641327
+In scene 4
+Scene 6
+
+319.000000
+
+xLookAt = 381.181000
+yLookAt = -436.000000
+zLookAt = -345.050751
+xEagle = 393.619476
+yEagle = -451.000000
+zEagle = -332.827515
+In scene 4
+Scene 6
+
+319.500000
+
+xLookAt = 382.007385
+yLookAt = -436.000000
+zLookAt = -344.338684
+xEagle = 394.338684
+yEagle = -451.000000
+zEagle = -332.007385
+In scene 4
+Scene 6
+
+320.000000
+
+xLookAt = 382.827515
+yLookAt = -436.000000
+zLookAt = -343.619476
+xEagle = 395.050751
+yEagle = -451.000000
+zEagle = -331.181000
+In scene 4
+Scene 6
+
+320.500000
+
+xLookAt = 383.641327
+yLookAt = -436.000000
+zLookAt = -342.893097
+xEagle = 395.755554
+yEagle = -451.000000
+zEagle = -330.348450
+In scene 4
+Scene 6
+
+321.000000
+
+xLookAt = 384.448761
+yLookAt = -436.000000
+zLookAt = -342.159668
+xEagle = 396.453064
+yEagle = -451.000000
+zEagle = -329.509766
+In scene 4
+Scene 6
+
+321.500000
+
+xLookAt = 385.249786
+yLookAt = -436.000000
+zLookAt = -341.419220
+xEagle = 397.143250
+yEagle = -451.000000
+zEagle = -328.665039
+In scene 4
+Scene 6
+
+322.000000
+
+xLookAt = 386.044312
+yLookAt = -436.000000
+zLookAt = -340.671783
+xEagle = 397.826019
+yEagle = -451.000000
+zEagle = -327.814331
+In scene 4
+Scene 6
+
+322.500000
+
+xLookAt = 386.832306
+yLookAt = -436.000000
+zLookAt = -339.917480
+xEagle = 398.501343
+yEagle = -451.000000
+zEagle = -326.957672
+In scene 4
+Scene 6
+
+323.000000
+
+xLookAt = 387.613647
+yLookAt = -436.000000
+zLookAt = -339.156311
+xEagle = 399.169159
+yEagle = -451.000000
+zEagle = -326.095184
+In scene 4
+Scene 6
+
+323.500000
+
+xLookAt = 388.388336
+yLookAt = -436.000000
+zLookAt = -338.388336
+xEagle = 399.829437
+yEagle = -451.000000
+zEagle = -325.226868
+In scene 4
+Scene 6
+
+324.000000
+
+xLookAt = 389.156311
+yLookAt = -436.000000
+zLookAt = -337.613647
+xEagle = 400.482117
+yEagle = -451.000000
+zEagle = -324.352844
+In scene 4
+Scene 6
+
+324.500000
+
+xLookAt = 389.917480
+yLookAt = -436.000000
+zLookAt = -336.832306
+xEagle = 401.127136
+yEagle = -451.000000
+zEagle = -323.473145
+In scene 4
+Scene 6
+
+325.000000
+
+xLookAt = 390.671783
+yLookAt = -436.000000
+zLookAt = -336.044312
+xEagle = 401.764435
+yEagle = -451.000000
+zEagle = -322.587860
+In scene 4
+Scene 6
+
+325.500000
+
+xLookAt = 391.419220
+yLookAt = -436.000000
+zLookAt = -335.249786
+xEagle = 402.394012
+yEagle = -451.000000
+zEagle = -321.697052
+In scene 4
+Scene 6
+
+326.000000
+
+xLookAt = 392.159668
+yLookAt = -436.000000
+zLookAt = -334.448761
+xEagle = 403.015778
+yEagle = -451.000000
+zEagle = -320.800781
+In scene 4
+Scene 6
+
+326.500000
+
+xLookAt = 392.893097
+yLookAt = -436.000000
+zLookAt = -333.641327
+xEagle = 403.629700
+yEagle = -451.000000
+zEagle = -319.899109
+In scene 4
+Scene 6
+
+327.000000
+
+xLookAt = 393.619476
+yLookAt = -436.000000
+zLookAt = -332.827515
+xEagle = 404.235718
+yEagle = -451.000000
+zEagle = -318.992126
+In scene 4
+Scene 6
+
+327.500000
+
+xLookAt = 394.338684
+yLookAt = -436.000000
+zLookAt = -332.007385
+xEagle = 404.833832
+yEagle = -451.000000
+zEagle = -318.079865
+In scene 4
+Scene 6
+
+328.000000
+
+xLookAt = 395.050751
+yLookAt = -436.000000
+zLookAt = -331.181000
+xEagle = 405.423920
+yEagle = -451.000000
+zEagle = -317.162445
+In scene 4
+Scene 6
+
+328.500000
+
+xLookAt = 395.755554
+yLookAt = -436.000000
+zLookAt = -330.348450
+xEagle = 406.006012
+yEagle = -451.000000
+zEagle = -316.239899
+In scene 4
+Scene 6
+
+329.000000
+
+xLookAt = 396.453064
+yLookAt = -436.000000
+zLookAt = -329.509766
+xEagle = 406.580017
+yEagle = -451.000000
+zEagle = -315.312317
+In scene 4
+Scene 6
+
+329.500000
+
+xLookAt = 397.143250
+yLookAt = -436.000000
+zLookAt = -328.665039
+xEagle = 407.145905
+yEagle = -451.000000
+zEagle = -314.379761
+In scene 4
+Scene 6
+
+330.000000
+
+xLookAt = 397.826019
+yLookAt = -436.000000
+zLookAt = -327.814331
+xEagle = 407.703644
+yEagle = -451.000000
+zEagle = -313.442291
+In scene 4
+Scene 6
+
+330.500000
+
+xLookAt = 398.501343
+yLookAt = -436.000000
+zLookAt = -326.957672
+xEagle = 408.253174
+yEagle = -451.000000
+zEagle = -312.500000
+In scene 4
+Scene 6
+
+331.000000
+
+xLookAt = 399.169159
+yLookAt = -436.000000
+zLookAt = -326.095184
+xEagle = 408.794464
+yEagle = -451.000000
+zEagle = -311.552948
+In scene 4
+Scene 6
+
+331.500000
+
+xLookAt = 399.829437
+yLookAt = -436.000000
+zLookAt = -325.226868
+xEagle = 409.327454
+yEagle = -451.000000
+zEagle = -310.601196
+In scene 4
+Scene 6
+
+332.000000
+
+xLookAt = 400.482117
+yLookAt = -436.000000
+zLookAt = -324.352844
+xEagle = 409.852142
+yEagle = -451.000000
+zEagle = -309.644836
+In scene 4
+Scene 6
+
+332.500000
+
+xLookAt = 401.127136
+yLookAt = -436.000000
+zLookAt = -323.473145
+xEagle = 410.368439
+yEagle = -451.000000
+zEagle = -308.683960
+In scene 4
+Scene 6
+
+333.000000
+
+xLookAt = 401.764435
+yLookAt = -436.000000
+zLookAt = -322.587860
+xEagle = 410.876343
+yEagle = -451.000000
+zEagle = -307.718567
+In scene 4
+Scene 6
+
+333.500000
+
+xLookAt = 402.394012
+yLookAt = -436.000000
+zLookAt = -321.697052
+xEagle = 411.375824
+yEagle = -451.000000
+zEagle = -306.748810
+In scene 4
+Scene 6
+
+334.000000
+
+xLookAt = 403.015778
+yLookAt = -436.000000
+zLookAt = -320.800781
+xEagle = 411.866791
+yEagle = -451.000000
+zEagle = -305.774719
+In scene 4
+Scene 6
+
+334.500000
+
+xLookAt = 403.629700
+yLookAt = -436.000000
+zLookAt = -319.899109
+xEagle = 412.349243
+yEagle = -451.000000
+zEagle = -304.796387
+In scene 4
+Scene 6
+
+335.000000
+
+xLookAt = 404.235718
+yLookAt = -436.000000
+zLookAt = -318.992126
+xEagle = 412.823151
+yEagle = -451.000000
+zEagle = -303.813873
+In scene 4
+Scene 6
+
+335.500000
+
+xLookAt = 404.833832
+yLookAt = -436.000000
+zLookAt = -318.079865
+xEagle = 413.288483
+yEagle = -451.000000
+zEagle = -302.827271
+In scene 4
+Scene 6
+
+336.000000
+
+xLookAt = 405.423920
+yLookAt = -436.000000
+zLookAt = -317.162445
+xEagle = 413.745148
+yEagle = -451.000000
+zEagle = -301.836670
+In scene 4
+Scene 6
+
+336.500000
+
+xLookAt = 406.006012
+yLookAt = -436.000000
+zLookAt = -316.239899
+xEagle = 414.193176
+yEagle = -451.000000
+zEagle = -300.842072
+In scene 4
+Scene 6
+
+337.000000
+
+xLookAt = 406.580017
+yLookAt = -436.000000
+zLookAt = -315.312317
+xEagle = 414.632507
+yEagle = -451.000000
+zEagle = -299.843628
+In scene 4
+Scene 6
+
+337.500000
+
+xLookAt = 407.145905
+yLookAt = -436.000000
+zLookAt = -314.379761
+xEagle = 415.063110
+yEagle = -451.000000
+zEagle = -298.841400
+In scene 4
+Scene 6
+
+338.000000
+
+xLookAt = 407.703644
+yLookAt = -436.000000
+zLookAt = -313.442291
+xEagle = 415.484955
+yEagle = -451.000000
+zEagle = -297.835419
+In scene 4
+Scene 6
+
+338.500000
+
+xLookAt = 408.253174
+yLookAt = -436.000000
+zLookAt = -312.500000
+xEagle = 415.897980
+yEagle = -451.000000
+zEagle = -296.825836
+In scene 4
+Scene 6
+
+339.000000
+
+xLookAt = 408.794464
+yLookAt = -436.000000
+zLookAt = -311.552948
+xEagle = 416.302185
+yEagle = -451.000000
+zEagle = -295.812653
+In scene 4
+Scene 6
+
+339.500000
+
+xLookAt = 409.327454
+yLookAt = -436.000000
+zLookAt = -310.601196
+xEagle = 416.697540
+yEagle = -451.000000
+zEagle = -294.795990
+In scene 4
+Scene 6
+
+340.000000
+
+xLookAt = 409.852142
+yLookAt = -436.000000
+zLookAt = -309.644836
+xEagle = 417.084015
+yEagle = -451.000000
+zEagle = -293.775909
+In scene 4
+Scene 6
+
+340.500000
+
+xLookAt = 410.368439
+yLookAt = -436.000000
+zLookAt = -308.683960
+xEagle = 417.461578
+yEagle = -451.000000
+zEagle = -292.752533
+In scene 4
+Scene 6
+
+341.000000
+
+xLookAt = 410.876343
+yLookAt = -436.000000
+zLookAt = -307.718567
+xEagle = 417.830200
+yEagle = -451.000000
+zEagle = -291.725861
+In scene 4
+Scene 6
+
+341.500000
+
+xLookAt = 411.375824
+yLookAt = -436.000000
+zLookAt = -306.748810
+xEagle = 418.189819
+yEagle = -451.000000
+zEagle = -290.696014
+In scene 4
+Scene 6
+
+342.000000
+
+xLookAt = 411.866791
+yLookAt = -436.000000
+zLookAt = -305.774719
+xEagle = 418.540466
+yEagle = -451.000000
+zEagle = -289.663086
+In scene 4
+Scene 6
+
+342.500000
+
+xLookAt = 412.349243
+yLookAt = -436.000000
+zLookAt = -304.796387
+xEagle = 418.882050
+yEagle = -451.000000
+zEagle = -288.627136
+In scene 4
+Scene 6
+
+343.000000
+
+xLookAt = 412.823151
+yLookAt = -436.000000
+zLookAt = -303.813873
+xEagle = 419.214630
+yEagle = -451.000000
+zEagle = -287.588226
+In scene 4
+Scene 6
+
+343.500000
+
+xLookAt = 413.288483
+yLookAt = -436.000000
+zLookAt = -302.827271
+xEagle = 419.538086
+yEagle = -451.000000
+zEagle = -286.546478
+In scene 4
+Scene 6
+
+344.000000
+
+xLookAt = 413.745148
+yLookAt = -436.000000
+zLookAt = -301.836670
+xEagle = 419.852478
+yEagle = -451.000000
+zEagle = -285.501923
+In scene 4
+Scene 6
+
+344.500000
+
+xLookAt = 414.193176
+yLookAt = -436.000000
+zLookAt = -300.842072
+xEagle = 420.157715
+yEagle = -451.000000
+zEagle = -284.454681
+In scene 4
+Scene 6
+
+345.000000
+
+xLookAt = 414.632507
+yLookAt = -436.000000
+zLookAt = -299.843628
+xEagle = 420.453796
+yEagle = -451.000000
+zEagle = -283.404785
+In scene 4
+Scene 6
+
+345.500000
+
+xLookAt = 415.063110
+yLookAt = -436.000000
+zLookAt = -298.841400
+xEagle = 420.740723
+yEagle = -451.000000
+zEagle = -282.352386
+In scene 4
+Scene 6
+
+346.000000
+
+xLookAt = 415.484955
+yLookAt = -436.000000
+zLookAt = -297.835419
+xEagle = 421.018463
+yEagle = -451.000000
+zEagle = -281.297485
+In scene 4
+Scene 6
+
+346.500000
+
+xLookAt = 415.897980
+yLookAt = -436.000000
+zLookAt = -296.825836
+xEagle = 421.286957
+yEagle = -451.000000
+zEagle = -280.240234
+In scene 4
+Scene 6
+
+347.000000
+
+xLookAt = 416.302185
+yLookAt = -436.000000
+zLookAt = -295.812653
+xEagle = 421.546234
+yEagle = -451.000000
+zEagle = -279.180664
+In scene 4
+Scene 6
+
+347.500000
+
+xLookAt = 416.697540
+yLookAt = -436.000000
+zLookAt = -294.795990
+xEagle = 421.796265
+yEagle = -451.000000
+zEagle = -278.118896
+In scene 4
+Scene 6
+
+348.000000
+
+xLookAt = 417.084015
+yLookAt = -436.000000
+zLookAt = -293.775909
+xEagle = 422.036987
+yEagle = -451.000000
+zEagle = -277.054962
+In scene 4
+Scene 6
+
+348.500000
+
+xLookAt = 417.461578
+yLookAt = -436.000000
+zLookAt = -292.752533
+xEagle = 422.268463
+yEagle = -451.000000
+zEagle = -275.988953
+In scene 4
+Scene 6
+
+349.000000
+
+xLookAt = 417.830200
+yLookAt = -436.000000
+zLookAt = -291.725861
+xEagle = 422.490601
+yEagle = -451.000000
+zEagle = -274.920990
+In scene 4
+Scene 6
+
+349.500000
+
+xLookAt = 418.189819
+yLookAt = -436.000000
+zLookAt = -290.696014
+xEagle = 422.703400
+yEagle = -451.000000
+zEagle = -273.851135
+In scene 4
+Scene 6
+
+350.000000
+
+xLookAt = 418.540466
+yLookAt = -436.000000
+zLookAt = -289.663086
+xEagle = 422.906860
+yEagle = -451.000000
+zEagle = -272.779449
+In scene 4
+Scene 6
+
+350.500000
+
+xLookAt = 418.882050
+yLookAt = -436.000000
+zLookAt = -288.627136
+xEagle = 423.100983
+yEagle = -451.000000
+zEagle = -271.706024
+In scene 4
+Scene 6
+
+351.000000
+
+xLookAt = 419.214630
+yLookAt = -436.000000
+zLookAt = -287.588226
+xEagle = 423.285706
+yEagle = -451.000000
+zEagle = -270.630951
+In scene 4
+Scene 6
+
+351.500000
+
+xLookAt = 419.538086
+yLookAt = -436.000000
+zLookAt = -286.546478
+xEagle = 423.461029
+yEagle = -451.000000
+zEagle = -269.554321
+In scene 4
+Scene 6
+
+352.000000
+
+xLookAt = 419.852478
+yLookAt = -436.000000
+zLookAt = -285.501923
+xEagle = 423.626984
+yEagle = -451.000000
+zEagle = -268.476166
+In scene 4
+Scene 6
+
+352.500000
+
+xLookAt = 420.157715
+yLookAt = -436.000000
+zLookAt = -284.454681
+xEagle = 423.783508
+yEagle = -451.000000
+zEagle = -267.396637
+In scene 4
+Scene 6
+
+353.000000
+
+xLookAt = 420.453796
+yLookAt = -436.000000
+zLookAt = -283.404785
+xEagle = 423.930603
+yEagle = -451.000000
+zEagle = -266.315765
+In scene 4
+Scene 6
+
+353.500000
+
+xLookAt = 420.740723
+yLookAt = -436.000000
+zLookAt = -282.352386
+xEagle = 424.068268
+yEagle = -451.000000
+zEagle = -265.233673
+In scene 4
+Scene 6
+
+354.000000
+
+xLookAt = 421.018463
+yLookAt = -436.000000
+zLookAt = -281.297485
+xEagle = 424.196472
+yEagle = -451.000000
+zEagle = -264.150391
+In scene 4
+Scene 6
+
+354.500000
+
+xLookAt = 421.286957
+yLookAt = -436.000000
+zLookAt = -280.240234
+xEagle = 424.315247
+yEagle = -451.000000
+zEagle = -263.066071
+In scene 4
+Scene 6
+
+355.000000
+
+xLookAt = 421.546234
+yLookAt = -436.000000
+zLookAt = -279.180664
+xEagle = 424.424530
+yEagle = -451.000000
+zEagle = -261.980713
+In scene 4
+Scene 6
+
+355.500000
+
+xLookAt = 421.796265
+yLookAt = -436.000000
+zLookAt = -278.118896
+xEagle = 424.524323
+yEagle = -451.000000
+zEagle = -260.894470
+In scene 4
+Scene 6
+
+356.000000
+
+xLookAt = 422.036987
+yLookAt = -436.000000
+zLookAt = -277.054962
+xEagle = 424.614655
+yEagle = -451.000000
+zEagle = -259.807373
+In scene 4
+Scene 6
+
+356.500000
+
+xLookAt = 422.268463
+yLookAt = -436.000000
+zLookAt = -275.988953
+xEagle = 424.695496
+yEagle = -451.000000
+zEagle = -258.719574
+In scene 4
+Scene 6
+
+357.000000
+
+xLookAt = 422.490601
+yLookAt = -436.000000
+zLookAt = -274.920990
+xEagle = 424.766846
+yEagle = -451.000000
+zEagle = -257.631073
+In scene 4
+Scene 6
+
+357.500000
+
+xLookAt = 422.703400
+yLookAt = -436.000000
+zLookAt = -273.851135
+xEagle = 424.828705
+yEagle = -451.000000
+zEagle = -256.541992
+In scene 4
+Scene 6
+
+358.000000
+
+xLookAt = 422.906860
+yLookAt = -436.000000
+zLookAt = -272.779449
+xEagle = 424.881042
+yEagle = -451.000000
+zEagle = -255.452423
+In scene 4
+Scene 6
+
+358.500000
+
+xLookAt = 423.100983
+yLookAt = -436.000000
+zLookAt = -271.706024
+xEagle = 424.923859
+yEagle = -451.000000
+zEagle = -254.362442
+In scene 4
+Scene 6
+
+359.000000
+
+xLookAt = 423.285706
+yLookAt = -436.000000
+zLookAt = -270.630951
+xEagle = 424.957153
+yEagle = -451.000000
+zEagle = -253.272125
+In scene 4
+Scene 6
+
+359.500000
+
+xLookAt = 423.461029
+yLookAt = -436.000000
+zLookAt = -269.554321
+xEagle = 424.980957
+yEagle = -451.000000
+zEagle = -252.181549
+In scene 4
+Scene 6
+
+360.000000
+
+xLookAt = 423.626984
+yLookAt = -436.000000
+zLookAt = -268.476166
+xEagle = 424.995239
+yEagle = -451.000000
+zEagle = -251.090820
+In scene 4
+Scene 6
+
+360.500000
+
+xLookAt = 423.783508
+yLookAt = -436.000000
+zLookAt = -267.396637
+xEagle = 425.000000
+yEagle = -451.000000
+zEagle = -250.000000
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+In scene 4
+Log File Successfully Closed.

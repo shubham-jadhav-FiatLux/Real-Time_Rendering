@@ -1,0 +1,12 @@
+#include <Windows.h>
+#include "OGL.h"
+
+MYICON ICON Coffee.ico
+
+IDBITMAP_ARROW_TIP BITMAP ArrowTip.bmp 
+
+IDBITMAP_ARROW_TAIL BITMAP ArrowTail.bmp
+
+IDBITMAP_ARROW_STICK BITMAP ArrowStick.bmp
+
+IDBITMAP_ARROW_TAIL_REV BITMAP ArrowTailRev.bmp

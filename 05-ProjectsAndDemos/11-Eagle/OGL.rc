@@ -1,0 +1,12 @@
+#include <Windows.h>
+#include "OGL.h"
+
+MYICON ICON Coffee.ico
+
+EAGLEFEATHER_HEAD BITMAP EagleFeatherHead.bmp
+EAGLEFEATHER_NECK BITMAP EagleFeatherNeck.bmp
+EAGLEFEATHER_BODY BITMAP EagleFeatherBody.bmp
+EAGLEFEATHER_TAIL BITMAP EagleFeatherTail.bmp
+EAGLEFEATHER_EYE BITMAP EagleFeatherEye.bmp
+EAGLEFEATHER_LEG BITMAP EagleFeatherLeg.bmp
+EAGLEFEATHER_WING BITMAP EagleFeatherWing.bmp

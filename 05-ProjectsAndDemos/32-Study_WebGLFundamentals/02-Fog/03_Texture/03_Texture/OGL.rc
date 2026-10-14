@@ -1,0 +1,4 @@
+#include "OGL.h"
+
+HEIGHTMAP_BITMAP BITMAP "heightmap.bmp"
+

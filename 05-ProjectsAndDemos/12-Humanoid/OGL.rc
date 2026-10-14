@@ -1,0 +1,12 @@
+#include <Windows.h>
+#include "OGL.h"
+
+MYICON ICON Coffee.ico
+
+SHIRT BITMAP shirt.bmp
+
+SHIRT2 BITMAP shirt2.bmp
+
+PANT BITMAP pant.bmp
+
+FACE BITMAP face.bmp

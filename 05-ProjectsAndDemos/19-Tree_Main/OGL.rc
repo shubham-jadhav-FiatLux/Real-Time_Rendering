@@ -1,0 +1,8 @@
+#include <Windows.h>
+#include "OGL.h"
+
+MYICON ICON Coffee.ico
+
+IDBITMAP_BAMBOO BITMAP Bamboo.bmp
+
+IDBITMAP_BAMBOOLEAF BITMAP BambooLeaf.bmp

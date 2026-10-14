@@ -1,0 +1,4 @@
+#include "OGL.h"
+
+MYICON ICON Vipin.ico
+MYSOUND WAVE Dulhan_Chali_Pahen_Chali_Teen_Rang_Edited.wav
