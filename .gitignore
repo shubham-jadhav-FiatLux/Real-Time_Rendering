@@ -83,3 +83,16 @@ RCb*
 
 # Linux ELF Binaries
 01-Foundations/01-HelloWorld/06-Assembly/HelloWorld
+OGL
+XWindow
+XWindow.out
+
+# Xcode User Data & State
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Android Build Outputs & Packages
+*.apk
+*.aab
+.idea/
