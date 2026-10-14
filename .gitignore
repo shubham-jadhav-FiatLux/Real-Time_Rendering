@@ -52,3 +52,34 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Java
+*.class
+
+# Visual Studio & C++ Build Artifacts
+.vs/
+*.ipch
+*.db
+*.opendb
+*.VC.db
+Debug/
+Release/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+*.pdb
+*.ilk
+*.exp
+
+# Resource Compiler temporary files
+RCa*
+RCb*
+
+# Linux ELF Binaries
+01-Foundations/01-HelloWorld/06-Assembly/HelloWorld
