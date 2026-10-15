@@ -236,5 +236,4 @@ python3 -m http.server 8080
 
 - **Dr. Vijay D. Gokhale**: For his visionary teaching, unwavering mentorship, and for instilling the values of clean systems engineering and real-time graphics architecture.
 - **AstroMediComp**: For conducting the transformative Real-Time Rendering 2021 program.
-- **Mrs. Gokhale Ma'am**: For teaching the foundational principles of art, light, perspective, and screenplay design.
-- **Team HULL**: To all team members of the PENETRALIA group finale for their collaboration and shared passion for graphics programming.
+- **HULL Group**: To all team members of the HULL group for their collaboration and shared passion for graphics programming.
